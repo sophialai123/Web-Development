@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Table Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>This is a table </h1>
+
+  <table>
+    <!-- Table Head 
+      head still requires a row in order to contain the table headings.
+      only the column headings go under the <thead> element-->
+    <thead>
+
+      <!-- Table Rows -->
+      <tr>
+        <!-- Table Headings
+     scope attribute, which can take one of two values:
+    row - this value makes it clear that the heading is for a row.
+    col - this value makes it clear that the heading is for a column. -->
+        <th scope="col">Friday</th>
+        <th scope="col">Saturday</th>
+        <th scope="col">Sunday</th>
+      </tr>
+    </thead>
+
+    <!-- The <tbody> element should contain all of the table’s data, 
+      excluding the table headings -->
+    <tbody>
+
+      <tr>
+
+        <!-- Table Cells(columns) or table data -->
+        <td colspan="2">Adam’s Greenworks</td>
+        <td>Package Items</td>
+      </tr>
+      <tr>
+        <td>Davie's Burgers</td>
+        <td>2</td>
+        <td>Send Invoice</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Baker's Bike Shop</td>
+        <td>4</td>
+        <td>Send Invoice</td>
+      </tr>
+      <tr>
+        <td>Miss Sally's Southern</td>
+        <td>Ship</td>
+      </tr>
+      <tr>
+        <td>Summit Resort Rentals</td>
+        <td>4</td>
+        <td>Ship</td>
+      </tr>
+      <tr>
+        <td>Strike Fitness</td>
+        <td>1</td>
+        <td>Enter Order</td>
+      </tr>
+    </tbody>
+
+
+    <!-- Table Footer -->
+    <tfoot>
+      <tr>
+        <th>Total</th>
+        <td>$22M</td>
+        <td>$12.5M</td>
+      </tr>
+
+    </tfoot>
+
+
+  </table>
+
+</body>
+
+</html>

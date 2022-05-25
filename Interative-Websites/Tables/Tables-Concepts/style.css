@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+
+body {
+  background-color: antiquewhite;
+}
+
+
+h1 {
+  margin: 100px auto;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: auto;
+  font-size: 18px;
+}
+
+table {
+
+  height: 40%;
+  left: 10%;
+  margin: 120px auto;
+  overflow-y: scroll;
+  position: static;
+  width: 50%;
+
+}
+
+thead th {
+  background: #88CCF1;
+  color: #FFF;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+}
+
+
+tr {
+  background: #f4f7f8;
+  border-bottom: 1px solid #FFF;
+  margin-bottom: 5px;
+}

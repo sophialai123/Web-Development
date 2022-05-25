@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Arrays: Task 4</title>
+  <style>
+    p {
+      color: purple;
+      margin: 0.5em 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <section class="preview">
+
+
+
+  </section>
+
+</body>
+<script>
+  //https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/arrays/marking.md#task-3
+
+  /* For this array task, we provide you with a starting array listing the names of some birds.
+
+Find the index of the "Eagles" item, and use that to remove the "Eagles" item.
+Make a new array from this one, called eBirds, that contains only birds from the original array whose names begin with the letter "E". Note that startsWith() is a great way to check whether a string starts with a given character.
+
+If it works, you should see "Emus,Egrets" appear in the page. */
+  const birds = ["Parrots", "Falcons", "Eagles", "Emus", "Caracaras", "Egrets"];
+
+  // Add your code here
+  //console.log(birds.indexOf("Eagles"))
+  birds.splice(birds.indexOf("Eagles"), 1) //splice(index, numberofitems)
+  //console.log(birds)
+
+  // function startsWith(bird) {
+  //   return bird.startsWith("E")
+  // }
+
+  // let eBirds = birds.filter(startsWith) //The function passed to filter() can use bird.startsWith() to test whether the bird starts with "E"
+  // console.log(eBirds)
+
+
+  const eBirds = birds.filter(bird => {
+    return bird.startsWith("E")
+  })
+
+  console.log(eBirds)
+
+  // Don't edit the code below here!
+
+  const section = document.querySelector('section');
+
+  const para1 = document.createElement('p');
+  para1.textContent = eBirds;
+
+  section.appendChild(para1);
+
+  //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
+  const fruits = ["Banana", "Orange", "Apple", "Mango"];
+  let removed = fruits.splice(2, 2, "Lemon", "Kiwi"); // remove from index 2 and delete 2 items, add lemo and kiwi to the fruits array.
+  console.log(removed)
+  console.log(fruits)
+
+</script>
+
+</html>
