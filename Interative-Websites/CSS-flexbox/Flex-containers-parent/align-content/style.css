@@ -1,0 +1,58 @@
+body {
+  font-family: 'Roboto Mono', monospace;
+}
+
+h1 {
+  margin: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.container {
+  height: 300px;
+  width: 600px;
+  background-color: whitesmoke;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.left,
+.center,
+.right {
+  /* min-height will aplly to stretch:
+  if a minimum height or no height is specified, 
+  the rows of elements will stretch to fill the parent container from top to bottom (default value).;
+   */
+  min-height: 75px;
+  width: 200px;
+  margin: 2px;
+  background-color: dodgerblue;
+  border: 2px solid lightgrey;
+}
+
+#flexstart {
+  align-content: flex-start;
+
+}
+
+#flexend {
+  align-content: flex-end;
+
+}
+
+#center {
+  align-content: center;
+
+}
+
+#between {
+  align-content: space-between;
+
+}
+
+#around {
+
+  align-content: space-around;
+
+}

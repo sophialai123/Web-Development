@@ -1,0 +1,55 @@
+body {
+  border: 0;
+  margin: 0 15px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+h1 {
+  text-align: center;
+  display: block;
+  font-size: 18px;
+}
+
+.container {
+  height: 150px;
+  width: 100%;
+  display: flex;
+  background-color: whitesmoke;
+}
+
+.side,
+.center {
+  height: 75px;
+  background-color: dodgerblue;
+  border: 1px solid lightgrey;
+  display: inline-block;
+}
+
+#top .side {
+  /* // flex-grow: 2;
+  // flex-shrink: 2;
+  // flex-basis: 100px; */
+  flex: 2 2 100px;
+}
+
+#top .center {
+  /* // flex-grow: 1;
+  // flex-shrink: 3;
+  // flex-basis: 50px; */
+  flex: 1 3 50px;
+}
+
+
+#bottom .side {
+  /* // flex-grow: 1;
+  // flex-shrink: 2;
+  // flex-basis: 75px; */
+  flex: 1 2 75px;
+}
+
+#bottom .center {
+  /* // flex-grow: 2;
+  // flex-shrink: 1;
+  // flex-basis: 100px; */
+  flex: 2 1 100px;
+}

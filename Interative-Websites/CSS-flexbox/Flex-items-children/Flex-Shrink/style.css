@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  border: 0;
+  font-family: 'Roboto Mono', monospace;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.top,
+.middle,
+.bottom {
+  width: 400px;
+  height: 200px;
+  background-color: dodgerblue;
+  border: 2px solid lightgrey;
+  margin: 10px 30px;
+}
+
+.top.side {
+
+  /* 1 and 3 will shrink more than 2 */
+  flex-shrink: 2;
+
+}
+
+.top.center {}
+
+.middle.side {
+
+  /* moddle side 2 will shirnk more than other two */
+  flex-shrink: 0;
+
+}
+
+.middle.center {}
+
+.bottom.side {}
+
+.bottom.center {
+
+  /* moddle side 2 will shirnk more than other two */
+  flex-shrink: 2;
+}
+
+#top,
+#middle,
+#bottom {
+  display: flex;
+  background-color: whitesmoke;
+  justify-content: center;
+  min-height: 200px;
+  align-items: center;
+}

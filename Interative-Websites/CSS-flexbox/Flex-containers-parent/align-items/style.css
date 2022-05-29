@@ -1,0 +1,50 @@
+body {
+  font-family: 'Roboto Mono', monospace;
+}
+
+h1 {
+  margin: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.container {
+  height: 150px;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+}
+
+.left,
+.center,
+.right {
+  /* min-height for stretch */
+  min-height: 75px;
+  width: 125px;
+  background-color: dodgerblue;
+  border: 2px solid lightgrey;
+}
+
+
+#baseline .center {
+  height: 100px;
+  width: 100px;
+  border: 5px solid turquoise;
+}
+
+/* align-items on flex parent elements */
+#flexstart {
+  align-items: flex-start;
+}
+
+#flexend {
+  align-items: flex-end;
+}
+
+#center {
+  align-items: center;
+}
+
+#baseline {
+  align-items: baseline;
+}

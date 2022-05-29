@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  border: 0;
+  font-family: 'Roboto Mono', monospace;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.top,
+.middle,
+.bottom {
+  width: 100px;
+  height: 100px;
+  background-color: dodgerblue;
+  border: 2px solid lightgrey;
+  margin: 10px 30px;
+}
+
+
+/* flex-grow horizontal (from left to right or right to left) on  flex items chidren elements */
+.top.side {
+  flex-grow: 1;
+
+}
+
+.top.center {
+  flex-grow: 1;
+
+}
+
+
+.middle.center {
+  flex-grow: 1;
+
+}
+
+.bottom.side {
+  flex-grow: 1;
+
+}
+
+.bottom.center {
+  flex-grow: 2;
+
+}
+
+
+
+#top,
+#middle,
+#bottom {
+  display: flex;
+  background-color: Whitesmoke;
+  justify-content: center;
+  min-height: 200px;
+  align-items: center;
+}
+
+
+/* flex-shrink horizontal default value is 1 on  flex items chidren elements */
