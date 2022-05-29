@@ -6,10 +6,10 @@
  - [Learn web development MDN](https://developer.mozilla.org/en-US/docs/Learn)
  - [Freecodecamp](https://www.freecodecamp.org/)
  - [Codecademy](https://www.codecademy.com/learn)
- - [Frontedmentor](https://www.frontendmentor.io/)
- - [Datacamp](https://www.datacamp.com/)
+ - [Frontedmentor - Project Challengs](https://www.frontendmentor.io/)
+ - [Datacamp - Data science](https://www.datacamp.com/)
  - [Geeksforgeeks](https://www.geeksforgeeks.org/)
- - [Udemy](https://www.udemy.com/)
+ - [Udemy - Online Course](https://www.udemy.com/)
 
 
 ### HTML 
@@ -34,10 +34,19 @@
  - [Error](https://www.w3schools.com/js/js_errors.asp)
  - [Regular Expressions](https://www.w3schools.com/js/js_regexp.asp)
  - [JavaScript Exercises](https://www.w3resource.com/javascript-exercises/)
+ - [Javascript Quizzes](https://www.javatpoint.com/javascript-quiz)
  - [React Doc](https://reactjs.org/docs/getting-started.html)
  - [React Router](https://reactrouter.com/docs/en/v6/getting-started/overview)
   
 
+### Python
+- [Angela Yu - Udemy](https://www.udemy.com/course/100-days-of-code/)
+- [Python Quizzes](https://pynative.com/python/quizzes/)
+  
+
+### Version Control System
+- [Git commands](https://git-scm.com/docs/git#_git_commands)
+- [Jira - Atlassian](https://www.atlassian.com/software/jira?bundle=jira-software&edition=free)
 
 ### Icons
 - [Fontawesome](https://fontawesome.com/icons)
@@ -68,3 +77,11 @@
  - [Keith Galli - Python](https://www.youtube.com/c/KGMIT)
  - [John - Python Web Scraping](https://www.youtube.com/c/JohnWatsonRooney)
  - [CleverProgrammer](https://www.youtube.com/c/CleverProgrammer)
+  
+
+
+### Code Editors
+- [Visual Studio Code](https://code.visualstudio.com/docs)
+- [Atom](https://atom.io/)
+- [Pycharm - Python](https://www.jetbrains.com/pycharm/)
+- [Jupyter Notebook - Data science](https://jupyter.org/install)
