@@ -24,7 +24,8 @@
 - [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
 - [Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
-
+- [colorhunt](https://colorhunt.co/)
+- [Media Queries](https://css-tricks.com/snippets/css/media-queries-for-standard-devices/)
 
 ### JavaScript 
  - [Loops and iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)

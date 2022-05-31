@@ -1,0 +1,226 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fcfcfc;
+  color: #db6363;
+  text-align: center;
+}
+
+
+/*   grid container */
+.grid {
+  display: grid;
+  /* grid-template-rows: 100px 8fr 5fr 4fr 5fr 80px;
+  grid-template-columns: repeat(6, 1fr); */
+
+  /* shorthand */
+  grid-template: 100px 8fr 5fr 4fr 5fr 80px /repeat(6, 1fr);
+  gap: 20px;
+}
+
+
+/*  grid items */
+header {
+  /* grid-column-start: 1;
+  grid-column-end: 7; */
+
+  /* shorthand */
+  grid-column: 1 / 7;
+  display: grid;
+
+
+}
+
+.title {
+  margin: auto;
+  color: #dc6363;
+  font-family: Poppins;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.banner {
+  padding: 3%;
+  background-color: #db6363;
+  color: #ffffff;
+  font-family: Poppins;
+  font-size: 3em;
+  font-weight: 300;
+  letter-spacing: 3.7px;
+  grid-column: 1 / 7;
+
+}
+
+p,
+.banner-contents {
+  max-width: 80%;
+  margin: auto;
+}
+
+img {
+  height: 5em;
+  margin-left: 75px;
+}
+
+.about {
+  background-color: #f0f0f0;
+  grid-column: 1 / 7;
+
+  display: grid;
+}
+
+.text {
+  color: #2f2d2d;
+  font-family: Poppins;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.box {
+  background-color: #2f2f2f;
+  color: #ffffff;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-align: center;
+  display: grid;
+
+}
+
+.address {
+  /* shorthand */
+  grid-column: 1 / span 2;
+}
+
+.hours {
+  /* start column 3 and span the rest */
+  grid-column: 3 / span 2;
+
+}
+
+.call-us {
+  /* start column 5 and span the rest */
+  grid-column: 5 / span 2;
+}
+
+.icon {
+  height: 80px;
+  margin: auto;
+}
+
+.testimonial {
+  background-color: #f0f0f0;
+  color: #db6363;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: italic;
+  letter-spacing: 3.7px;
+  display: grid;
+
+}
+
+.one {
+  /* start column 4 and span the rest */
+  grid-column: 1 / span 3;
+}
+
+.two {
+
+  /* start column 4 and span the rest */
+  grid-column: 4 / span 3;
+}
+
+footer {
+  background-color: #db6363;
+  color: #ffffff;
+  font-family: Poppins;
+  font-size: 16px;
+  letter-spacing: 0.4px;
+  grid-column: 1 / 7;
+  display: grid;
+}
+
+
+/* ************** Mobile size*********************** */
+@media screen and (max-width: 600px) {
+  .grid {
+    grid-template: 5% 30% 10% repeat(3, 10%) 20% 5% / 100%;
+    gap: 20px;
+
+  }
+
+  .banner {
+    font-size: 20px;
+    font-weight: 300px;
+    line-height: 2.75;
+    letter-spacing: 1.9px;
+    margin-bottom: -20px;
+
+  }
+
+  .text {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+
+  }
+
+  .about {
+    grid-row: 3 / span 1;
+    grid-column: 1 / span1;
+    margin-bottom: -20px;
+
+  }
+
+  hearder {
+    margin-bottom: -20px;
+  }
+
+  .address {
+    grid-row: 4 / span 1;
+    /* only one column */
+    grid-column: 1 / span1;
+
+  }
+
+  .hours {
+    grid-row: 5/ span 1;
+    grid-column: 1 / span1;
+  }
+
+
+  .call-us {
+    grid-row: 6 / span 1;
+    grid-column: 1 / span1;
+
+  }
+
+  .testimonial {
+    font-size: 14px;
+    font-weight: 500px;
+    letter-spacing: 0.3px;
+  }
+
+  .one {
+    grid-row: 7 / span 1;
+    grid-column: 1 / span1;
+
+  }
+
+  .two {
+    grid-row: 8 / span 1;
+    grid-column: 1 / span1;
+
+  }
+
+  .footer {
+    margin-top: -20px;
+  }
+
+}
