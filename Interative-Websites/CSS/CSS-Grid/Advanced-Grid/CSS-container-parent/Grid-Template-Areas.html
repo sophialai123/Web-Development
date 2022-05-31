@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Template Areas</title>
+
+  <style>
+    .container {
+      display: grid;
+      max-width: 900px;
+      position: relative;
+      margin: auto;
+      grid-template-areas: "head head"
+        "nav nav"
+        "info services"
+        "footer footer";
+      grid-template-rows: 300px 120px 800px 120px;
+      grid-template-columns: 1fr 3fr;
+    }
+
+    header {
+      grid-area: head;
+      background-color: lightblue;
+    }
+
+    nav {
+      grid-area: nav;
+      background-color: blueviolet;
+    }
+
+    .info {
+      grid-area: info;
+      background-color: cadetblue;
+    }
+
+    .services {
+      grid-area: services;
+      background-color: olivedrab;
+    }
+
+    footer {
+      grid-area: footer;
+      background-color: orchid;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <header>Welcome!</header>
+    <nav>Links!</nav>
+    <section class="info">Info!</section>
+    <section class="services">Services!</section>
+    <footer>Contact us!</footer>
+  </div>
+
+</body>
+
+</html>

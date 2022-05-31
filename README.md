@@ -23,6 +23,7 @@
 - [Box Model](https://www.w3schools.com/css/css_boxmodel.asp)
 - [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+- [Inspect CSS Grid](https://developer.chrome.com/docs/devtools/css/grid/)
 - [Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
 - [colorhunt](https://colorhunt.co/)
 - [Media Queries](https://css-tricks.com/snippets/css/media-queries-for-standard-devices/)
