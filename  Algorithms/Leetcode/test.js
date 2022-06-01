@@ -7,7 +7,7 @@ const twoSum = (nums, target) => {
     // Not comparing to the same index: x + 1
     for (let y = x + 1; nums.length; y++) {
       if (nums[x] + nums[y] === target) {
-        retun[x, y]
+        console.log([x, y])
 
       }
     }

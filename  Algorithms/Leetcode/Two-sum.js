@@ -19,42 +19,22 @@ Input: nums = [3,3], target = 6
 Output: [0,1]
  */
 
-let newArray = [];
+
 
 const twoSum = (nums, target) => {
 
   for (let x = 0; nums.length; x++) {
-    for (let y = 0; nums.length; y++) {
+
+    // Not comparing to the same index: x + 1
+    for (let y = x + 1; nums.length; y++) {
       if (nums[x] + nums[y] === target) {
-        newArray.push(x, y)
-        console.log(nums[x], nums[y])
-        console.log(x, y)
-        return newArray;
+        retun[x, y]
 
       }
     }
+    return [x, y]
   }
 
-}
+};
 
-
-console.log(twoSum([3, 2, 4], 6))
-
-
-// if (target === nums[i] + nums[j]) {
-//   // index1 = nums.indexOf(nums[i])
-//   // index2 = nums.indexOf(nums[j])
-//   newArray.push(nums[i], nums[j])
-//   console.log(nums[j])
-// } else {
-//   return `${nums[i]} ${nums[j]}`
-
-// }
-
-
-// console.log(
-//   [1, 2, 3, 4].reduce((a, b) => a + b, 0)
-// )
-// console.log(
-//   [].reduce((a, b) => a + b, 0)
-// )
+console.log(twoSum([3, 2, 4], 6));

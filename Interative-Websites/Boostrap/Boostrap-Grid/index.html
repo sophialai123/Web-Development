@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <title>Columns</title>
+</head>
+
+<body>
+  <div class="container">
+    <!--First row-->
+    <div class="row">
+      <div class="col">
+        <h3>One column in a row</h3>
+      </div>
+    </div>
+
+    <!--Second row-->
+    <div class="row">
+
+      <div class="col">
+        <p>Two columns in a row</p>
+      </div>
+
+      <div class="col">
+        <p>Two columns in a row</p>
+      </div>
+    </div>
+
+    <!--Third row-->
+    <div class="row">
+      <div class="col">
+        <p>Three columns in a row</p>
+      </div>
+      <div class="col">
+        <p>Three columns in a row</p>
+      </div>
+      <div class="col">
+        <p>Three columns in a row</p>
+      </div>
+
+    </div>
+
+    <!-- Setting Column Widths -->
+
+    <div class="row">
+      <!-- render its width as 9 individual columns. -->
+      <div class="col-9">
+        <p>9 columns</p>
+      </div>
+      <!-- render its width as 3 individual columns. -->
+      <div class="col-3">
+        <p>3 columns</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3">
+        <p>Left 3 Columns</p>
+      </div>
+      <div class="col-6">
+        <p>Middle 6 Columns</p>
+      </div>
+      <div class="col-3">
+        <p>Right 3 Columns</p>
+      </div>
+    </div>
+
+
+    <!-- Setting Column Width with Content -->
+    <div class="row">
+      <div class="col-auto">
+        <p>Auto Adjusted</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <p>This column takes up 12 columns of space!</p>
+      </div>
+    </div>
+
+  </div>
+
+
+  <table>
+    <h1>Bootstrap Breakpoints</h1>
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Breakpoint Range</th>
+        <th>Device Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background-color: lightgray;">
+        <td>Extra small</td>
+        <td>
+          < 576 px</td>
+        <td> portrait smartphones</td>
+      </tr>
+      <tr>
+        <td>Small</td>
+        <td>≥ 576 px</td>
+        <td>landscape smartphones</td>
+      </tr>
+      <tr style="background-color: lightgray;">
+        <td>Medium</td>
+        <td>≥ 768 px</td>
+        <td>tablets</td>
+      </tr>
+      <tr>
+        <td>Large</td>
+        <td>≥ 992 px</td>
+        <td>desktops</td>
+      </tr>
+      <tr style="background-color: lightgray;">
+        <td>Extra Large</td>
+        <td>≥ 1200 px</td>
+        <td>large desktops</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+
+
+  <div class="container">
+    <!-- First Row -->
+    <div class="row">
+      <div class="col-md-6">
+        <h3>6 columns wide:</h3>
+        <p>On medium sized screens and bigger!</p>
+      </div>
+    </div>
+
+    <!-- Second Row -->
+    <div class="row">
+      <div class="col-sm-3">
+        <h3>3 columns wide:</h3>
+        <p>On small sized screens and bigger!</p>
+      </div>
+      <div class="col-sm-3">
+        <h3>3 columns wide:</h3>
+        <p>On small sized screens and bigger!</p>
+      </div>
+    </div>
+
+    <!-- Depending on the size of your screen, you might not hit certain breakpoints. -->
+    <div class="row">
+      <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-3">
+        <h3>Take advantage of breakpoints!</h3>
+        <p>This column will have different widths based on screen size</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
