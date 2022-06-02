@@ -1,0 +1,131 @@
+/* Universal Styles */
+
+html {
+
+  /* font-size is for rem size */
+  font-size: 16px;
+}
+
+body {
+  background-color: white;
+}
+
+
+/* Scaling Images and Videos */
+.image-container {
+  width: 50%;
+  height: 200px;
+  overflow: hidden;
+}
+
+
+/* max-width is based on parent .image-container's width */
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+
+}
+
+/* end of the images scaling */
+
+
+
+p {
+  min-width: 200px;
+  min-height: 200px;
+}
+
+/* Banner Section */
+
+#banner {
+  height: 46rem;
+  background-image: url('travel-logo.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#banner h1 {
+  /* font-size is = 16px(html font-size) * 3.75rem = 60px */
+  font-size: 3.75rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: white;
+
+}
+
+/* Blog Post */
+
+#blog {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* When height and width are set using percentages, you learned that the dimensions of child elements are calculated based on the dimensions of the parent element */
+
+#blog .post {
+  width: 52%;
+  margin-top: 12.5%;
+  margin-bottom: 7.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.8;
+  color: #444444;
+}
+
+.post h2 {
+  font-size: 1.875rem;
+
+}
+
+.post h3 {
+  font-size: 1.125rem;
+  color: #999999;
+}
+
+.post .opening-line {
+  margin-top: 4.1875rem;
+  margin-bottom: 1.5rem;
+  color: black;
+  font-weight: bold;
+}
+
+
+.post .image-container {
+  width: 100%;
+
+}
+
+/* Blog Images */
+.images {
+  margin-bottom: 20%;
+}
+
+/* relative to the parent elements use percentages. which is .images's width of 30% */
+.images .image-container {
+  display: inline-block;
+  width: 30%;
+}
+
+/* Footer */
+
+footer {
+  padding: 4rem 0;
+  border-top: 1px solid #999999;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.125rem;
+  color: #999999;
+  text-align: center;
+}
