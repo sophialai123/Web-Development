@@ -52,6 +52,7 @@
 
 ### Icons
 - [Fontawesome](https://fontawesome.com/icons)
+- [Fontawesome-cheatsheet](https://fontawesome.com/v5/cheatsheet)
 - [Bootstrap Icons](https://icons.getbootstrap.com/)
 - [Google Icons](https://fonts.google.com/icons)
 - [Material Icons](https://fonts.google.com/icons?selected=Material+Icons)
