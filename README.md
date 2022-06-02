@@ -39,6 +39,7 @@
  - [Javascript Quizzes](https://www.javatpoint.com/javascript-quiz)
  - [React Doc](https://reactjs.org/docs/getting-started.html)
  - [React Router](https://reactrouter.com/docs/en/v6/getting-started/overview)
+ - [Redux](https://redux.js.org/)
   
 
 ### Python
