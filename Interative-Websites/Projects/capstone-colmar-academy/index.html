@@ -6,9 +6,214 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Colmar Academy</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+  <!-- --------------------------------navbar section-------------------------------- -->
+  <header id="grid-container">
+    <nav class="navbar">
+      <div class="logo">
+        <a href="#"><img src="./images/ic-logo.svg" alt="logo"></a>
+        <h2><strong>colmar</strong>academy</h2>
+        <a href="#" id="toggleButton" class="toggle-button">
+          <span><img src="./images/ic-on-campus.svg" alt="campus"></span>
+          <span><img src="./images/ic-online.svg" alt="online"></span>
+          <span><img src="./images/ic-login.svg" alt="login"></span>
+        </a>
+      </div>
+      <ul class="nav-items">
+        <a href="#">
+          <li>On campus</li>
+        </a>
+        <a href="#">
+          <li>Online</li>
+        </a>
+        <a href="#">
+          <li>or companies</li>
+        </a>
+        <a href="#">
+          <li>Sign in</li>
+        </a>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- --------------------------------start section-------------------------------- -->
+  <main class="grid-container">
+    <section id="start">
+      <div class="image-container">
+        <img src="./images/banner.jpg" alt="banner">
+      </div>
+      <div class="row1-info">
+        <h1>Learn something new everyday</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <button>Start here</button>
+      </div>
+    </section>
+
+    <!-- ----------------------------activity section------------------------------------ -->
+    <section id="activity">
+      <div class="left-row2">
+        <div class="image-container">
+          <img src="./images/information-main.jpg" alt="information-main">
+        </div>
+        <div class="left-row2-info">
+          <h1>It doesn't hurt to keep practicing</h1>
+          <p><q>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, itaque fugiat, quaerat praesentium
+              fuga quidem error officiis possimus accusamus culpa facilis cum? Dolores eius eos optio quasi tenetur
+              ducimus id.</q></p>
+          <p>Emanuel, Sr Strategist at Hiring.com</p>
+        </div>
+
+      </div>
+      <div class="right-row2">
+        <div class="orientation right-row2-cols">
+          <div class="right-row2-img">
+            <img src="./images/information-orientation.jpg" alt="information-orientation">
+          </div>
+          <div class="right-row2-info">
+            <h3>Orientation date</h3>
+            <p>Tue 10/11 & Wed 10/12: 8am-3pm</p>
+            <a href="#">Read more</a>
+          </div>
+        </div>
+        <div class="our-compus right-row2-cols">
+          <div class="right-row2-img">
+            <img src="./images/information-campus.jpg" alt="information-campus">
+          </div>
+          <div class="right-row2-info">
+            <h3>Our campus</h3>
+            <p>Find which campus is close by you</p>
+            <a href="#">Read more</a>
+          </div>
+        </div>
+        <div class="guest-lecture right-row2-cols ">
+          <div class="right-row2-img">
+            <img src="./images/information-guest-lecture.jpg" alt="information-guest-lecture">
+          </div>
+          <div class="right-row2-info">
+            <h3>Our guest lecture</h3>
+            <p>Join a keynote with Oliver Sack about music in medical treatment</p>
+            <a href="#">Read more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -----------------------------course section----------------------------------- -->
+    <section id="course">
+      <div class="grid-rows">
+        <h1>Start learning</h1>
+        <div class="row3-gird-container">
+          <div class="software row3-grid-child">
+            <img src="./images/course-software.jpg" alt="">
+            <h3>Software engineering</h3>
+            <ul>
+              <li>Cloud</li>
+              <li>Web Deveploment, Moblie</li>
+              <li>Deveploment, iOT, APIs</li>
+            </ul>
+          </div>
+          <div class="computer row3-grid-child">
+            <img src="./images/course-computer-art.jpg" alt="">
+            <h3>Computer art</h3>
+            <ul>
+              <li>COURSES</li>
+              <li>Imaging & Design, Wed Design</li>
+              <li>Motion Graphics & Visual Effects</li>
+              <li>Computer Animation</li>
+            </ul>
+          </div>
+          <div class="design row3-grid-child">
+            <img src="./images/course-design.jpg" alt="">
+            <div class="row3-grid-child-infor">
+              <h3>Design</h3>
+              <ul>
+                <li>COURSES</li>
+                <li>Usuer Expenrience Design, User</li>
+                <li>Reaserch, Visual Design</li>
+              </ul>
+            </div>
+          </div>
+          <div class="data row3-grid-child">
+            <img src="./images/course-data.jpg" alt="">
+            <ul>
+              <h3>Data</h3>
+              <li>COURSES</li>
+              <lI>Data Science, Big Data, SQL, Data Visulization</lI>
+            </ul>
+          </div>
+          <div class="business row3-grid-child">
+            <img src="./images/course-business.jpg" alt="">
+            <h3>Business</h3>
+            <ul>
+              <li>COURSES</li>
+              <li>Product Deveploment, Business</li>
+              <li>Deveploment, Startup</li>
+            </ul>
+          </div>
+          <div class="marketing row3-grid-child">
+            <img src="./images/course-marketing.jpg" alt="">
+            <h3>Marketing</h3>
+            <ul>
+              <li>COURSES</li>
+              <li>Analytics, Content Marketing</li>
+              <li>Mobile Marketing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -----------------------------exhibit section----------------------------------- -->
+    <section id="exhibit">
+      <h1>Thesis exhibit</h1>
+      <div class="row4-gird-container">
+        <div class="row4-video">
+          <video controls>
+            <source src="videos/thesis.mp4" type="video/mp4">
+          </video>
+          <div class="left-row4-info">
+            <h3>Reimagine urban</h3>
+            <p><q>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere enim ipsum itaque, eaque unde eveniet
+                incidunt dolorem sint cupiditate illum. Aliquid perspiciatis quibusdam quae impedit consequatur suscipit
+                provident possimus voluptatem.</q></p>
+          </div>
+        </div>
+        <div class="row4-grid-child-right">
+          <div class="row4-grid-child row4-first-child">
+            <div class="row4-img-div">
+              <img src="./images/thesis-fisma.jpg" alt="">
+            </div>
+            <div class="right-row4-info">
+              <h3>Figma: Design and prototype</h3>
+              <p>Designers showcare of new protoype product</p>
+            </div>
+          </div>
+          <div class="row4-grid-child row4-second-child">
+            <div class="row4-img-div">
+              <img src="./images/thesis-now-and-then.jpg" alt="">
+            </div>
+            <div class="right-row4-info">
+              <h3>Now and then</h3>
+              <p>Reaserch study about New York</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <hr>
+  <!-- -----------------------------footer section----------------------------------- -->
+  <footer>
+    <p>@ 20222 Colmar Academy. All rights reserved</p>
+
+    <div class="footer-link">
+      <a href="#">Terms</a>
+      <a href="#">Privacy</a>
+  </footer>
 
 </body>
 

@@ -3,3 +3,553 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --color-light: rgb(56, 55, 55);
+  --darkgray: darkgray;
+  --bg-gray: lightgray;
+}
+
+/*  root parent font-size for rem unit */
+html {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* ******************************* navbar section ******************************* */
+
+/* navbar section */
+
+/* flex container */
+.navbar {
+  height: 64px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-left: 1.5rem;
+
+}
+
+.logo img {
+  margin-top: 1rem;
+}
+
+.navbar h2 {
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: normal;
+  /* color: lightgray */
+}
+
+/* navbar items */
+
+.nav-items {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5rem;
+  gap: 0.5rem;
+  margin-right: 1.5rem;
+}
+
+.nav-items li {
+  list-style: none;
+  font-size: 1.3rem;
+}
+
+.toggle-button span img {
+  display: none;
+}
+
+@media only screen and (min-width: 480px) and (max-width:736px) {
+
+  .navbar h2,
+  .nav-items li {
+    display: none;
+  }
+
+  .logo {
+    display: flex;
+    gap: 4rem;
+    width: 100%;
+  }
+
+
+  .toggle-button {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .toggle-button span img {
+    display: flex;
+  }
+
+}
+
+/* ******************************* start section ******************************* */
+.grid-container {
+  display: grid;
+  width: 100%;
+}
+
+
+#start {
+  width: 100%;
+  background-color: var(--g);
+  display: flex;
+
+}
+
+/* Scaling Images image parent */
+#start .image-container {
+  width: 60%;
+  height: auto;
+  overflow: hidden;
+}
+
+/* Scaling Images image child 100% of parent 60% width */
+#start .image-container img {
+  width: 100%;
+  margin: 2rem 1.5rem;
+}
+
+.row1-info {
+  width: 40%;
+  margin: 7% 2rem;
+  padding: 3rem;
+}
+
+.row1-info h1,
+.row1-info p,
+.row1-info button {
+  margin-top: 2rem;
+}
+
+#start button {
+  background-color: darkgreen;
+  width: 65%;
+  height: 50px;
+  color: white;
+  font-size: 1.7rem;
+  padding: 0.5rem 0;
+}
+
+#start button:hover {
+  background-color: olive;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 480px) and (max-width:736px) {
+  #start {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  #start .row1-info,
+  #start .image-container,
+  #start .image-container img {
+    width: 100%;
+    margin: 0;
+  }
+
+  #start .row1-info {
+    margin: 2rem;
+    padding: 0rem;
+    width: 80%;
+  }
+
+  #start button {
+    width: 100%;
+    margin-bottom: 2rem
+  }
+
+}
+
+/* ******************************* activity section ******************************* */
+
+#activity {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+#activity .left-row2 {
+  width: 60%;
+}
+
+/* Scaling Images parent*/
+#activity .image-container {
+  height: auto;
+  overflow: hidden;
+}
+
+/* Scaling Images child*/
+#activity .image-container img {
+  width: 100%;
+  margin: 2.5rem 2rem;
+}
+
+#activity .left-row2 {
+  width: 60%;
+}
+
+
+#activity .left-row2-info {
+  margin: 2rem 1.5rem;
+
+}
+
+#activity p {
+  padding-bottom: 0.5rem;
+}
+
+#activity .right-row2 {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 2rem;
+  padding: 1.5rem;
+}
+
+#activity .right-row2-info {
+  width: 65%;
+  padding: 1.5rem;
+}
+
+#activity .right-row2-info p {
+  margin-left: 2px;
+  padding: 0;
+  width: 100%;
+}
+
+#activity .right-row2 {
+  width: 35%;
+}
+
+#activity .right-row2 img {
+  height: auto;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+#activity .right-row2-cols {
+  display: flex;
+  flex-direction: row;
+  justify-items: flex-start;
+  align-content: flex-start;
+
+}
+
+#activity .right-row2 .guest-lecture {
+  background-color: var(--bg-gray);
+}
+
+@media only screen and (min-width: 480px) and (max-width:736px) {
+  #activity .left-row2 {
+    display: none;
+  }
+
+  #activity .right-row2,
+  #activity .right-row2 img {
+    width: 100%;
+  }
+
+  #activity .right-row2 .right-row2-cols {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #activity .right-row2 h3 {
+    font-size: 2rem;
+  }
+
+  #activity .right-row2 .right-row2-cols p,
+  a {
+    font-size: 1.3rem;
+  }
+
+}
+
+
+/* ******************************* course section ******************************* */
+
+#course {
+  background-color: var(--bg-gray);
+
+  /* 3 rows and 3 columns */
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+
+
+#course h1 {
+  text-align: center;
+  margin: 32px auto;
+  color: var(--color-light);
+}
+
+
+.row3-gird-container {
+  display: grid;
+  margin: 2rem 4.5rem;
+  row-gap: 2rem;
+}
+
+.row3-gird-container .row3-grid-child img {
+  height: auto;
+  width: 100%;
+  transform: scale(2ms);
+  cursor: pointer;
+}
+
+
+.row3-grid-child h3 {
+  color: black;
+}
+
+.row3-grid-child h3,
+li {
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+}
+
+.row3-grid-child li {
+  color: var(--darkgray);
+}
+
+
+.row3-grid-child {
+  background-color: white;
+  margin-left: 1.5rem;
+
+}
+
+
+.row3-gird-container .software {
+  grid-area: 1 / 1;
+  height: 480px;
+
+}
+
+.row3-gird-container .computer {
+  grid-area: 1 / 2;
+  height: 480px;
+
+}
+
+.row3-gird-container .design {
+  grid-area: 1 / 3;
+  height: 480px;
+}
+
+.row3-gird-container .data {
+  grid-area: 2 / 1;
+  height: 480px;
+
+}
+
+.row3-gird-container .business {
+  grid-area: 2 / 2;
+  height: 480px;
+}
+
+.row3-gird-container .marketing {
+  grid-area: 2 / 3;
+  height: 480px;
+}
+
+
+@media only screen and (min-width: 480px) and (max-width:736px) {
+
+  #course {
+    background-color: aliceblue;
+  }
+
+  #course .row3-gird-container img,
+  #course .row3-gird-container li {
+    display: none;
+  }
+
+  #course .row3-gird-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+
+  #course .row3-gird-container h3 {
+    margin: 2rem;
+  }
+
+  #course .row3-grid-child {
+    width: 100%;
+    height: 80px;
+    background-color: lightblue;
+
+  }
+
+}
+
+
+/* ******************************* exhibit section ******************************* */
+
+#exhibit {
+  width: 100%;
+}
+
+#exhibit h1 {
+  margin: 0 auto;
+  font-size: 3rem;
+  text-align: center;
+  padding: 2rem 0;
+
+
+}
+
+#exhibit .row4-gird-container {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  overflow: hidden;
+
+}
+
+#exhibit .row4-video {
+  width: 60%;
+}
+
+#exhibit .row4-video video,
+p {
+  width: 100%;
+  margin: 2rem 1.5rem 1.5rem;
+
+}
+
+#exhibit .row4-grid-child-right {
+  width: 40%;
+  display: inline-flex;
+  flex-direction: column;
+  margin-left: 2.8rem;
+  margin-top: 1rem;
+}
+
+
+#exhibit .row4-grid-child {
+  display: flex;
+
+}
+
+/* image parent */
+.row4-img-div {
+  width: 35%;
+  height: auto;
+  overflow: hidden;
+}
+
+#exhibit img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+
+}
+
+#exhibit .left-row4-info {
+  margin-left: 1.5rem;
+}
+
+#exhibit .row4-first-child {
+  background-color: lightgray;
+  padding: 1.5rem;
+}
+
+
+#exhibit .row4-second-child {
+  padding: 1.5rem;
+}
+
+#exhibit .right-row4-info {
+  margin-left: 1.5rem;
+  margin-top: 4rem;
+  font-weight: 500;
+}
+
+#exhibit .right-row4-info h3 {
+  font-size: 2rem;
+  width: 300px;
+  color: var(--color-light);
+}
+
+#exhibit .right-row4-info p {
+  font-size: 1.2rem;
+  width: 300px;
+  color: grey;
+  margin-left: 0px;
+
+}
+
+@media only screen and (min-width: 480px) and (max-width:736px) {
+
+  #exhibit .left-row4-info,
+  #exhibit .row4-grid-child-right {
+    display: none;
+  }
+
+  #exhibit .row4-video {
+
+    width: 100%;
+  }
+
+}
+
+/* ******************************* footer section ******************************* */
+
+hr {
+  color: var(--color-light);
+  width: 100%;
+}
+
+footer {
+  height: 64px;
+  width: 100%;
+
+}
+
+footer p {
+  margin: 1rem 0 0 1.5rem;
+
+}
+
+footer .footer-link {
+  width: 200px;
+  margin-left: 85%;
+}
+
+footer .footer-link a {
+  padding-left: 1rem;
+  display: inline-block;
+
+}
+
+@media only screen and (min-width: 480px) and (max-width:736px) {
+  footer .footer-link a {
+    display: none;
+  }
+}
