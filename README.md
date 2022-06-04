@@ -89,3 +89,10 @@
 - [Atom](https://atom.io/)
 - [Pycharm - Python](https://www.jetbrains.com/pycharm/)
 - [Jupyter Notebook - Data science](https://jupyter.org/install)
+
+
+### Site Generator
+- [Jekyll-Ruby gem](https://jekyllrb.com/docs/)
+- [Gatsby-React](https://www.gatsbyjs.com/)
+- [Hugo](https://gohugo.io/)
+- [Next.Js](https://vercel.com/solutions/nextjs?utm_source=next-site&utm_medium=banner&utm_campaign=next-website)
