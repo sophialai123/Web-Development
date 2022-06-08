@@ -16,8 +16,9 @@
   --link-color: hsl(var(--hue), 90%, 70%);
   --accent-color: hsl(var(--accent-hue), 100%, 70%);
   --button-background: hsl(var(--hue), 63%, 43%);
-  --dark-dropdown-background: hsl(var(--hue), 63%, 43%);
+
   --dark-mode-background: hsl(var(--hue), 20%, 12%);
+  --dark-dropdown-background: black;
 
   /* Custom theme variables go below */
   --custom-main-bg: #ADD2EB;
@@ -25,16 +26,11 @@
   --custom-secondary-bg: #0F2417;
   --custom-accent: #A24F0B;
   --custom-drop: #67929e;
-  /* create is to use the clip-path property in combination with the polygon() function to change the header’s shape*/
+  --main-bird: url("images/hummingbird.jpeg");
+  --night-bird: url("images/owl.jpeg");
   --path-value-1: 20%;
   --path-value-2: 80%;
   --path-value-3: 100%;
-
-
-  /* Adding Interactions and Features */
-  --main-bird: url("images/hummingbird.jpeg");
-  --night-bird: url("images/owl.jpeg");
-
 }
 
 .light {
@@ -44,45 +40,36 @@
   --text: var(--secondary-black);
   --border-color: var(--accent-blue);
   --bg-custom: var(--drop-down-custom);
-  /*  toggle between each bird */
   --bird: var(--main-bird);
 }
 
 /* Dark theme code goes below */
 .dark {
-  /* redefine the --bg variable*/
   --bg: var(--dark-mode-background);
   --bg-dropdown: var(--dark-dropdown-background);
   --text: var(--text-color-dark-mode);
   --border-color: var(--accent-color);
   --bg-custom: var(--drop-down-custom);
-
-  /* linear-gradient() */
-  --bg-nav: linear-gradient(to bottom, --link-color, --secondary-black);
-  /*  toggle between each bird */
+  --bg-nav: linear-gradient(to bottom, var(--link-color), var(--secondary-black));
   --bird: var(--night-bird);
 }
 
-
 /* Custom theme code goes below */
 .custom-theme {
-  /* redefine variables */
   --bg: var(--custom-main-bg);
   --text: var(--custom-font);
   --border-color: var(--custom-accent);
   --bg-dropdown: var(--custom-drop);
-  --bg-custoom: var(--custom-main-bg);
+  --bg-custom: var(--custom-main-bg);
   --bg-nav: linear-gradient(to right, var(--custom-main-bg), var(--custom-secondary-bg));
 
   /* Redefine the --bird variable */
-  --bird: var(--main-bird);
+
   --clip1: var(--path-value-1);
   --clip2: var(--path-value-2);
   --clip3: var(--path-value-3);
-
-  --bird: var(--main-bird)
+  --bird: var(--main-bird);
 }
-
 
 #dark::before {
   background: #2a2e35;
@@ -128,12 +115,7 @@ header {
   margin-bottom: 1em;
   padding-bottom: 2.5em;
   text-align: center;
-
-  /* The clip-path property lets you clip an element to a basic shape or to an SVG source. */
-  /* polygon() function */
   clip-path: polygon(var(--clip1) 0%, var(--clip2) 0%, var(--clip3) var(--clip3), 0% var(--clip3));
-
-
 }
 
 main {
@@ -210,7 +192,6 @@ img {
   height: auto;
 }
 
-/* Main Container */
 .container {
   display: flex;
   flex-direction: column;
@@ -236,16 +217,13 @@ img {
 }
 
 .subhead-1 {
-  background-image: url('https://static-assets.codecademy.com/Courses/Learn-CSS/Projects/bird2.jpg');
-  --bird: var(--night-bird);
-  background-image: var(--night-bird);
+  background-image: var(--bird);
 }
 
 .subhead-1:hover {
-  /* transition with filter  */
+  filter: hue-rotate(3.142rad);
   transition: filter 0.5s ease-in;
   cursor: pointer;
-  filter: hue-rotate(3.142);
 }
 
 .subhead-2 {
@@ -260,9 +238,7 @@ img {
   filter: blur(1.2px);
   transition: filter 0.5s ease-in;
   cursor: pointer;
-
 }
-
 
 .block-2 {
   background-image: url('https://static-assets.codecademy.com/Courses/Learn-CSS/Projects/bird5.jpg');
@@ -288,7 +264,6 @@ img {
   background-image: url('https://static-assets.codecademy.com/Courses/Learn-CSS/Projects/bird10.jpg');
 }
 
-/* The @supports specify declarations that depend on a browser's support for one or more specific CSS features. This is called a feature query. */
 
 @supports (display: grid) {
   @media screen and (min-width: 400px) {
