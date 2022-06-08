@@ -51,6 +51,7 @@
   --border-color: var(--accent-color);
   --bg-custom: var(--drop-down-custom);
   --bg-nav: linear-gradient(to bottom, var(--link-color), var(--secondary-black));
+  /* change the bird images based on the theme */
   --bird: var(--night-bird);
 }
 
@@ -63,11 +64,11 @@
   --bg-custom: var(--custom-main-bg);
   --bg-nav: linear-gradient(to right, var(--custom-main-bg), var(--custom-secondary-bg));
 
-  /* Redefine the --bird variable */
-
   --clip1: var(--path-value-1);
   --clip2: var(--path-value-2);
   --clip3: var(--path-value-3);
+
+  /* Redefine the --bird variable */
   --bird: var(--main-bird);
 }
 
@@ -115,6 +116,7 @@ header {
   margin-bottom: 1em;
   padding-bottom: 2.5em;
   text-align: center;
+  /* clip an element to a basic shape or to an SVG source.  */
   clip-path: polygon(var(--clip1) 0%, var(--clip2) 0%, var(--clip3) var(--clip3), 0% var(--clip3));
 }
 
@@ -221,6 +223,7 @@ img {
 }
 
 .subhead-1:hover {
+  /* hue-rotate(angle) */
   filter: hue-rotate(3.142rad);
   transition: filter 0.5s ease-in;
   cursor: pointer;
