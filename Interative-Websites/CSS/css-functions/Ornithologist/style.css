@@ -32,9 +32,8 @@
 
 
   /* Adding Interactions and Features */
-  --main-bird: url("images/hummingbird.jpg");
-  --night-bird: url("owl.jpeg");
-
+  --main-bird: url("images/hummingbird.jpeg");
+  --night-bird: url("images/owl.jpeg");
 
 }
 
@@ -74,13 +73,14 @@
   --bg-dropdown: var(--custom-drop);
   --bg-custoom: var(--custom-main-bg);
   --bg-nav: linear-gradient(to right, var(--custom-main-bg), var(--custom-secondary-bg));
+
   /* Redefine the --bird variable */
   --bird: var(--main-bird);
-
   --clip1: var(--path-value-1);
   --clip2: var(--path-value-2);
   --clip3: var(--path-value-3);
 
+  --bird: var(--main-bird)
 }
 
 
