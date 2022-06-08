@@ -87,7 +87,8 @@ body {
 
   /* saturate() function */
   filter: saturate(0.2);
-  /* moves an element from its initial position to another position */
+
+  /* The scale() method increases or decreases the size of an element. */
   transform: scale(1.4);
 }
 
