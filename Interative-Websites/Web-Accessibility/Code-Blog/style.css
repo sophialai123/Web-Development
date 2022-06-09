@@ -58,7 +58,7 @@ ul {
 
 .primary-text-color {
   /* Set color to a new value with at least 3:1 contrast ratio */
-  color: #CCCCCC;
+  color: #333333;
 }
 
 .secondary-text-color {
@@ -102,7 +102,7 @@ ul {
 .spotlight-list {
   display: flex;
   /* Change flex-direction to match HTML content order */
-  flex-direction: row-reverse;
+  flex-direction: row;
   margin: 0;
   padding: 0;
   width: 800px;
@@ -263,13 +263,15 @@ ul {
 
 .summary {
   /* Change font-size below to be between 18 to 20 pixels */
-  font-size: 12px;
+  font-size: 20px;
   /* Set line-height to 1.5 */
+  line-height: 1.5;
 
   /* Set letter-spacing to 1.2 */
+  letter-spacing: 1.2;
 
   /* Change text-align to left */
-  text-align: justify;
+  text-align: left;
 
   overflow: hidden;
 }
@@ -316,8 +318,11 @@ ul {
 
 a:hover {
   /* Set links to change color when they are hovered over */
+  color: #29D8DB;
+
 
   /* Set cursor to pointer */
+  cursor: pointer;
 
 }
 
@@ -332,11 +337,13 @@ nav select {
 input:focus {
   outline: none;
   /* Set solid border of size 1px and of a color of your choice */
+  border: 1px solid #414CE1;
 
 }
 
 .premium {
   /* Hide premium content */
+  display: none;
 
 }
 
@@ -400,4 +407,11 @@ input:focus {
     background-color: #FFF;
   }
 
+}
+
+/* print the pages */
+@media print {
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+  }
 }
