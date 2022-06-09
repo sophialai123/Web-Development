@@ -7,9 +7,11 @@
  - [Freecodecamp](https://www.freecodecamp.org/)
  - [Codecademy](https://www.codecademy.com/learn)
  - [Frontedmentor - Project Challengs](https://www.frontendmentor.io/)
+ - [DEV Community](https://dev.to/)
  - [Datacamp - Data science](https://www.datacamp.com/)
  - [Geeksforgeeks](https://www.geeksforgeeks.org/)
  - [Udemy - Online Course](https://www.udemy.com/)
+  
 
 
 ### HTML 
@@ -27,6 +29,7 @@
 - [Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
 - [colorhunt](https://colorhunt.co/)
 - [Media Queries](https://css-tricks.com/snippets/css/media-queries-for-standard-devices/)
+- [Css tricks](https://css-tricks.com/)
 
 ### JavaScript 
  - [Loops and iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
@@ -103,3 +106,8 @@
 - [Balsamiq](https://balsamiq.com/)
 - [Figma](https://www.figma.com)
 - [Sketch](https://www.sketch.com/)
+
+
+### Web Accessibility
+- [WebAIM-Contrast Checker](https://webaim.org/resources/contrastchecker/)
+- [Web Content Accessibility](https://www.w3.org/TR/WCAG20/)
