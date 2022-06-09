@@ -1,0 +1,293 @@
+<html>
+
+<head>
+  <link rel='stylesheet' href='styles.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
+  <meta content='width=device-width, initial-scale=1' name='viewport'>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class='header-content'>
+      <img src='https://static-assets.codecademy.com/Courses/Learn-CSS/Projects/code-logo.png' id='logo' />
+      <nav>
+        <ul class='nav-link-list'>
+          <li>
+            <a href='/home'>home</a>
+          </li>
+          <li>
+            <a href='/editors-choice'>editor's choice</a>
+          </li>
+          <li>
+            <a href='/most-popular'>most popular</a>
+          </li>
+          <li class='premium'>
+            <a href='/for-you'>for you</a>
+          </li>
+        </ul>
+
+        <select>
+          <option value='' selected='selected'>Navigation</option>
+          <option value='/'><a href='/home'>Home</a></option>
+          <option value='/editors-choice'><a href='/editors-choice'>Editor's Choice</a></option>
+          <option value='/most-popular'><a href='/most-popular'>Most Popular</a></option>
+          <option value='/for-you'><a href='/for-you'>For You</a></option>
+        </select>
+      </nav>
+      <!-- Hide the search icon below from screen readers -->
+      <span class='fas fa-search search-icon secondary-text-color'></span>
+      <div class='search-container'>
+        <input class='search-input' placeholder='Find a story...' />
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <div class='main'>
+    <section class='spotlight-container'>
+      <ul class='spotlight-list'>
+        <li class='spotlight-item'>
+          <div class='spotlight-item-inner'>
+            <a class='spotlight-image-link' href='#'>
+              <img
+                src='https://news.codecademy.com/content/images/size/w1600/2021/02/java-for-programmers-new-course-codecademy.png' />
+            </a>
+            <div class='post-info'>
+              <span class='post-tag'>learning to code</span>
+              <h2 class='post-title primary-text-color'>
+                <a>Introducing Java for Programmers</a>
+              </h2>
+              <div class='post-meta'>
+                <span class='post-author primary-text-color'>
+                  <a>Codecademy</a>
+                </span>
+                <span class='post-date secondary-text-color'>February 4, 2021</span>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class='spotlight-item-sm'>
+          <div class='content-item-image-container'>
+            <span class='post-tag'>learning to code</span>
+            <a class='content-item-image-link' href='#'>
+              <img
+                src='https://news.codecademy.com/content/images/size/w1600/2021/02/java-for-programmers-new-course-codecademy.png' />
+            </a>
+          </div>
+          <div class='content-item-info'>
+            <h2 class='primary-text-color'>
+              <a>Introducing Java for Programmers</a>
+            </h2>
+            <div class='post-meta'>
+              <span class='post-author primary-text-color'>
+                <a>Codecademy</a>
+              </span>
+              <span class='post-date secondary-text-color'>February 4, 2021</span>
+            </div>
+            <p class='summary primary-text-color'>Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been th…</p>
+            <a href='#'>
+              <button class='btn read-more'>Read More</button>
+            </a>
+          </div>
+        </li>
+        <li class='spotlight-item'>
+          <div class='spotlight-item-inner'>
+            <a class='spotlight-image-link' href='#'>
+              <img src='https://news.codecademy.com/content/images/size/w1600/2021/04/coding-mentor.png' />
+            </a>
+            <div class='post-info'>
+              <span class='post-tag'>learning to code</span>
+              <h2 class='post-title primary-text-color'>
+                <a>3 Ways a Coding Mentor Can Help You Learn</a>
+              </h2>
+              <div class='post-meta'>
+                <span class='post-author primary-text-color'>
+                  <a>Codecademy</a>
+                </span>
+                <span class='post-date secondary-text-color'>April 2, 2021</span>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class='spotlight-item-sm'>
+          <div class='content-item-image-container'>
+            <span class='post-tag'>learning to code</span>
+            <a class='content-item-image-link' href='#'>
+              <img src='https://news.codecademy.com/content/images/size/w1600/2021/04/coding-mentor.png' />
+            </a>
+          </div>
+          <div class='content-item-info'>
+            <h2 class='primary-text-color'>
+              <a>3 Ways a Coding Mentor Can Help You Learn</a>
+            </h2>
+            <div class='post-meta'>
+              <span class='post-author primary-text-color'>
+                <a>Codecademy</a>
+              </span>
+              <span class='post-date secondary-text-color'>April 2, 2021</span>
+            </div>
+            <p class='summary primary-text-color'>Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been th…</p>
+            <a href='#'>
+              <button class='btn read-more'>Read More</button>
+            </a>
+          </div>
+        </li>
+        <li class='spotlight-item'>
+          <div class='spotlight-item-inner'>
+            <a class='spotlight-image-link' href='#'>
+              <img
+                src='https://news.codecademy.com/content/images/size/w1600/2020/07/what-is-a-programming-language.png' />
+            </a>
+            <div class='post-info'>
+              <span class='post-tag'>learning to code</span>
+              <h2 class='post-title primary-text-color'>
+                <a>What is a Programming Language?</a>
+              </h2>
+              <div class='post-meta'>
+                <span class='post-author primary-text-color'>
+                  <a>Codecademy</a>
+                </span>
+                <span class='post-date secondary-text-color'>July 22, 2020</span>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class='spotlight-item-sm'>
+          <div class='content-item-image-container'>
+            <span class='post-tag'>learning to code</span>
+            <a class='content-item-image-link' href='#'>
+              <img
+                src='https://news.codecademy.com/content/images/size/w1600/2020/07/what-is-a-programming-language.png' />
+            </a>
+          </div>
+          <div class='content-item-info'>
+            <h2 class='primary-text-color'>
+              <a>What is a Programming Language?</a>
+            </h2>
+            <div class='post-meta'>
+              <span class='post-author primary-text-color'>
+                <a>Codecademy</a>
+              </span>
+              <span class='post-date secondary-text-color'>July 22, 2020</span>
+            </div>
+            <p class='summary primary-text-color'>Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been th…</p>
+            <a href='#'>
+              <button class='btn read-more'>Read More</button>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class='main-content'>
+      <ul class='content-list'>
+        <li class='content-list-item'>
+          <div class='content-item-image-container'>
+            <span class='post-tag'>learning to code</span>
+            <a class='content-item-image-link' href='#'>
+              <img src='https://news.codecademy.com/content/images/size/w1600/2021/04/build-ios-apps-swiftui.png' />
+            </a>
+          </div>
+          <div class='content-item-info'>
+            <h2 class='primary-text-color'>
+              <!-- Add <abbr> tag for Apps -->
+              <a>Introducing Build iOS Apps with SwiftUI</a>
+            </h2>
+            <div class='post-meta'>
+              <span class='post-author primary-text-color'>
+                <a>Codecademy</a>
+              </span>
+              <span class='post-date secondary-text-color'>July 22, 2020</span>
+            </div>
+            <p class='summary primary-text-color'>Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been th…</p>
+            <a href='#'>
+              <button class='btn read-more'>Read More</button>
+            </a>
+          </div>
+        </li>
+        <li class='content-list-item'>
+          <div class='content-item-image-container'>
+            <span class='post-tag'>learning to code</span>
+            <a class='content-item-image-link' href='#'>
+              <img
+                src='https://news.codecademy.com/content/images/size/w1600/2021/03/how-to-get-a-job-as-a-developer--h-.png' />
+            </a>
+          </div>
+          <div class='content-item-info'>
+            <h2 class='primary-text-color'>
+              <a>How to Get a Job as a Developer</a>
+            </h2>
+            <div class='post-meta'>
+              <span class='post-author primary-text-color'>
+                <a>Codecademy</a>
+              </span>
+              <span class='post-date secondary-text-color'>July 22, 2020</span>
+            </div>
+            <p class='summary primary-text-color'>Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been th…</p>
+            <a href='#'>
+              <button class='btn read-more'>Read More</button>
+            </a>
+          </div>
+        </li>
+        <li class='content-list-item'>
+          <div class='content-item-image-container'>
+            <span class='post-tag'>learning to code</span>
+            <a class='content-item-image-link' href='#'>
+              <img src='https://news.codecademy.com/content/images/size/w1600/2021/02/what-is-open-source.png' />
+            </a>
+          </div>
+          <div class='content-item-info'>
+            <h2 class='primary-text-color'>
+              <a>Understanding Open Source Software: Q & A</a>
+            </h2>
+            <div class='post-meta'>
+              <span class='post-author primary-text-color'>
+                <a>Codecademy</a>
+              </span>
+              <span class='post-date secondary-text-color'>July 22, 2020</span>
+            </div>
+            <p class='summary primary-text-color'>Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been th…</p>
+            <a href='#'>
+              <button class='btn read-more'>Read More</button>
+            </a>
+          </div>
+        </li>
+        <li class='content-list-item'>
+          <div class='content-item-image-container'>
+            <span class='post-tag'>learning to code</span>
+            <a class='content-item-image-link' href='#'>
+              <img src='https://news.codecademy.com/content/images/size/w1600/2020/12/CSS-interview-questions.png' />
+            </a>
+          </div>
+          <div class='content-item-info'>
+            <h2 class='primary-text-color'>
+              <!-- Add <abbr> tag for CSS -->
+              <a>7 Top CSS Interview Questions to Practice</a>
+            </h2>
+            <div class='post-meta'>
+              <span class='post-author primary-text-color'>
+                <a>Codecademy</a>
+              </span>
+              <span class='post-date secondary-text-color'>July 22, 2020</span>
+            </div>
+            <p class='summary primary-text-color'>Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been th…</p>
+            <a href='#'>
+              <button class='btn read-more'>Read More</button>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </div>
+</body>
+
+</html>
