@@ -66,7 +66,7 @@
 - [TOP 10 CODING CHALLENGE WEBSITES](https://www.analyticsinsight.net/sharpen-your-coding-skills-top-10-coding-challenge-websites/)
 - [Codewars](https://www.codewars.com/)
 - [Leetcode](https://leetcode.com/)
-- [HackeRank](https://www.hackerrank.com/challenges/challenges/problem)
+- [HackerRank](https://www.hackerrank.com/challenges/challenges/problem)
 
 
 ### Solution to Problems
