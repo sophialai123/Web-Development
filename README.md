@@ -111,3 +111,9 @@
 ### Web Accessibility
 - [WebAIM-Contrast Checker](https://webaim.org/resources/contrastchecker/)
 - [Web Content Accessibility](https://www.w3.org/TR/WCAG20/)
+
+### Free Web Hosting 
+- [Digital Ocean](https://www.digitalocean.com/)
+- [Heroku-fullstack](https://www.heroku.com/)
+- [Netlify](https://www.netlify.com/?utm_medium=paid_search&utm_source=google&utm_campaign=12755510784&utm_term=netlify)
+  
