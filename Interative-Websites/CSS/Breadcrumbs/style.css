@@ -1,0 +1,175 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: #1E1E24;
+  text-align: center;
+}
+
+.jumbotron {
+  background-image: url(https://images.unsplash.com/photo-1444882158336-bcfbd9298309?dpr=1&auto=format&crop=entropy&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb);
+  height: 200px;
+  background-position: bottom center;
+}
+
+h1 {
+  color: #ffffff;
+  font-family: 'Ruda', sans-serif;
+  font-size: 70px;
+  font-weight: 900;
+  margin: 0px;
+  padding-top: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: #ffffff;
+  font-family: 'Catamaran', sans-serif;
+  margin: 0px;
+  text-align: left;
+}
+
+h3 {
+  color: #D7263D;
+  font-family: 'Ruda', sans-serif;
+  font-size: 32px;
+  margin: 0px;
+  position: relative;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+p {
+  color: rgba(255, 255, 255, 0.75);
+  font-family: 'Pontano Sans', sans-serif;
+  margin: 0px;
+  text-align: left;
+}
+
+.hotel {
+  border: 1px solid #ffffff;
+  margin: 60px auto;
+  padding: 10px 0px 0px 0px;
+  width: 90%;
+}
+
+.hotel-img {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.hotel-description {
+  display: inline-block;
+  width: 70%;
+}
+
+.book {
+  margin-top: 30px;
+  width: 100%;
+}
+
+a {
+  background-color: #D7263D;
+  color: #ffffff;
+  display: block;
+  font-family: 'Pontano Sans', sans-serif;
+  font-size: 16px;
+  padding: 14px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+ul {
+  padding: 0px;
+  margin: 10px 0px;
+}
+
+li {
+  margin: 0px;
+  list-style: none;
+}
+
+.breadcrumb a {
+  background-color: inherit;
+  display: inline;
+}
+
+
+/* Breadcrumb Styles */
+.breadcrumb {
+  text-align: left;
+}
+
+
+.breadcrumb li {
+  display: inline;
+}
+
+/* .breadcrumb li+li::before {
+  content: ">";
+  color: #ffffff;
+} */
+
+/*Using the ::before and ::after pseudo-elements to add filled rectangles (with empty content) before and after each list item:s */
+
+
+.breadcrumb a {
+  color: #fff;
+  background: darkcyan;
+  text-decoration: none;
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin-right: 15px;
+  padding: 0 5px;
+}
+
+.breadcrumb li {
+  float: left;
+}
+
+
+/* ::before selector inserts content before a selected element. 
+:after inserts content after a specified element.
+must to have content:''.otherwise will not work */
+
+.breadcrumb a::before,
+.breadcrumb a::after {
+  content: "";
+  position: absolute;
+  border-color: darkcyan;
+  border-style: solid;
+  border-width: 15px 5px;
+}
+
+/* The total width of our pseudo-elements is 10px, */
+
+.breadcrumb a::before {
+  left: -10px;
+  border-left-color: transparent;
+}
+
+.breadcrumb a::after {
+  left: 100%;
+}
+
+.breadcrumb a::after {
+  left: 100%;
+  border-color: transparent;
+  border-left-color: darkcyan;
+}
+
+.breadcrumb a:hover {
+  background-color: blue;
+}
+
+.breadcrumb a:hover::before {
+  border-color: blue;
+  border-left-color: transparent;
+}
+
+.breadcrumb a:hover::after {
+  border-left-color: blue;
+}
