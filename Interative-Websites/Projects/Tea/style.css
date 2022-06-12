@@ -1,0 +1,206 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+
+body {
+  background-color: black;
+  font-family: Helvetica, sans-serif;
+  opacity: 0.9;
+  color: seashell;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.3rem;
+}
+
+
+li {
+  list-style: none;
+  font-size: 1.2rem;
+  color: seashell;
+}
+
+/* *************************** Navbar ***************************** */
+
+header {
+  height: 69px;
+
+}
+
+header nav {
+  height: 69px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid seashell;
+  position: fixed;
+
+}
+
+nav img {
+  margin: 10px;
+  height: auto;
+  width: 120px;
+}
+
+ul {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+
+ul li {
+
+  text-decoration: underline;
+}
+
+
+/* *************************** Mission ***************************** */
+
+
+#mission {
+  background-image: url(./images/img-mission-background.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 700px;
+  width: minmax(480px, 1200px);
+  margin: 0 30px;
+
+}
+
+#mission .mission-info {
+  width: 100%;
+  background-color: black;
+  border: 1px solid black;
+  padding: 20px;
+  position: absolute;
+  left: 0px;
+  top: 260px;
+}
+
+#mission h2,
+h4 {
+  text-align: center;
+  color: aliceblue;
+  padding: 10px;
+}
+
+/* *************************** Feature ***************************** */
+#feature h2 {
+  margin-top: 100px;
+}
+
+#feature h4 {
+  padding-bottom: 30px;
+}
+
+#feature img {
+  width: 300px;
+  height: 200px;
+
+}
+
+#feature .grid-container {
+  display: flex;
+  max-width: 1000px;
+  height: auto;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10px;
+  gap: 20px;
+  margin: 0 auto;
+}
+
+
+/* *************************** Location ***************************** */
+#location {
+  position: relative;
+  background-image: url(./images/img-locations-background.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  width: minmax(480px, 1200px);
+  margin: 0 30px;
+}
+
+#location h2 {
+  font-size: 2rem;
+  text-align: center;
+  padding: 60px 0 20px 0;
+
+}
+
+#location .location-info {
+
+  margin: 0 auto;
+  width: 1000px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+
+}
+
+#location .location-info-box {
+  background-color: black;
+  width: 300px;
+  opacity: 1;
+}
+
+#location .location-info-box p {
+  padding: 15px;
+  text-align: center;
+}
+
+/* 
+@media only screen and(min-width:480px) and (max-width:736px) {
+
+
+  #location .location-info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-height: 100px;
+    min-width: 25px;
+    gap: 10px;
+  }
+
+
+} */
+
+/* *************************** Footer ***************************** */
+footer {
+  height: 200px;
+  margin-top: 20px;
+}
+
+footer .footer-info h5,
+p {
+  text-align: center;
+  padding: 20px;
+  font-size: 1rem;
+}
+
+footer p {
+  margin-left: 20px;
+  text-align: left;
+}
