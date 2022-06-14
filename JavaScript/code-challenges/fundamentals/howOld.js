@@ -13,7 +13,28 @@ If the year is in the past but not before the person was born, you should return
 
 const howOld = (age, year) => {
 
+  //to get current year
+  const date = new Date()
+  let currentYear = date.getFullYear();
+
+  const yearDiff = year - currentYear;
+
+  console.log(yearDiff);
+  const newAge = age + yearDiff;
+  console.log(newAge);
+
+
+
+  //If the newAge is less than 0, this means the year provided was before the person was born. If the newAge is greater than their current age, this means the year passed in is in the future. Otherwise, we know the year provided was in the past but not before they were born.
+
+  if (newAge < 0) {
+    return `The year ${year} was ${-newAge} years before you were born.`
+  } else if (newAge > age) {
+    return `You will be ${newAge} in the year ${year}.`;
+  } else {
+    return `You were ${newAge} in the year ${year}.`;
+  }
 }
 
 
-console.log(howOld());
+console.log(howOld(33, 2012));

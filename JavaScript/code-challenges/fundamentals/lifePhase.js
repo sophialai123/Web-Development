@@ -10,24 +10,23 @@ If the number is less than 0 or greater than 140, the program should return 'Thi
 
 function lifePhase(age) {
 
-
   //does not work with switch statement because the value chanegs
-  // The switch normally needs a fixed condition/value
+  // The switch normally needs a fixed condition/value, not expression
 
   // switch (age) {
-  //   case age >= 0 && age <= 3:
+  //   case (age >= 0 && age <= 3):
   //     return "baby";
   //     break;
-  //   case age >= 4 && age <= 12:
+  //   case (age >= 4 && age <= 12):
   //     return "child";
   //     break;
-  //   case age >= 13 && age <= 19:
+  //   case (age >= 13 && age <= 19):
   //     return "teen";
   //     break;
-  //   case age >= 20 && age <= 64:
+  //   case (age >= 20 && age <= 64):
   //     return "adult";
   //     break;
-  //   case age >= 65 && age <= 140:
+  //   case (age >= 65 && age <= 140):
   //     return "senior citizen";
   //     break;
   //   default:
@@ -48,7 +47,7 @@ function lifePhase(age) {
   } else if (age >= 65 && age <= 140) {
     return "senior citizen";
   } else {
-    return "This is not a valid age"
+    return "This is not a valid age";
   }
 
 }
@@ -56,4 +55,4 @@ function lifePhase(age) {
 
 
 // Uncomment the line below when you're ready to try out your function
-console.log(lifePhase(140)) //should print 'child'
+console.log(lifePhase(10)) //should print 'child'
