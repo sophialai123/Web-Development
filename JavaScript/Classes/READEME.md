@@ -163,3 +163,34 @@ class Cat {
 - The diagram shows the relationships we want to create between the Animal, Cat, and Dog classes.
   
   ![](parentClass.png)
+
+---
+
+### Inheritance III
+- Now that we have these shared properties and methods in the parent Animal class, we can extend them to the subclass, Cat.
+
+```
+class Cat extends Animal {
+  constructor(name, usesLitter) {
+    super(name);
+    this._usesLitter = usesLitter;
+  }
+}
+
+```
+  - In the example above, we create a new class named Cat that extends the Animal class. Let’s pay special attention to our new keywords: extends and super.
+  
+  - The extends keyword makes the methods of the animal class available inside the cat class.
+
+  - The constructor, called when you create a new Cat object, accepts two arguments, name and usesLitter.
+
+  - The super keyword calls the constructor of the parent class. In this case, super(name) passes the name argument of the Cat class to the constructor of the Animal class. When the Animal constructor runs, it sets this._name = name; for new Cat instances.
+
+  - _usesLitter is a new property that is unique to the Cat class, so we set it in the Cat constructor.
+
+  - Notice, we call super on the first line of our constructor(), then set the usesLitter property on the second line. In a constructor(), you must always call the super method before you can use the this keyword — if you do not, JavaScript will throw a reference error. To avoid reference errors, it is best practice to call super on the first line of subclass constructors.
+  
+  
+
+
+
