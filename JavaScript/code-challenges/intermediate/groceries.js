@@ -13,48 +13,25 @@ groceries( [{item: 'Cheese Balls'}] );
 
 const groceries = arr => {
 
-  /* arr.forEach((value, index) => {
+  let newArr = [];
+  //return all the item string
+  arr.forEach((value) => newArr.push(value.item));
 
-    //find the last item in the array
-    const lastItem = arr[arr.length - 1].item
-    //console.log(lastItem);
+  //the last two items
+  let lastTwoItems = newArr.slice(-2).join(" and ");
+  if (newArr.length === 2) {
+    return lastTwoItems
+  } else if (newArr.length > 2) {
+    //remove all the items before the last two items 
+    newArr.splice((newArr.length - 2, (newArr.length - 2)));
+    newArr.push(lastTwoItems);
+    return newArr.join(" , ");
+  }
+  return newArr.join();
+};
 
-    // find the second last item in the arrar
-    const secondLastItem = arr[arr.length - 2].item
-    //console.log(secondLastItem)
-
-    //console.log(value.item + );
-    //console.log(`${value.item}`)
-    if (value.item === secondLastItem) {
-      console.log(value.item + "and" + ",")
-    } else {
-      console.log(value.item + ",");
-
-    }
-
-  }) */
-
-
-  arr.forEach(element => {
-
-    const Allitems = element.item
-
-
-    //String#concat()
-    const stringCancat = Allitems.concat(',')
-    console.log(stringCancat)
-
-
-    //console.log(Allitems.split(","))
-
-  });
-
-
-
-
-
-
-}
-
-
-groceries([{ item: 'Carrots' }, { item: 'Hummus' }, { item: 'Pesto' }, { item: 'Rigatoni' }]);
+//Test all the code
+console.log(groceries([{ item: 'Breads' }, { item: 'Butters' }, { item: 'Carrots' }, { item: 'Hummus' }, { item: 'Pestos' }, { item: 'Breads' }]));
+console.log(groceries([{ item: 'Bread' }, { item: 'Butter' }]));
+console.log(groceries([{ item: 'Carrots' }, { item: 'Hummus' }, { item: 'Pesto' }, { item: 'Rigatoni' }]));
+console.log(groceries([{ item: 'Cheese Balls' }]))
