@@ -1,4 +1,4 @@
-# The DOM as a Tree Structure
+# The [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) as a Tree Structure
 - In the DOM tree, the top-most node is called the root node, and it represents the HTML document. The descendants of the root node are the HTML tags in the document, starting with the <html> tag followed by the <head> and <body> tags and so on.
   
 - The diagram models the HTML document and labels the root element, which is the document.
@@ -31,3 +31,136 @@
   ![](DomImages/dom-attributes.png)
 
 --- 
+
+## The Document Keyword
+- Here is a [comprehensive list](https://developer.mozilla.org/en-US/docs/Web/API/Document) of all document properties.
+---
+## Tweak an Element
+- The .innerHTML property allows you to access and set the contents of an element.
+  ```
+  document.body.innerHTML = 'The cat loves the dog.';
+  ```
+  
+- The .innerHTML property can also add any valid HTML elements.
+  ```
+  document.body.innerHTML = '<h2>This is a heading</h2>';
+  ```
+---
+## Select and Modify Elements
+- The .querySelector() method allows us to specify a CSS selector as a string and returns the first element that matches that selector.
+  ``` 
+   document.querySelector('p');
+  ```
+  
+- The .getElementById() method allow us to access an element directly by its id.
+  ```
+   document.getElementById('bio').innerHTML = 'The description'; 
+  ```
+
+- There are also the .getElementsByClassName() and .getElementsByTagName() methods which return an array of elements, instead of just one element.
+  
+  ```
+    // Set first element of .student class as 'Not yet registered'
+    document.getElementsByClassName('student')[0].innerHTML = 'Not yet registered';
+ 
+    // Set second <li> tag as 'Cedric Diggory'
+    document.getElementsByTagName('li')[1].innerHTML = 'Cedric Diggory`;
+  ```
+---
+## [Style an Element](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference)
+- The .style property of a DOM element provides access to the inline style of that HTML tag.
+
+- The syntax follows an element.style.property format, with the property representing a CSS property.
+  ```
+  //selects the first element with a class of blue and assigns blue as the background-color:
+
+   let blueElement = document.querySelector('.blue');
+   blueElement.style.backgroundColor = 'blue';
+  ``` 
+- The DOM .style property does not implement a hyphen such as background-color, but rather camel case notation, backgroundColor.
+  
+- The following chaining syntax would also work:
+   ```
+    document.querySelector('.blue').style.fontFamily = 'Roboto';
+   ```
+
+---
+## Traversing the DOM
+- Each element has a .parentNode and .children property. The [.parentNode property](https://developer.mozilla.org/en-US/docs/Web/API/Node/parentNode) returns the parent of the specified element in the DOM hierarchy. Note that the document element is the root node so its .parentNode property will return null.
+  
+- The .children property returns an array of the specified element’s children. If the element does not have any children, it will return null.
+  
+```
+<ul id='groceries'>
+  <li id='must-have'>Toilet Paper</li>
+  <li>Apples</li>
+  <li>Chocolate</li>
+  <li>Dumplings</li>
+</ul>
+
+
+let parentElement = document.getElementById('must-have').parentNode; // returns <ul> element
+let childElements = document.getElementById('groceries').children; // returns an array of <li> elements
+```
+--- 
+
+## [Create and Insert Elements](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement) 
+- The .createElement() method creates a new element based on the specified tag name passed into it as an argument. However, it does not append it to the document. It creates an empty element with no inner HTML.
+  ```
+  //the .createElement() method takes 'p' as its argument which creates an empty <p> element and stores it as the paragraph variable
+
+   let paragraph = document.createElement('p');
+  ```
+- We can assign values to the properties of the newly created element like how we’ve done previously with existing elements.
+  ```
+    // we use the .id property to assign 'info' as ID and the .innerHTML property to set 'The text inside the paragraph' as the content of the <p> element.
+
+    paragraph.id = 'info'; 
+    paragraph.innerHTML = 'The text inside the paragraph';
+  ```
+- The .appendChild() method will add a child element as the parent element’s last child node. The following code appends the "p" element stored in the paragraph variable to the document body.
+  ```
+   document.body.appendChild(paragraph);
+  ```
+---
+## Remove an Element
+- The .removeChild() method removes a specified child from a parent.
+  ```
+   //the .querySelector() method returns the first paragraph in the document. 
+    
+   let paragraph = document.querySelector('p');
+
+   // the paragraph element is passed as an argument of the .removeChild() method chained to the parent of the paragraph—document.body. This removes the first paragraph from the document body. 
+
+   document.body.removeChild(paragraph);
+  ```
+ - If you want to hide an element rather than completely deleting it, the [.hidden property](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hidden) allows you to hide it by setting the property as true or false:
+   ```
+    document.getElementById('sign').hidden = true;
+   ```
+---
+## Add Click Interactivity
+-  [Events](https://developer.mozilla.org/en-US/docs/Web/Events) can include anything from a click to a user mousing over an element. We will learn more about events in the upcoming DOM Events with JavaScript lesson.
+
+- The .onclick property allows you to assign a function to run on when a click event happens on an element:
+  ```
+    let element = document.querySelector('button');
+ 
+    element.onclick = function() { 
+    element.style.backgroundColor = 'blue' 
+    };
+  ``` 
+- You can also assign the .onclick property to a function by name:
+  ```
+   //when the <button> element detects a click event, the backgroundColor will change to 'blue'.
+   
+   let element = document.querySelector('button');
+ 
+   function turnBlue() {
+   element.style.backgroundColor = 'blue';
+   }
+ 
+   element.onclick = turnBlue;
+
+  ```
+
