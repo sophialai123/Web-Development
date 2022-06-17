@@ -28,6 +28,7 @@ const groceries = arr => {
     return newArr.join(" , ");
   }
   return newArr.join();
+
 };
 
 //Test all the code
