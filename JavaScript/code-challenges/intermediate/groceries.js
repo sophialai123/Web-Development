@@ -31,8 +31,28 @@ const groceries = arr => {
 
 };
 
+
+
+//Another solution:
+const grocerie = list => {
+  let listString = ''
+
+  for (let i = 0; i < list.length; i++) {
+    listString += list[i].item;
+    //console.log(listString)
+    if (i < list.length - 2) {
+      listString += ', ';
+    } else if (i == list.length - 2) {
+      listString += ' and ';
+    }
+  }
+  return listString;
+}
+
+
 //Test all the code
-console.log(groceries([{ item: 'Breads' }, { item: 'Butters' }, { item: 'Carrots' }, { item: 'Hummus' }, { item: 'Pestos' }, { item: 'Breads' }]));
-console.log(groceries([{ item: 'Bread' }, { item: 'Butter' }]));
-console.log(groceries([{ item: 'Carrots' }, { item: 'Hummus' }, { item: 'Pesto' }, { item: 'Rigatoni' }]));
-console.log(groceries([{ item: 'Cheese Balls' }]))
+console.log(grocerie([{ item: 'Breads' }, { item: 'Butters' }, { item: 'Carrots' }, { item: 'Hummus' }, { item: 'Pestos' }, { item: 'Breads' }]));
+console.log(grocerie([{ item: 'Bread' }, { item: 'Butter' }]));
+// console.log(groceries([{ item: 'Carrots' }, { item: 'Hummus' }, { item: 'Pesto' }, { item: 'Rigatoni' }]));
+// console.log(groceries([{ item: 'Cheese Balls' }]));
+// console.log(groceries([{ item: 'Lettuce' }, { item: 'Onions' }, { item: 'Tomatoes' }]));
