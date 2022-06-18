@@ -20,7 +20,8 @@ let doorImage3 = document.getElementById('door3');
 
 /* Step 2:
 We also need to access the orange div that says “Good luck!” located under the doors on the webpage. 
-Below the variables containing the door images, create a variable called startButton and set it to the HTML element with the id of start.We will be manipulating this div in a future task to display the game result. */
+Below the variables containing the door images, create a variable called startButton and set it to the HTML element with the id of start.
+We will be manipulating this div in a future task to display the game result. */
 
 let startButton = document.getElementById('start')
 
@@ -56,7 +57,9 @@ const isBot = door => door === botDoorPath ? true : false;
  Create a function called gameOver that takes status as its parameter. 
 
 Inside the gameOver() function, write a conditional statement that checks if status is equal to 'win'.
-If the conditional statement evaluates to a truthy value, set the content of the startButton element to 'You win! Play again?'. If the condition is falsy, set it to 'Game over! Play again?'
+If the conditional statement evaluates to a truthy value,
+set the content of the startButton element to 'You win! Play again?'.
+If the condition is falsy, set it to 'Game over! Play again?'
  
  
  */
@@ -69,8 +72,9 @@ const gameOver = status => {
 /* Step 6:
 Using the three functions we’ve created so far, we will write the logic for progressing the game.
 
-Create a function called playDoor that takes door as its parameter. Inside the function, decrement numClosedDoors by one. This will decrease the value of the numClosedDoors variable by one every
- time a door is opened. */
+Create a function called playDoor that takes door as its parameter. Inside the function, decrement numClosedDoors by one. 
+This will decrease the value of the numClosedDoors variable by one every
+time a door is opened. */
 
 const playDoor = door => {
   numClosedDoors--;
