@@ -11,70 +11,45 @@ let openDoor2;
 let openDoor3;
 let currentlyPlaying = true;
 
-/* Step 1: 
-Let’s start by accessing the elements of the door images. At the top of script.js,
-create a variable called doorImage1 and set it to the HTML element with the id of door1 . */
+/* Step 1: Create varaibles for the doorImages */
 let doorImage1 = document.getElementById('door1');
 let doorImage2 = document.getElementById('door2');
 let doorImage3 = document.getElementById('door3');
 
-/* Step 2:
-We also need to access the orange div that says “Good luck!” located under the doors on the webpage. 
-Below the variables containing the door images, create a variable called startButton and set it to the HTML element with the id of start.
-We will be manipulating this div in a future task to display the game result. */
-
-let startButton = document.getElementById('start')
-
-// Define game logic to check doors, progress game, end game, and choose a random chore door
+/* Step 2: Create button varaible to display game result:
+Below the variables containing the door images. */
+let startButton = document.getElementById('start');
 
 
-/* Step 3: Checking Doors
-First, we will create a function to check if the door that the player clicked on is closed.
-This is to make sure that clicking on already opened doors will not affect the progress of the game.
-
-
-Inside the isClicked() function, create a conditional that checks if the src property of door is equal 
-to closedDoorPath. If the condition is truthy, return true. Otherwise, return false
-
-
+/* Step 3: Checking Doors if the door that the player clicked on is closed.
+This is to make sure that clicking on already opened doors 
+will not affect the progress of the game.
 */
-
-
 const isClicked = door => door.src === closedDoorPath ? true : false;
 
 
-
-/*  Step 4:
-Create a function called isBot that takes door as its parameter. Inside the function, 
-create a conditional statement that checks if the src property of door is equal to botDoorPath. 
-If the conditional is truthy, return true. */
-
-const isBot = door => door === botDoorPath ? true : false;
+/*  Step 4:Checking if the src property of door is equal to botDoorPath.*/
+const isBot = door => door.src === botDoorPath ? true : false;
 
 
 /*Step 5: Writing Play and Game Over Logic
  Create a function to display a game over message depending on whether the player has won or lost. 
- Create a function called gameOver that takes status as its parameter. 
-
-Inside the gameOver() function, write a conditional statement that checks if status is equal to 'win'.
-If the conditional statement evaluates to a truthy value,
-set the content of the startButton element to 'You win! Play again?'.
-If the condition is falsy, set it to 'Game over! Play again?'
- 
- 
- */
+*/
 const gameOver = status => {
 
   status === "win" ? startButton.innerHTML = "Yon win! Play again?" : startButton.innerHTML = "Game over! Play again?";
+
+  //restart the button to a new game;
   currentlyPlaying = false;
 }
 
 /* Step 6:
-Using the three functions we’ve created so far, we will write the logic for progressing the game.
-
-Create a function called playDoor that takes door as its parameter. Inside the function, decrement numClosedDoors by one. 
+Create a function called playDoor that takes door as its parameter. 
+Inside the function, decrement numClosedDoors by one. 
 This will decrease the value of the numClosedDoors variable by one every
-time a door is opened. */
+time a door is opened.
+calling the gameover function with status === " win";
+Calling isBot with the argument with door returns true */
 
 const playDoor = door => {
   numClosedDoors--;
@@ -82,18 +57,34 @@ const playDoor = door => {
     return gameOver("win")
   } else if (isBot(door) === true) {
     return gameOver();
-
   }
-
 }
 
 /* Step 7: Choosing a Random Chore Door 
-What good is this game if you know where the ChoreBot is always hiding?
-Create a function called randomChoreDoorGenerator. Inside the function, 
-create a variable called choreDoor, and set it to a random integer between 0 and numClosedDoors.
 We will use this function to randomize which door ChoreBot will hide behind.
-
+First, create an if conditional to check if choreDoor equals 0. 
+If the condition is true, set openDoor1 to botDoorPath 
+(the ChoreBot will hide in the first door!), 
+openDoor2 to beachDoorPath, and openDoor3 to spaceDoorPath.
 */
+
+const randomChoreDoorGenerator = () => {
+  //set it to a random integer between 0 and numClosedDoors
+  let choreDoor = Math.floor(Math.random() * numClosedDoors)
+  if (choreDoor === 0) {
+    openDoor1 = botDoorPath;
+    openDoor2 = beachDoorPath;
+    openDoor3 = spaceDoorPath;
+  } else if (choreDoor === 1) {
+    openDoor1 = beachDoorPath;
+    openDoor2 = botDoorPath;
+    openDoor3 = spaceDoorPath;
+  } else {
+    openDoor1 = beachDoorPath;
+    openDoor2 = spaceDoorPath;
+    openDoor3 = botDoorPath;
+  }
+}
 
 doorImage1.onclick = () => {
   if (currentlyPlaying && isClicked(doorImage1)) {
@@ -122,6 +113,29 @@ startButton.onclick = () => {
   }
 }
 
-// Start a game round
+/* Step 8: Starting the Game
+We’ve got some more variables to reset to ensure that players can start with a fresh slate.
+Set numClosedDoors back to 3, currentlyPlaying to true, and the content of startButton element 
+to 'Good Luck!'.*/
 
+const startRound = () => {
 
+  //set the src properties of doorImages are closed at the start of the game.
+  doorImage1.src = closedDoorPath;
+  doorImage2.src = closedDoorPath;
+  doorImage3.src = closedDoorPath
+
+  //reset to ensure that players can start with a fresh slate
+  numClosedDoors = 3;
+  currentlyPlaying = true;
+
+  //reset the content of startButton element to 'Good Luck!'
+  startButton.innerHTML = "Good Luck!";
+
+  //Call the randomChoreDoorGenerator() function
+  randomChoreDoorGenerator();
+
+}
+
+//get the game started—call the startRound()
+startRound()

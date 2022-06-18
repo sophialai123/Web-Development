@@ -62,3 +62,15 @@ body {
   margin-bottom: 9px;
   cursor: pointer;
 }
+
+#steak {
+  text-align: center;
+}
+
+
+#steak p {
+  color: white;
+  display: inline-block;
+  padding-right: 20px;
+
+}
