@@ -43,3 +43,34 @@ const findIndex = (n: string[]): boolean[] => {
 };
 
 console.log(findIndex(N)); */
+
+let N = ['abba', 'aabbb', 'aaa', 'baab', 'ba', 'bb', 'aab', 'accc', 'abba']
+
+function solution(S) {
+  let regex = /^a*b*$/g;
+
+  for (let i = 0; i <= S.length; i++) {
+    console.log(S.length)
+
+    if (S[i].match(regex) != null) {
+      console.log(S[i])
+      return true;
+    } else {
+      return false;
+    }
+  }
+  return false;
+
+}
+
+// console.log(solution("abba"))
+// console.log(solution("bba"))
+// console.log(solution("aaaaa"))
+// console.log(solution("bbaaa"))
+// console.log(solution("bbbbbb"))
+// console.log(solution("aaabbb"))
+console.log(solution(N))
+
+
+
+///S.match(regex) != null ? true : false

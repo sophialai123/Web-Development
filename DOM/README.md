@@ -163,4 +163,88 @@ let childElements = document.getElementById('groceries').children; // returns an
    element.onclick = turnBlue;
 
   ```
+---
+# DOM Event Handler Registration
+- Using the .addEventListener() method, we can have a DOM element listen for a specific event and execute a block of code when the event is detected. 
+  
+- The DOM element that listens for an event is called the event target and the block of code that runs when the event happens is called the event handler.
 
+```
+ let eventTarget = document.getElementById('targetElement');
+ 
+  eventTarget.addEventListener('click', function() {
+  // this block of code will run when click event happens on eventTarget element
+  });
+
+
+  function eventHandlerFunction() {
+  // this block of code will run  when click event happens
+  }
+ 
+  eventTarget.addEventListener('click', eventHandlerFunction);
+```
+- We used the .addEventListener() method on the eventTarget DOM element.
+
+- The .addEventListener() method takes two arguments: an event name in string format and an event handler function.
+  
+- We used the 'click' event, which fires when the user clicks on eventTarget.
+
+- The code block in the event handler function will execute when the 'click' event is detected.
+
+- The named function eventHandlerFunction is passed as the second argument of the .addEventListener() method instead of defining an anonymous function within the method!
+---
+
+## Adding Event Handlers
+- Event Handlers can also be registered by setting an .onevent property on a DOM element (event target). 
+- we give the DOM element eventTarget the [.onclick property](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick) and set its value as the event handler function eventHandlerFunction.
+  
+```
+  eventTarget.onclick = eventHandlerFunction;
+```
+- This .onevent property and .addEventListener() will both register event listeners.
+   - With .onevent, it allows for one event handler function to be attached to the event target.
+   - With the .addEventListener() method , we can add multiple event handler functions. 
+  
+---
+## Removing Event Handlers
+- The .removeEventListener() method is used to reverse the .addEventListener() method.
+- This method stops the event target from “listening” for an event to fire when it no longer needs to.
+- The .removeEventListener() also takes two arguments:
+  1. The event type as a string
+  2. The event handler function
+
+ ```
+  eventTarget.removeEventListener('click',  eventHandlerFunction);
+ ```
+- Because there can be multiple event handler functions associated with a particular event, .removeEventListener() needs both the exact event type name and the name of the event handler you want to remove.
+- If .addEventListener() was provided an anonymous function, then that event listener cannot be removed.
+  
+---
+## [Event Object Properties](https://developer.mozilla.org/en-US/docs/Web/API/Event)
+- JavaScript stores events as Event objects with their related data and functionalities as properties and methods.
+- When an event is triggered, the event object can be passed as an argument to the event handler function.
+```
+  function eventHandlerFunction(event){
+   console.log(event.timeStamp);
+   }
+ 
+   eventTarget.addEventListener('click',eventHandlerFunction);
+```
+- There are pre-determined properties associated with event objects. You can call these properties to see information about the event, for example:
+  - The [.target property](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) to reference the element that the event is registered to.
+  - The [.type property](https://developer.mozilla.org/en-US/docs/Web/API/Event/type) to access the name of the event.
+  - The [.timeStamp property](https://developer.mozilla.org/en-US/docs/Web/API/Event/timeStamp) to access the number of milliseconds that passed since the document loaded and the event was triggered.
+  
+---
+## Event Types
+- Browsers can fire many other events without a user — you can check out a list of events on the [MDN Events Reference](https://developer.mozilla.org/en-US/docs/Web/Events) page.
+
+- Many events need user interaction with the DOM to fire. One user interaction event you’ve become familiar with is the click event.
+  
+- [The onwheel event handler](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onwheel) that fires when you rotate the mouse wheel or slide down on the mousepad.
+---
+## Mouse Events
+- The mousedown event is fired when the user presses a mouse button down.
+- The mouseup event is fired when the user releases the mouse button.
+- The mouseover event is fired when the mouse enters the content of an element.
+- The mouseout event is fired when the mouse leaves an element.
