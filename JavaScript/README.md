@@ -1,7 +1,7 @@
 ## Pass-By Value vs. Pass-By Reference
 
 ![](value-refrence.png)
-
+### Pass By Value
 - The difference between pass-by-reference and pass-by-value is, pass-by-value creates a new space in memory and **makes a copy of a value**, whereas pass-by-reference does not. 
   
 - **Pass By Value:** In Pass by value, function is called by directly passing the value of the variable as an argument. So any changes made inside the function does not affect the original value.
@@ -35,6 +35,7 @@ After calling Pass by value Function -> a =1 b = 2
 
 ```
 --- 
+### Pass By Reference
 - Instead of making a copy, pass-by-reference does exactly what it sounds like; a value **stored in memory gets referenced**.
 
 - **Pass by Reference**: In Pass by Reference, Function is called by directly passing the reference/address of the variable as an argument. So **changing the value inside the function also change the original value.** In JavaScript array and Object follows pass by reference property.
