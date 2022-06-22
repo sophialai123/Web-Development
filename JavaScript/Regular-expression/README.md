@@ -33,7 +33,8 @@
 - These are called negated character sets. Thus the regex [^cat] will match any character that is not c, a, or t, and would completely match each character d, o or g.
 
 - Example:
-![](images/Charater-set.png) 
+
+  ![](images/Charater-set.png) 
 
 ---
 ### Wild for Wildcards
@@ -50,7 +51,8 @@
 - The regex Howler monkeys are really lazy\. will completely match the text Howler monkeys are really lazy..
   
 - Example:
-![](images/wildcards.png)
+  
+  ![](images/wildcards.png)
 
 ---
 ### Ranges
@@ -69,7 +71,9 @@
 - Remember, within any character set [] we only match one character.
   
 - Example:
+  
   ![](images/range.png)
+  
 ---
 ### Shorthand Character Classes
 1. **Shorthand character classes** that represent common ranges, and they make writing regular expressions much simpler. These shorthand classes include:
@@ -134,7 +138,7 @@
   
 - Another useful quantifier is the Kleene plus, denoted by the **plus +**, which matches the preceding character 1 or more times.
   
-- **The regex meo+w **will match the characters me, followed by 1 or more os, followed by a w. Thus the regex will match meow, meooow, and meoooooooooooow, but not match mew.
+- **The regex meo+w** will match the characters me, followed by 1 or more os, followed by a w. Thus the regex will match meow, meooow, and meoooooooooooow, but not match mew.
   
 - Like all the other metacharacters, in order to match the symbols * and +, you need to use the escape character in your regex. The regex My cat is a \* will completely match the text My cat is a *.
   
