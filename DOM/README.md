@@ -274,3 +274,18 @@ let childElements = document.getElementById('groceries').children; // returns an
 - The keypress event is fired when a user presses a key down and releases it. This is different from using keydown and keyup events together, because those are two complete events and keypress is one complete event.
   
 - Keyboard events have unique properties assigned to their event objects like the .key property that stores the values of the key pressed by the user. You can program the event handler function to react to a specific key, or react to any interaction with the keyboard.
+---
+## **Review**
+- You can register events to DOM elements using the addEventListener() method.
+  
+- The addEventListener() method takes two arguments: an event type and an event handler function.
+  
+- When an event is triggered on the event target, the registered event handler function executes.
+  
+- Event handler functions can also be registered as values of onevent properties of their event target.
+  
+- Event object properties like .target, .type, and .timeStamp are used to provide information about the event.
+
+- The addEventListener() method can be used to add multiple event handler functions to a single event.
+  
+- The removeEventListener() method stops specific event handlers from “listening” for specific events firing.

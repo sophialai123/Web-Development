@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id='container'>
+    <h1>Ball Bounce</h1>
+    <p>Let's dribble the ball on the platform using any key on your keyboard. Hold a key down to lift the ball, then
+      release the key to drop the ball.</p>
+    <!--<button id='button'>Reset</button>-->
+    <div id='float-circle'></div>
+    <div id='platform'></div>
+    <div id='floor'></div>
+  </div>
+
+  <script>
+    let ball = document.getElementById('float-circle');
+
+    // make a function named up() that will raise 
+    //the .bottom position of the ball to '350px'.
+    function up() {
+      ball.style.bottom = "350px";
+
+    }
+
+    //lower the .bottom position of the ball to '50px'.
+    function down() {
+      ball.style.bottom = "50px";
+    }
+
+
+    //Create an event handler property that runs the up() function
+    // when a keydown event fires on the document object, 
+    document.addEventListener("keydown", up)
+
+    //Create an event handler property that runs the down() function 
+    //when a keyup event fires on the document.
+    document.addEventListener("keyup", down)
+
+  </script>
+
+</body>
+
+</html>
