@@ -34,6 +34,7 @@
 
 ## The Document Keyword
 - Here is a [comprehensive list](https://developer.mozilla.org/en-US/docs/Web/API/Document) of all document properties.
+  
 ---
 ## Tweak an Element
 - The .innerHTML property allows you to access and set the contents of an element.
@@ -71,12 +72,14 @@
 - The .style property of a DOM element provides access to the inline style of that HTML tag.
 
 - The syntax follows an element.style.property format, with the property representing a CSS property.
+  
   ```
   //selects the first element with a class of blue and assigns blue as the background-color:
 
    let blueElement = document.querySelector('.blue');
    blueElement.style.backgroundColor = 'blue';
   ``` 
+
 - The DOM .style property does not implement a hyphen such as background-color, but rather camel case notation, backgroundColor.
   
 - The following chaining syntax would also work:
@@ -112,12 +115,14 @@ let childElements = document.getElementById('groceries').children; // returns an
    let paragraph = document.createElement('p');
   ```
 - We can assign values to the properties of the newly created element like how we’ve done previously with existing elements.
+  
   ```
     // we use the .id property to assign 'info' as ID and the .innerHTML property to set 'The text inside the paragraph' as the content of the <p> element.
 
     paragraph.id = 'info'; 
     paragraph.innerHTML = 'The text inside the paragraph';
   ```
+
 - The .appendChild() method will add a child element as the parent element’s last child node. The following code appends the "p" element stored in the paragraph variable to the document body.
   ```
    document.body.appendChild(paragraph);
@@ -125,6 +130,7 @@ let childElements = document.getElementById('groceries').children; // returns an
 ---
 ## Remove an Element
 - The .removeChild() method removes a specified child from a parent.
+  
   ```
    //the .querySelector() method returns the first paragraph in the document. 
     
@@ -196,11 +202,13 @@ let childElements = document.getElementById('groceries').children; // returns an
 
 ## Adding Event Handlers
 - Event Handlers can also be registered by setting an .onevent property on a DOM element (event target). 
+  
 - we give the DOM element eventTarget the [.onclick property](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick) and set its value as the event handler function eventHandlerFunction.
   
 ```
   eventTarget.onclick = eventHandlerFunction;
 ```
+
 - This .onevent property and .addEventListener() will both register event listeners.
    - With .onevent, it allows for one event handler function to be attached to the event target.
    - With the .addEventListener() method , we can add multiple event handler functions. 
@@ -209,19 +217,23 @@ let childElements = document.getElementById('groceries').children; // returns an
 ## Removing Event Handlers
 - The .removeEventListener() method is used to reverse the .addEventListener() method.
 - This method stops the event target from “listening” for an event to fire when it no longer needs to.
+  
 - The .removeEventListener() also takes two arguments:
   1. The event type as a string
+   
   2. The event handler function
 
  ```
   eventTarget.removeEventListener('click',  eventHandlerFunction);
  ```
 - Because there can be multiple event handler functions associated with a particular event, .removeEventListener() needs both the exact event type name and the name of the event handler you want to remove.
+  
 - If .addEventListener() was provided an anonymous function, then that event listener cannot be removed.
   
 ---
 ## [Event Object Properties](https://developer.mozilla.org/en-US/docs/Web/API/Event)
 - JavaScript stores events as Event objects with their related data and functionalities as properties and methods.
+  
 - When an event is triggered, the event object can be passed as an argument to the event handler function.
 ```
   function eventHandlerFunction(event){
@@ -232,7 +244,9 @@ let childElements = document.getElementById('groceries').children; // returns an
 ```
 - There are pre-determined properties associated with event objects. You can call these properties to see information about the event, for example:
   - The [.target property](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) to reference the element that the event is registered to.
+  
   - The [.type property](https://developer.mozilla.org/en-US/docs/Web/API/Event/type) to access the name of the event.
+  
   - The [.timeStamp property](https://developer.mozilla.org/en-US/docs/Web/API/Event/timeStamp) to access the number of milliseconds that passed since the document loaded and the event was triggered.
   
 ---
@@ -245,6 +259,18 @@ let childElements = document.getElementById('groceries').children; // returns an
 ---
 ## Mouse Events
 - The mousedown event is fired when the user presses a mouse button down.
+  
 - The mouseup event is fired when the user releases the mouse button.
+  
 - The mouseover event is fired when the mouse enters the content of an element.
+  
 - The mouseout event is fired when the mouse leaves an element.
+---
+## Keyboard Events
+- The keydown event is fired while a user presses a key down.
+  
+- The keyup event is fired while a user releases a key.
+  
+- The keypress event is fired when a user presses a key down and releases it. This is different from using keydown and keyup events together, because those are two complete events and keypress is one complete event.
+  
+- Keyboard events have unique properties assigned to their event objects like the .key property that stores the values of the key pressed by the user. You can program the event handler function to react to a specific key, or react to any interaction with the keyboard.
