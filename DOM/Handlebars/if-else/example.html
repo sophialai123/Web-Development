@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>GIF!</title>
+  <!-- Handlebars CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="public/style.css">
+
+  <!-- Add an {{if}} helper block in the script element below-->
+  <script id="ifHelper" type="text/x-handlebars-template">
+   {{#if opinion}}
+      <p>"The correct way to say 'GIF' is GIF!"</p>
+   {{else}}
+      <p>"There's no right way to say GIF!"</p>
+   {{/if}}
+    </script>
+
+  <style>
+    body {
+      margin: 0;
+      position: relative;
+    }
+
+    .bg {
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .bg-convo {
+      width: 120%;
+    }
+
+    #debate {
+      font-family: Verdana;
+      font-size: 2em;
+      margin: 35% 30% 0 20%;
+      text-align: center;
+      width: 50%;
+      height: 100%;
+      min-width: 180px;
+      position: absolute;
+    }
+
+
+    @media screen and (max-width: 450px) {
+      .bg {
+        position: absolute;
+        z-index: -1;
+        width: 450px;
+      }
+
+      .bg-convo {
+        width: 450px;
+      }
+
+      #debate {
+        font-family: Verdana;
+        font-size: 2em;
+        margin: 150px 130px 0 90px;
+        text-align: center;
+        width: 225px;
+        height: 100%;
+        position: absolute;
+      }
+  </style>
+
+</head>
+
+<body>
+  <div class="bg">
+    <img class="bg-convo" src="https://content.codecademy.com/courses/learn-handlebars/handlebars%20if.svg">
+  </div>
+  <div id="debate">
+  </div>
+</body>
+<script src="./main.js" type="text/javascript"></script>
+
+</html>

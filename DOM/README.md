@@ -290,4 +290,3 @@ let childElements = document.getElementById('groceries').children; // returns an
   
 - The removeEventListener() method stops specific event handlers from “listening” for specific events firing.
 
----

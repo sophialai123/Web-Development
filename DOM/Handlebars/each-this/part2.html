@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Languages</title>
+  <link href="public/style.css" type="text/css" rel="stylesheet">
+  <!-- Handlebars CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+
+  <!-- Add an {{each}} helper block in the <script> element below-->
+  <script id="languagesTemp" type="text/x-handlebars-template">
+    {{#each languages}}
+
+    <!-- After compiling, for each iteration of elements, {{this.name}} will be replaced with a value. -->
+      <div class="card">
+
+        <!-- Combining "If" "esle" and "Each" -->
+        {{#if this.modern}}
+        	<p>I should learn {{this.name}}.</p>
+
+          {{else}}
+          <p>When I have time, I'll learn {{this.name}}.</p>
+
+          {{/if}}
+      </div>
+    {{/each}}
+
+    </script>
+
+  <style>
+    body {
+      background-color: #0F1931;
+    }
+
+    h1 {
+      color: white;
+      font-family: Verdana;
+      font-weight: normal;
+      text-align: center;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 5px;
+      font-family: Verdana;
+      height: 15%;
+      margin: 2% auto;
+      padding: 2% 5%;
+      width: 80%;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>
+    Thoughts on Languages:
+  </h1>
+  <div id="goals">
+  </div>
+  <script src="./part2.js" type="text/javascript"></script>
+</body>
+
+</html>
