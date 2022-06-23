@@ -289,3 +289,5 @@ let childElements = document.getElementById('groceries').children; // returns an
 - The addEventListener() method can be used to add multiple event handler functions to a single event.
   
 - The removeEventListener() method stops specific event handlers from “listening” for specific events firing.
+
+---
