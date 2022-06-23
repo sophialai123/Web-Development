@@ -24,15 +24,22 @@ const keyReturn = function (event) {
 const eventAssigment = function (note) {
 
   // create an event handler that runs the keyPlay as an event handler when a mousedown event fires on any note.
-  note.onmousedown = function () {
-    //pass the function here
-    keyPlay(event);
+  // note.onmousedown = function () {
+  //   //pass the function here
+  //   keyPlay(event);
 
-  }
-  //create a second event handler property that runs the keyReturn when a mouseup event fires on any note.
-  note.onmouseup = function () {
-    keyReturn(event);
-  }
+  // }
+
+
+  // //create a second event handler property that runs the keyReturn when a mouseup event fires on any note.
+  // note.onmouseup = function () {
+  //   keyReturn(event);
+  // }
+
+  //use addEventListener instead of onmousedown and onmouseup
+  note.addEventListener("click", keyPlay);
+  note.addEventListener("click", keyReturn);
+
 
 }
 
