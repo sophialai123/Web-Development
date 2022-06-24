@@ -69,5 +69,3 @@ checkInventory(order).then(handleSuccess, handleFailure)
 /* We pass a success handler to .then() and a failure handler to .catch(). */
 checkInventory(order).then(handleSuccess).catch(handleFailure)
 
-
-/* Chaining Multiple Promises */
