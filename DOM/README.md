@@ -212,6 +212,10 @@ let childElements = document.getElementById('groceries').children; // returns an
 - This .onevent property and .addEventListener() will both register event listeners.
    - With .onevent, it allows for one event handler function to be attached to the event target.
    - With the .addEventListener() method , we can add multiple event handler functions. 
+
+- Examples:
+  
+  ![](createElement.png)
   
 ---
 ## Removing Event Handlers
@@ -229,7 +233,10 @@ let childElements = document.getElementById('groceries').children; // returns an
 - Because there can be multiple event handler functions associated with a particular event, .removeEventListener() needs both the exact event type name and the name of the event handler you want to remove.
   
 - If .addEventListener() was provided an anonymous function, then that event listener cannot be removed.
+
+- Examples:
   
+  ![](removeElement.png)
 ---
 ## [Event Object Properties](https://developer.mozilla.org/en-US/docs/Web/API/Event)
 - JavaScript stores events as Event objects with their related data and functionalities as properties and methods.
@@ -248,6 +255,10 @@ let childElements = document.getElementById('groceries').children; // returns an
   - The [.type property](https://developer.mozilla.org/en-US/docs/Web/API/Event/type) to access the name of the event.
   
   - The [.timeStamp property](https://developer.mozilla.org/en-US/docs/Web/API/Event/timeStamp) to access the number of milliseconds that passed since the document loaded and the event was triggered.
+
+- Examples:
+  
+  ![](./Dom-methods-Properities.png)
   
 ---
 ## Event Types
@@ -256,6 +267,10 @@ let childElements = document.getElementById('groceries').children; // returns an
 - Many events need user interaction with the DOM to fire. One user interaction event you’ve become familiar with is the click event.
   
 - [The onwheel event handler](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onwheel) that fires when you rotate the mouse wheel or slide down on the mousepad.
+  
+- Examples:
+  
+  ![](dom-events.png)
 ---
 ## Mouse Events
 - The mousedown event is fired when the user presses a mouse button down.
@@ -265,6 +280,11 @@ let childElements = document.getElementById('groceries').children; // returns an
 - The mouseover event is fired when the mouse enters the content of an element.
   
 - The mouseout event is fired when the mouse leaves an element.
+  
+- Examples:
+  
+
+
 ---
 ## Keyboard Events
 - The keydown event is fired while a user presses a key down.
