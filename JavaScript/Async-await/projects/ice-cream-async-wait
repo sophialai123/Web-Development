@@ -1,0 +1,7 @@
+// create a stock for ice creams
+let stocks = {
+  fruits: ['blueberry', 'banana', 'mix berry', 'apple'],
+  liquid: ['water', 'ice'],
+  holder: ['cone', 'cup', 'stick'],
+  toppings: ['chocolate', 'peanuts']
+}

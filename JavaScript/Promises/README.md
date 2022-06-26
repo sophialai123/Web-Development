@@ -1,4 +1,6 @@
 # **Promise**
+ ![](promise.png)
+ 
 #### Promises are objects that represent the eventual outcome of an asynchronous operation. A Promise object can be in one of three states:
 
 1. Pending: The initial state— the operation has not completed yet.
