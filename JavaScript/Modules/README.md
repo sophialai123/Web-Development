@@ -44,3 +44,6 @@
 - The [require()](https://www.freecodecamp.org/news/requiring-modules-in-node-js-everything-you-need-to-know-e7fbd119be8/) function accepts a string as an argument. That string provides the file path to the module you would like to import.
   
 - Using [Object Destructuring](https://www.codecademy.com/courses/learn-intermediate-javascript/articles/implementing-modules-in-node) to be more Selective With require()
+  
+- add a package json file to use module
+  - npm init -y 
