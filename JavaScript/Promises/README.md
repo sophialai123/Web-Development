@@ -146,6 +146,8 @@ firstPromiseFunction()
   
 ---
 ## Using Promise.all()
+- Promise.all() is useful for awaiting multiple promises where all are required but none depend on each other to execute.
+  
 - Promise.all() accepts an array of promises as its argument and returns a single promise. That single promise will settle in one of two ways:
   
   1. If every promise in the argument array resolves, the single promise returned from Promise.all() will resolve with an array containing the resolve value from each promise in the argument array.
