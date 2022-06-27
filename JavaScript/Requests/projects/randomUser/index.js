@@ -35,23 +35,27 @@
 /*  async await function */
 
 async function fetchUser() {
-  const user = await fetch("https://randomuser.me/api/")
-    .then((data) => {
-      console.log(data)
-      return data.json()
 
-    })
-    .then((data) => {
-      console.log(data)
-      return data.results[0]
-    })
-    .catch((data) => {
-      console.log('This is error')
-    })
+  try {
+    const user = await fetch("https://randomuser.me/api/")
+      .then((data) => {
+        return data.json()
 
-  console.log(user)
+      })
+      .then((data) => {
+        console.log(data)
+        return data.results[0]
+      })
+    displayUser(user)
+  }
+  catch (error) {
+    alert('Sorry somethis went wrong!!!!!', error)
 
-  displayUser(user)
+  }
+  finally {
+    console.log("This will run anyway!!!")
+  }
+
 }
 
 fetchUser()
@@ -89,26 +93,6 @@ const displayUser = (user) => {
     document.body.appendChild(div);
   });
 
-
-
-  // let userName = document.getElementById("name");
-  // let userLocation = document.getElementById('location');
-  // let userCell = document.getElementById('cell');
-  // let userEmail = document.getElementById('email');
-
-  // //document.createTextNode to add more text
-  // let nameText = document.createTextNode(`${user.name.first} ${user.name.last}`)
-  // userName.appendChild(nameText);
-
-  // let locationText = document.createTextNode(`${user.location.city}`);
-  // userLocation.appendChild(locationText);
-
-  // let emailText = document.createTextNode(`${user.email}`);
-  // userEmail.appendChild(emailText);
-
-
-  // let cellText = document.createTextNode(`${user.phone}`);
-  // userCell.appendChild(cellText);
 
 }
 
