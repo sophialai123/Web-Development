@@ -37,7 +37,7 @@ withAsync(100)
 
 
 
-/* Handling Dependent Promises, improt functions from library.js file */
+/*************** Handling Dependent Promises ***********************/
 /* shopForBeans() expects no arguments and returns a promise which will resolve to a string of a bean type.
 soakTheBeans() expects a bean type string as an argument and returns a promise which resolves to a boolean indicating whether or not the beans are softened.
 cookTheBeans() expects a boolean as an argument and, if that value is true, returns a promise which will resolve to a string announcing that dinner is ready. */
@@ -70,7 +70,7 @@ async function makeBeans() {
 makeBeans();
 
 
-/**** Handling Errors******* */
+/**************************** Handling Errors ************************** */
 import { cookBeanSouffle } from "./library.js";
 
 async function hostDinnerParty() {
@@ -93,7 +93,7 @@ hostDinnerParty()
 
 
 
-/*  Handling Independent Promises */
+/*********************** Handling Independent Promises ***********************/
 
 import { cookBeans, steamBroccoli, cookRice, bakeChicken } from "./library.js";
 
@@ -117,3 +117,19 @@ async function serveDinner() {
 serveDinner()
 
 
+/************************ Await Promise.all()*************************** */
+
+/* Create an async function and assign it the resolved value of 
+the promise returned from Promise.all(). */
+
+async function serveDinnerAgain() {
+
+  //primise.all take an array
+  let foodArray = await Promise.all([steamBroccoli(), cookRice(), bakeChicken(), cookBeans()]);
+
+  //return each resolve value from foodArray
+  console.log(`The dinner is served in promise all way. we are having ${foodArray[0]}, ${foodArray[1]}, ${foodArray[2]}, and ${foodArray[3]}`);
+
+}
+
+serveDinnerAgain()
