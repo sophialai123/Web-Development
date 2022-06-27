@@ -125,7 +125,7 @@ Create a class called SchoolCatalog that holds a collection of schools. Create a
 
 class MiddleSchool extends School {
   constructor(name, numberOfStudents, averageTestScores, schoolOverview) {
-    super(name, 'middle', newNumberOfStudents)
+    super(name, 'middle', numberOfStudents)
     this._averageTestScores = averageTestScores;
     this._schoolOverview = schoolOverview;
   }
@@ -143,6 +143,56 @@ class MiddleSchool extends School {
 
 
 class SchoolCatalog {
+  constructor() {
+    //create an empty array
+    this._schools = [];
+
+  }
+
+  get schools() {
+    return this._schools;
+  }
+
+
+  // addSchool(school) {
+  //   return this._schools.push(school)
+  // }
+
+  quickFacts(x) {
+    const teams = (x.sportsTeams ? `Intramural sports programs ${x.sportsTeams}` : '');
+    console.log(`${x.name} educates ${x.numberOfStudents} ${x.level} school students. ${teams}`);
+  }
+
+  print() {
+    this._schools.forEach(this.quickFacts);
+  }
+
+
+
+  ////use the method to get all the info
+  //from extend calsses
+
+  primaySc() {
+    let newPrimay = new PrimarySchool('Lorraine', 314, 'Students must be picked up by a parent, guardian, or a family member over the age of 13.')
+    this.schools.push(newPrimay);
+    return newPrimay
+  }
+
+
+
+  highSc() {
+
+    let newHigh = new HighSchool('Smith', 515, ['Baseball', 'Volleyball', 'Track and Field']);
+    this.schools.push(newHigh);
+    return newHigh
+  }
+
+  middleSc() {
+
+    let newMidd = new MiddleSchool('Sophia', 615, 89, "good");
+    this.schools.push(newMidd)
+    return newMidd
+  }
 
 
 }
@@ -150,3 +200,10 @@ class SchoolCatalog {
 const primay = new SchoolCatalog();
 const middle = new SchoolCatalog();
 const high = new SchoolCatalog();
+
+
+console.log(middle.primaySc())
+console.log(middle.middleSc())
+console.log(high.highSc())
+high.print();
+
