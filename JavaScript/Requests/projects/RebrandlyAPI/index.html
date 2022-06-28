@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Byte Size</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <style>
+    header {
+      height: 60px;
+      text-align: center;
+    }
+
+    main {
+      background-color: #0087de;
+      height: 900px;
+      text-align: center;
+    }
+
+    h1 {
+      height: 38px;
+      font-family: Roboto;
+      font-size: 32px;
+      font-weight: 300;
+      letter-spacing: 0.6px;
+      text-align: center;
+      color: #1f233e;
+      padding-top: 40px;
+    }
+
+    .logo {
+      width: 110px;
+      height: 28px;
+      margin-top: 40px;
+      object-fit: contain;
+    }
+
+    .container {
+      width: 400px;
+      margin: auto;
+      text-align: center;
+    }
+
+    #input {
+      width: 219px;
+      height: 37px;
+      border-radius: 3.2px;
+      border: solid 0.8px #1f233e;
+      background-color: inherit;
+      display: block;
+      margin: auto;
+      font-family: Source Sans Pro;
+      font-size: 14px;
+      letter-spacing: 0.2px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    #shorten {
+      width: 91px;
+      height: 37px;
+      border-radius: 3.2px;
+      border: solid 0.8px #1f233e;
+      background-color: inherit;
+      margin-top: 48px;
+      font-family: Source Sans Pro;
+      font-size: 14px;
+      letter-spacing: 0.2px;
+      text-align: center;
+      color: #ffffff;
+      margin-right: -3px;
+    }
+
+    #shorten:hover {
+      background-color: #1f233e;
+      border: solid 0.8px #4a4a4a;
+      color: #0087de;
+      cursor: pointer;
+    }
+
+    #shorten:active {
+      background-color: #ffffff;
+      border: solid 0.8px #4a4a4a;
+      color: #1f233e;
+      cursor: pointer;
+    }
+
+    #responseField {
+      min-width: 191px;
+      min-height: 120px;
+      border: solid 2px #ffffff;
+      margin: auto;
+      margin-top: 25px;
+      font-family: Source Sans Pro;
+      font-size: 16px;
+      letter-spacing: 0.2px;
+      text-align: center;
+      color: #ffffff;
+      overflow: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="https://content.codecademy.com/courses/intermediate-javascript-requests/bytesize_logo.svg" class="logo" />
+
+  </header>
+  <main id="main">
+    <div class="container">
+
+      <h1>Enter a URL</h1>
+
+      <form id="form" autocomplete="off">
+        <input type="text" id="input" value="">
+        <button id="shorten">Shorten</button>
+      </form>
+
+      <div id="responseField">
+
+      </div>
+
+    </div>
+  </main>
+  <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+  <script src="main.js"></script>
+  <script src="helperFunction.js"></script>
+</body>
+
+</html>
