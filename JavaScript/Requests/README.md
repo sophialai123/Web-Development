@@ -125,3 +125,45 @@ const shortenUrl = () => {
 ```
 ---
 ## Intro to async GET Requests
+ ![](async-await-get.png)
+
+- The structure for this request will be slightly different. We will use the new keywords async and await, as well as the try and catch statements.
+  
+- Here are some key points to keep in mind as we walk through the code:
+
+   - The async keyword is used to declare an async function that returns a promise.
+  
+  - The await keyword can only be used within an async function. await suspends the program while waiting for a promise to resolve.
+  
+  - In a try...catch statement, code in the try block will be run and in the event of an exception, the code in the catch statement will run.
+
+- Study the async getData() function to the right to see how the request can be written using async and await.
+
+--- 
+## Intro to async POST Requests
+
+ ![](async-await-post.png)
+
+- We still have the same structure of using try and catch as the async GET request we just learned about. But, in the fetch() call, we now have to include an additional argument that contains more information like method and body.
+  
+- The method property value is set to 'POST' to specify the type of request we are making. Then we have to include a body property with the value of JSON.stringify({id: 200}).
+
+---
+## Review
+
+- GET and POST requests can be created in a variety of ways.
+  
+- We can use fetch() and async/await to asynchronous request data from APIs.
+  
+- Promises are a type of JavaScript object that represents data that will eventually be returned from a request.
+  
+- The fetch() function can be used to create requests and will return promises.
+  
+- We can chain .then() methods to handle promises returned by the fetch() function.
+  
+- The async keyword is used to create asynchronous functions that will return promises.
+  
+- The await keyword can only be used with functions declared with the async keyword.
+  
+- The await keyword suspends the program while waiting for a promise to resolve.
+  
