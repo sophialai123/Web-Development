@@ -1,11 +1,11 @@
 // Add your imports here.
 import { getDataByRole, getDataByCompany } from "./salaryData.js"
 
-
 //Import salaryData default import syntax.
 import salaryData from "./salaryData.js";
-// Replace the empty array with the appropriate imported function/value
 
+
+// Replace the empty array with the appropriate imported function/value
 const getAverageSalaryByRole = role => {
   const roleData = getDataByRole(role);
   const salariesOfRole = roleData.map(obj => obj.salary);
@@ -38,8 +38,11 @@ const getIndustryAverageSalary = () => {
 function calculateAverage(arrayOfNumbers) {
   let total = 0;
   arrayOfNumbers.forEach(number => total += number);
+
+  //toFixed() converts a number to a string, 
+  //rounded to a specified number of decimals:
   return (total / arrayOfNumbers.length).toFixed(2);
 }
 
 
-export { getAverageSalaryByCompany, getIndustryAverageSalary, getSalaryAtCompany, calculateAverage, getAverageSalaryByRole }
+export { getAverageSalaryByCompany, getIndustryAverageSalary, getSalaryAtCompany, getAverageSalaryByRole }

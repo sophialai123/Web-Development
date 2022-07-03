@@ -1,7 +1,7 @@
 // TODO: Add your import statements here.
 import { getRoles, getCompanies, getDataByRole, getDataByCompany } from "./salaryData.js";
 
-import { getAverageSalaryByCompany, getIndustryAverageSalary, getSalaryAtCompany, getAverageSalaryByRole, calculateAverage } from "./workAroundModule.js";
+import { getAverageSalaryByCompany, getIndustryAverageSalary, getSalaryAtCompany, getAverageSalaryByRole } from "./workAroundModule.js";
 
 // TODO: Get the companies and roles using the salaryData module.
 const companies = getCompanies();
@@ -44,6 +44,8 @@ function renderInputButtons(labels, groupName) {
     container.appendChild(divElement);
   });
 
+  //The prepend() method inserts specified content 
+  //at the beginning of the selected elements.
   document.querySelector('main').prepend(container);
 }
 
@@ -53,6 +55,7 @@ function updateResults() {
   const role = document.querySelector("input[name='role']:checked").value;
 
   // If either the company or role is unselected, return.
+  //Using return without a value will return the value undefined?
   if (!company || !role) { return; }
 
   // TODO: Use the workAroundModule functions to calculate the needed data.
