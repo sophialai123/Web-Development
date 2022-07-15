@@ -161,3 +161,113 @@ const plantNeedsWater = function(day){
 
 console.log(plantNeedsWater("Tuesday"))
 ```
+
+---
+## Higher-order functions
+
+Higher-order functions are functions that **accept other functions as arguments and/or return functions as output**. 
+
+In Javascript, functions can be assigned to variables in the same way that strings or arrays can. They can be passed into other functions as parameters or returned from them as well.
+
+A “higher-order function” is a function that accepts functions as parameters and/or returns a function.
+
+JavaScript functions are first-class objects. Therefore:
+
+  - They have built-in properties and methods, such as the name property and the .toString() method.
+  
+  - Properties and methods can be added to them.
+  
+  - They can be passed as arguments and returned from other functions.
+  
+  - They can be assigned to variables, array elements, and other objects.
+
+```
+//Assign a function to a variable originalFunc
+const originalFunc = (num) => { return num + 2 };
+ 
+//Re-assign the function to a new variable newFunc
+const newFunc = originalFunc;
+ 
+//Access the function's name property
+newFunc.name; //'originalFunc'
+ 
+//Return the function's body as a string
+newFunc.toString(); //'(num) => { return num + 2 }'
+ 
+//Add our own isMathFunction property to the function
+newFunc.isMathFunction = true;
+ 
+//Pass the function as an argument
+const functionNameLength = (func) => { return func.name.length }; 
+functionNameLength(originalFunc); //12
+ 
+//Return the function
+const returnFunc = () => { return newFunc };
+returnFunc(); //[Function: originalFunc]
+```
+
+
+---
+## Higher-order Functions as Data
+JavaScript functions behave like any other data type in the language; we can assign functions to variables, and we can reassign them to new variables.
+
+```
+
+const announceThatIAmDoingImportantWork = () => {
+    console.log("I’m doing very important work!");
+};
+
+//assign functions to variables
+const busy = announceThatIAmDoingImportantWork;
+busy(); // This function call barely takes any space!
+```
+
+---
+
+## Higher-order Functions as Parameters
+
+A parameter is a placeholder for the data that gets passed into a function. Since functions can behave like any other type of data in JavaScript, it might not surprise you to learn that functions can accept other functions as parameters. 
+
+A higher-order function is a function that either accepts functions as parameters, returns a function, or both! We call functions that get passed in as parameters callback functions. Callback functions get invoked during the execution of the higher-order function.
+
+When we invoke a higher-order function, and pass another function in as an argument, we don’t invoke the argument function. Invoking it would evaluate to passing in the return value of that function call. 
+
+With callback functions, we pass in the function itself by typing the function name without the parentheses:
+
+```
+const higherOrderFunc = param => {
+  param();
+  return `I just invoked ${param.name} as a callback function!`
+}
+ 
+const anotherFunc = () => {
+  return 'I\'m being invoked by the higher-order function!';
+}
+ 
+higherOrderFunc(anotherFunc);
+
+```
+
+
+Higher order function example:
+
+```
+const addTwo = num => {
+  return num + 2;
+}
+
+const checkConsistentOutput = (func, val) => {
+  let checkA = val + 2;
+  let checkB = func(val)
+   if (checkA === checkB){
+     return func(val)
+   }else{
+     return 'inconsistent results';
+   }
+}
+
+
+//pass addTwo function as argument
+console.log(checkConsistentOutput(addTwo,3));
+
+```
