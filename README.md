@@ -40,9 +40,12 @@
  - [Regular Expressions](https://www.w3schools.com/js/js_regexp.asp)
  - [JavaScript Exercises](https://www.w3resource.com/javascript-exercises/)
  - [Javascript Quizzes](https://www.javatpoint.com/javascript-quiz)
+
+### React
  - [React Doc](https://reactjs.org/docs/getting-started.html)
  - [React Router](https://reactrouter.com/docs/en/v6/getting-started/overview)
  - [Redux](https://redux.js.org/)
+ - [React Deployment](https://create-react-app.dev/docs/deployment/)
   
 
 ### Python
@@ -99,6 +102,7 @@
 - [Gatsby-React](https://www.gatsbyjs.com/)
 - [Hugo](https://gohugo.io/)
 - [Next.Js](https://vercel.com/solutions/nextjs?utm_source=next-site&utm_medium=banner&utm_campaign=next-website)
+- [Vercel-React](https://vercel.com/docs/cli)
 
 
 ### Wireframes
