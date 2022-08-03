@@ -46,6 +46,7 @@
  - [React Router](https://reactrouter.com/docs/en/v6/getting-started/overview)
  - [Redux](https://redux.js.org/)
  - [React Deployment](https://create-react-app.dev/docs/deployment/)
+ - [Redux Toolkit Documentation](https://redux-toolkit.js.org/)
   
 
 ### Python
