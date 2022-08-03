@@ -47,6 +47,7 @@
  - [Redux](https://redux.js.org/)
  - [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
  - [React Deployment](https://create-react-app.dev/docs/deployment/)
+ - [React Adding a Stylesheet](https://create-react-app.dev/docs/adding-a-stylesheet/)
  - [Redux Toolkit Documentation](https://redux-toolkit.js.org/)
  - [Redux DevTools Chrome Extension](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
   
