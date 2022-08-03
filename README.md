@@ -45,8 +45,10 @@
  - [React Doc](https://reactjs.org/docs/getting-started.html)
  - [React Router](https://reactrouter.com/docs/en/v6/getting-started/overview)
  - [Redux](https://redux.js.org/)
+ - [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
  - [React Deployment](https://create-react-app.dev/docs/deployment/)
  - [Redux Toolkit Documentation](https://redux-toolkit.js.org/)
+ - [Redux DevTools Chrome Extension](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
   
 
 ### Python
