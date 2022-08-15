@@ -52,6 +52,11 @@
  - [Redux DevTools Chrome Extension](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
   
 
+### TypScript
+ - [TypScript Doc](https://www.typescriptlang.org/docs/handbook/2/functions.html)
+
+
+
 ### Python
 - [Angela Yu - Udemy](https://www.udemy.com/course/100-days-of-code/)
 - [Python Quizzes](https://pynative.com/python/quizzes/)
