@@ -50,12 +50,24 @@
  - [React Doc](https://reactjs.org/docs/getting-started.html)
  - [React Router](https://reactrouter.com/docs/en/v6/getting-started/overview)
  - [Redux](https://redux.js.org/)
+ - [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
  - [React Deployment](https://create-react-app.dev/docs/deployment/)
+<<<<<<< HEAD
  - [React TypeScript](https://create-react-app.dev/docs/adding-typescript/)
+=======
+ - [React Adding a Stylesheet](https://create-react-app.dev/docs/adding-a-stylesheet/)
+ - [Redux Toolkit Documentation](https://redux-toolkit.js.org/)
+ - [Redux DevTools Chrome Extension](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
+>>>>>>> ca5e8c67c06876b9b65c5333bdd14d3c11116d76
   
 ### Vue.js
 - [Vue.js3](https://vuejs.org/guide/introduction.html)
 - [Vue.js2](https://v2.vuejs.org/v2/guide/)
+
+### TypScript
+ - [TypScript Doc](https://www.typescriptlang.org/docs/handbook/2/functions.html)
+
+
 
 ### Python
 - [Angela Yu - Udemy](https://www.udemy.com/course/100-days-of-code/)
