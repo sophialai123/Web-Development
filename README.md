@@ -21,7 +21,6 @@
 
 
 ### CSS
-
 - [Box Model](https://www.w3schools.com/css/css_boxmodel.asp)
 - [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
@@ -30,6 +29,12 @@
 - [colorhunt](https://colorhunt.co/)
 - [Media Queries](https://css-tricks.com/snippets/css/media-queries-for-standard-devices/)
 - [Css tricks](https://css-tricks.com/)
+
+
+### UX Design
+- [UX tools challenges](https://uxtools.co/challenges/)
+- [UI skills](https://www.dailyui.co/)
+- [Ideation for Everyday Design Challenges](https://www.nngroup.com/articles/ux-ideation/)
 
 ### JavaScript 
  - [Loops and iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
@@ -46,7 +51,11 @@
  - [React Router](https://reactrouter.com/docs/en/v6/getting-started/overview)
  - [Redux](https://redux.js.org/)
  - [React Deployment](https://create-react-app.dev/docs/deployment/)
+ - [React TypeScript](https://create-react-app.dev/docs/adding-typescript/)
   
+### Vue.js
+- [Vue.js3](https://vuejs.org/guide/introduction.html)
+- [Vue.js2](https://v2.vuejs.org/v2/guide/)
 
 ### Python
 - [Angela Yu - Udemy](https://www.udemy.com/course/100-days-of-code/)
@@ -57,12 +66,15 @@
 - [Git commands](https://git-scm.com/docs/git#_git_commands)
 - [Jira - Atlassian](https://www.atlassian.com/software/jira?bundle=jira-software&edition=free)
 
+
 ### Icons
 - [Fontawesome](https://fontawesome.com/icons)
 - [Fontawesome-cheatsheet](https://fontawesome.com/v5/cheatsheet)
 - [Bootstrap Icons](https://icons.getbootstrap.com/)
 - [Google Icons](https://fonts.google.com/icons)
 - [Material Icons](https://fonts.google.com/icons?selected=Material+Icons)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [Undraw Images](https://undraw.co/search)
   
 
 ### Algorithm Coding Challenges
