@@ -29,12 +29,17 @@
 - [colorhunt](https://colorhunt.co/)
 - [Media Queries](https://css-tricks.com/snippets/css/media-queries-for-standard-devices/)
 - [Css tricks](https://css-tricks.com/)
+- [A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+- [Grid Garden](https://codepip.com/games/grid-garden/)
 
 
 ### UX Design
 - [UX tools challenges](https://uxtools.co/challenges/)
 - [UI skills](https://www.dailyui.co/)
 - [Ideation for Everyday Design Challenges](https://www.nngroup.com/articles/ux-ideation/)
+- [Career Foundry](https://careerfoundry.com/en/blog/ux-design/)
+- [Adobe](https://www.adobe.com/)
+- 
 
 ### JavaScript 
  - [Loops and iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
