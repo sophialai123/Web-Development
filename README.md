@@ -67,6 +67,8 @@
 ### Vue.js
 - [Vue.js3](https://vuejs.org/guide/introduction.html)
 - [Vue.js2](https://v2.vuejs.org/v2/guide/)
+- [Vue School](https://vueschool.io/courses?filter=free-courses)
+- [Vue Mastery](https://www.vuemastery.com/courses)
 
 ### TypScript
  - [TypScript Doc](https://www.typescriptlang.org/docs/handbook/2/functions.html)
