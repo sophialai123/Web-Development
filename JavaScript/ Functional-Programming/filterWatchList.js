@@ -41,7 +41,9 @@ const watchList = [
   }
 ];
 
-//Use a combination of filter and map on watchList to assign a new array of objects with only title and rating keys.
+//Use a combination of filter and map on 
+//watchList to assign a new array of objects
+//with only title and rating keys.
 const filteredList = watchList.filter(moive => parseInt(moive.imdbRating) >= 8)
   .map(item => {
     return {"title": item.Title,"rating":item.imdbRating}

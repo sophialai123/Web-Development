@@ -8,8 +8,10 @@ const prepareBlackTea = () => 'blackTea';
 /*
 pass a function and numofCups as arugments
 
-Given a function (representing the tea type) and number of cups needed, the
-following function returns an array of strings (each representing a cup of
+Given a function (representing the tea type) 
+and number of cups needed, the
+following function returns an array of strings 
+(each representing a cup of
 a specific type of tea).
 */
 
