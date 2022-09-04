@@ -134,3 +134,52 @@ console.log(usersObj);
 //return 
 { John: 34, Amy: 20, camperCat: 10 }
 ```
+---
+## Sort an Array Alphabetically using the sort Method
+
+JavaScript's default sorting method is by string Unicode point value, which may return unexpected results. Therefore, it is encouraged to provide a callback function to specify how to sort the array items. When such a callback function, normally called `compareFunction`, is supplied, the array elements are sorted according to the return value of the compareFunction: If `compareFunction(a,b) `returns a value less than 0 for two elements `a` and `b`, then a will come before b. If `compareFunction(a,b)` returns a value greater than 0 for two elements `a` and `b`, then `b` will come before `a`. If `compareFunction(a,b)` returns a value equal to 0 for two elements `a` and `b`, then `a` and `b` will remain unchanged.
+
+
+The sort method sorts the elements of an array according to the callback function.
+
+```
+function ascendingOrder(arr) {
+  return arr.sort(function(a, b) {
+    return a - b;
+  });
+}
+
+ascendingOrder([1, 5, 2, 3, 4]);
+//return [1, 2, 3, 4, 5]
+```
+
+```
+function reverseAlpha(arr) {
+  return arr.sort(function(a, b) {
+    return a === b ? 0 : a < b ? 1 : -1;
+  });
+}
+
+reverseAlpha(['l', 'h', 'z', 'b', 's']);
+//retrun  ['z', 's', 'l', 'h', 'b']
+```
+
+---
+## Return a Sorted Array Without Changing the Original Array
+
+A side effect of the sort method is that it changes the order of the elements in the original array. In other words, it mutates the array in place. One way to avoid this is to first concatenate an empty array to the one being sorted (remember that slice and concat return a new array), then run the sort method.
+
+```
+const globalArray = [5, 6, 3, 2, 9];
+
+//return a new array, and not mutate the globalArray variable.
+function nonMutatingSort(arr) {
+  // Only change code below this line
+  let newArr = []
+  //use concat() to copy the arr
+  return newArr.concat(arr).sort((a,b)=>a-b)
+  // Only change code above this line
+}
+
+console.log(nonMutatingSort(globalArray));
+```
