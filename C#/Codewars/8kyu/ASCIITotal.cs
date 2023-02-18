@@ -42,5 +42,10 @@ public static class Kata
     
     public static int UniTotal2(string str)
      => str.Sum(x=>(int)x);
+ 
+ public static int UniTotal3(string str)
+  {
+     return str.Select(x => Convert.ToInt32(x)).Sum();
+  }
 
 }
