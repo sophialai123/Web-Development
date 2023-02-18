@@ -20,6 +20,9 @@ public static class Kata
     }
 
     public static int FindSmallestInt(int[] args) => args.OrderBy(x => x).FirstOrDefault();
+    
+     public static int FindSmallestInt2(int[] args) => args.Min();
+
    
 
 }
