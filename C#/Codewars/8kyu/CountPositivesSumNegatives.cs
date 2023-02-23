@@ -25,7 +25,7 @@ public static class Kata
 
         if (input.Length == 0 || input == null)
         {
-            return new int[0] ;
+            return new int[] {} ;
         }
         var countNA = input.Where(x => x > 0).ToArray().Count();
 
