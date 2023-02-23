@@ -22,11 +22,12 @@ public static class Kata
    
     public static int[] CountPositivesSumNegatives(int[] input)
     {
-
-        if (input.Length == 0 || input == null)
+        //check the null and empty array
+        if(input == null || !input.Any())
         {
-            return new int[] {} ;
+            return new int[] {};
         }
+        
         var countNA = input.Where(x => x > 0).ToArray().Count();
 
         var SumN = input.Where(x => x < 0).ToArray().Sum();
