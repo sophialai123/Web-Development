@@ -88,4 +88,10 @@ public static class Kata
         ? new[] {input.Count(i => i > 0), input.Where(i => i < 0).Sum()}
         : new int[0];
   }
+    
+    public static int[] CountPositivesSumNegatives4(int[] input)
+    {
+        return (input == null || !input.Any()) ? new int[]{} :
+        new int[] {input.Where(x => x > 0).Count(), input.Where(x => x < 0).Sum()};
+    }
 }
