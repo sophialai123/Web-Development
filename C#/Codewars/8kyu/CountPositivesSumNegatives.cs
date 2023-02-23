@@ -28,11 +28,10 @@ public static class Kata
             return new int[] {};
         }
         
-        var countNA = input.Where(x => x > 0).ToArray().Count();
+        int countPositives = input.Count(n => n > 0);
+        int sumNegatives = input.Where(n => n < 0).Sum();
 
-        var SumN = input.Where(x => x < 0).ToArray().Sum();
-
-        return new int[] { countNA, SumN };
+        return new int[] { countPositives, sumNegatives };
 
     }
 }
