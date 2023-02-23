@@ -34,4 +34,58 @@ public static class Kata
         return new int[] { countPositives, sumNegatives };
 
     }
+    
+    
+    //Other solutions:
+    private static readonly int[] Empty = new int[0];
+    
+    public static int[] CountPositivesSumNegatives1(int[] input)
+    {
+        if (input == null || input.Length == 0)
+        {
+            return Empty;
+        }
+        
+        int count = 0;
+        int sum = 0;
+        
+        foreach (var element in input)
+        {
+            if (element > 0)
+            {
+                count += 1;
+            }
+            else if (element < 0)
+            {
+                sum += element;
+            }
+        }
+        
+        return new int[] { count, sum };
+    }
+    
+    
+    private static readonly int[] Empty = new int[0];
+    
+    public static int[] CountPositivesSumNegatives2(int[] input)
+    {
+        if (input == null || input.Length == 0)
+        {
+            return Empty;
+        }
+        
+        return new int[]
+        {
+            input.Count(x => x > 0),
+            input.Sum(x => Math.Min(0, x)),
+        };
+    }
+    
+    
+    public static int[] CountPositivesSumNegatives3(int[] input)
+  {
+    return input?.Length > 0
+        ? new[] {input.Count(i => i > 0), input.Where(i => i < 0).Sum()}
+        : new int[0];
+  }
 }
