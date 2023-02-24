@@ -1,3 +1,8 @@
+using System;
+using System.Linq;
+using System.Text;
+
+
 /*
 Given an array of integers.
 
