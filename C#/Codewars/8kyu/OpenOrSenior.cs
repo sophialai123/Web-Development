@@ -63,4 +63,28 @@ public static class Kata
         }
         return strArr;
     }
+    
+    //foreach method
+     public static IEnumerable<string> OpenOrSenior2(int[][] data)
+    {
+
+        List<string> newStrArr = new List<string>();
+        
+         foreach(var num in data)
+        {
+           if(num[0] >= 55 && num[1] > 7)
+            {
+                newStrArr.Add("Senior");
+            }
+            else
+            {
+                newStrArr.Add("Open");
+            }
+
+           
+        }
+
+         return newStrArr;
+       
+    }
 }
