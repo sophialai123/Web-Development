@@ -31,11 +31,36 @@ public static class Kata
 
     }
 
-
+    //Using Linq method
     public static IEnumerable<string> OpenOrSenior(int[][] data)
     {
         
         return data.Select(x => (x[0] > 55 && x[1] > 7) ? "Senior" : "Open");
 
+    }
+    
+    
+    //use for loop
+    
+    
+    public static IEnumerable<string> OpenOrSenior1(int[][] data)
+    {
+        //initial an empty array
+        String[]  strArr = new string[data.GetLength(0)];
+
+
+        for(int i= 0; i< data.GetLength(0); i++)
+        {
+
+            if (data[i][0] >= 55 && data[i][1] > 7 )
+            {
+                strArr[i] = "Senior";
+            }
+            else
+            {
+                strArr[i] = "Open";
+            }
+        }
+        return strArr;
     }
 }
