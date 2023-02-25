@@ -23,9 +23,7 @@ public static class Kata
 
     public static bool Solution(string str, string ending)
     {
-        // TODO: complete
-
-        return true;
+        return str.EndsWith(ending) ? true : false;
     }
 
 
