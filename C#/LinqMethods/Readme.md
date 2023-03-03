@@ -137,7 +137,30 @@ public static void ThenByDescendingEx1()
         }
 ```
 
+```
+ public static string FormatPetDataAtIndex(IEnumerable<Pet> pets, int index)
+        {
+            //TODO your code goes here
+            if(pets.ElementAtOrDefault(index) != null ){
+                
+                return $"Pet name: {pets.ElementAtOrDefault(index).Name}"; // To get index value pet name
+            }
+            
+            return $"Pet data is missing for index {index}";//return 0 
+        }
+    }
+    
+    public class Pet
+    {
+        public string Name {get; set;}
+    }
+```
+
 ---
 #### `ElementAtOrDefault()`
 - Returns the element at a specified index in a sequence or a default value if the index is out of range.
 - Returns `0` if it is index out of range
+---
+
+#### `Where()`
+- Filters a sequence of values based on a predicate.
