@@ -52,23 +52,25 @@ namespace Coding.Exercise
 - A function to test each element for a condition.
 
 ```
-using System;
-using System.Linq;
-
-namespace Coding.Exercise
-{
-    public class Exercise
-    {
-        public static bool AreAllNumbersDivisibleBy10(int[] numbers)
+       public static bool AreAllNumbersDivisibleBy10(int[] numbers)
         {
             //TODO your code goes here
             return numbers.All(number => number % 10 == 0);
         }
-    }
-}
+
 
 ```
 ---
+#### 3. `Count()` 
+- Returns the number of elements in a sequence.(How many)
+```
+     public static int CountAllLongWords(IEnumerable<string> words)
+        {
+          
+           return words.Count(word => word.Length > 10);
+        }
+  
+```
 
 
 
