@@ -84,5 +84,39 @@ string fruit = "mango";
 bool hasMango = fruits.Contains(fruit); //return True
 
 ```
+---
+####  `OrderBy()` 
+- Sorts the elements of a sequence in ascending order.
 
+####  `OrderByDescending()` 
+- Sorts the elements of a sequence in descending order.
+```
+ public static IEnumerable<string> OrderFromLongestToShortest(IEnumerable<string> words)
+        {
+            //TODO your code goes here
+            return words.OrderByDescending( word => word.Length);
+        }
+```
+#### `ThenByDescending()`
+- User `OrderBy()` first Then 
+- Performs a subsequent ordering of the elements in a sequence in descending order.
 
+```
+public static void ThenByDescendingEx1()
+{
+    string[] fruits = { "apPLe", "baNanA", "apple", "APple", "orange", "BAnana", "ORANGE", "apPLE" };
+
+    // Sort the strings first ascending by their length and
+    // then descending using a custom case insensitive comparer.
+    IEnumerable<string> query =
+        fruits
+        .OrderBy(fruit => fruit.Length)
+        .ThenByDescending(fruit => fruit, new CaseInsensitiveComparer());
+
+    foreach (string fruit in query)
+    {
+        Console.WriteLine(fruit);
+    }
+}
+
+```
