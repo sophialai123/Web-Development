@@ -1,5 +1,5 @@
 ## LINQ Methods
-#### 1. `Any()`: 
+#### 1. `Any()` 
 - Determines whether any element of a sequence exists or satisfies a condition. 
 - Return `true ` if the source sequence contains any elements; otherwise return `false`;
 - Also checks the ArgumentNullException 
@@ -25,7 +25,7 @@ namespace Coding.Exercise
         
         //Check null exception 
         public static int[] CountPositivesSumNegatives(int[] input)
-    {
+       {
         //check the null and empty array
         if(input == null || !input.Any())
         {
@@ -37,12 +37,38 @@ namespace Coding.Exercise
 
         return new int[] { countPositives, sumNegatives };
 
-    }
+      }
     
     }
 }
 
+```
+
+---
+
+#### 2. `All()` 
+- Determines whether all elements of a sequence satisfy a condition.
+- Returns `true` if every element of the source sequence passes the test in the specified predicate, or if the sequence is empty; otherwise, `false`.
+- A function to test each element for a condition.
 
 ```
+using System;
+using System.Linq;
+
+namespace Coding.Exercise
+{
+    public class Exercise
+    {
+        public static bool AreAllNumbersDivisibleBy10(int[] numbers)
+        {
+            //TODO your code goes here
+            return numbers.All(number => number % 10 == 0);
+        }
+    }
+}
+
+```
+---
+
 
 
