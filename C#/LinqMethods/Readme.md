@@ -125,6 +125,17 @@ public static void ThenByDescendingEx1()
 - Returns the element at a specified index in a sequence. ( return index)
 - If `index` is less than 0 or greater than or equal to the number of elements in source, will through `ArgumentOutOfRangeException`
 
+```
+ public static bool IsTheNumberAtIndexTheLargest(IEnumerable<int> numbers, int index)
+        {
+            //TODO your code goes here
+           if(index < 0 || index >= numbers.Count())
+           {
+               return false;
+           }
+           return numbers.All(x => x <= numbers.ElementAt(index)); // return true if the all numbers is greater than the index number 
+        }
+```
 
 ---
 #### `ElementAtOrDefault()`
