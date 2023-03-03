@@ -1,5 +1,5 @@
 ## LINQ Methods
-#### 1. `Any()` 
+####  `Any()` 
 - Determines whether any element of a sequence exists or satisfies a condition. 
 - Return `true ` if the source sequence contains any elements; otherwise return `false`;
 - Also checks the ArgumentNullException 
@@ -46,7 +46,7 @@ namespace Coding.Exercise
 
 ---
 
-#### 2. `All()` 
+####  `All()` 
 - Determines whether all elements of a sequence satisfy a condition.
 - Returns `true` if every element of the source sequence passes the test in the specified predicate, or if the sequence is empty; otherwise, `false`.
 - A function to test each element for a condition.
@@ -61,7 +61,7 @@ namespace Coding.Exercise
 
 ```
 ---
-#### 3. `Count()` 
+####  `Count()` 
 - Returns the number of elements in a sequence.(How many)
 ```
      public static int CountAllLongWords(IEnumerable<string> words)
