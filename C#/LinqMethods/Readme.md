@@ -71,6 +71,18 @@ namespace Coding.Exercise
         }
   
 ```
+---
+####  `Contains()` 
+- Determines whether a sequence contains a specified element.
+- Returns `true` if the source sequence contains an element that has the specified value; otherwise, `false`.
 
+```
+string[] fruits = { "apple", "banana", "mango", "orange", "passionfruit", "grape" };
+
+string fruit = "mango";
+
+bool hasMango = fruits.Contains(fruit); //return True
+
+```
 
 
