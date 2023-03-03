@@ -120,3 +120,13 @@ public static void ThenByDescendingEx1()
 }
 
 ```
+---
+#### `ElementAt()`
+- Returns the element at a specified index in a sequence. ( return index)
+- If `index` is less than 0 or greater than or equal to the number of elements in source, will through `ArgumentOutOfRangeException`
+
+
+---
+#### `ElementAtOrDefault()`
+- Returns the element at a specified index in a sequence or a default value if the index is out of range.
+- Returns `0` if it is index out of range
