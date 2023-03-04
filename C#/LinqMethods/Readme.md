@@ -253,6 +253,28 @@ public static IEnumerable<int> GetSingleElementCollection(IEnumerable<IEnumerabl
 ```
 ---
 
-
 #### `Where()`
 - Filters a sequence of values based on a predicate.
+- No exceptions will be throw if no conditions match.
+```
+ public class Exercise
+    {
+        public static IEnumerable<Student> GetScholarshipCandidates(IEnumerable<Student> students)
+        {
+            //return average mark is above 4.6
+           return students.Where(x => (x.Marks.Any() ? x.Marks.Average() : 0) > 4.6);
+            
+        }
+    }
+    
+    public class Student
+    {
+        public string Name {get; set;}
+        public IEnumerable<int> Marks {get; set;}
+        
+        public override string ToString()
+        {
+            return $"{Name} with marks ({string.Join(", ", Marks)})";
+        }
+    }
+```
