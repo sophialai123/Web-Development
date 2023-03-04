@@ -12,10 +12,16 @@ public class Kata
 {
   public static int FindShort(string s) => s.Split(' ').Min(t => t.Length);
   
-  
+  //another solution
   public static int FindShort2(string s)
   {
     return s.Split(' ').OrderBy(str => str.Length).First().Length;
+  }
+  
+  
+   public static int FindShort3(string s)
+  {
+    return s.Split(' ').Min(x => x.Length );
   }
   
 }
