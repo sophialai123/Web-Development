@@ -160,6 +160,19 @@ public static void ThenByDescendingEx1()
 #### `ElementAtOrDefault()`
 - Returns the element at a specified index in a sequence or a default value if the index is out of range.
 - Returns `0` if it is index out of range
+- If no such index is present in the collection, the ElementAtOrDefault method will return the default for the string type. which is "0" ;
+- The default for string is null. The string.IsNullOrEmpty method will return true for null, so this is the same result as in the original method.
+- If such an index is present, we return true if the string at this index is null or empty, and false otherwise. Again, this is the same behavior as in the original method. (As below)
+
+
+
+```
+public static bool IsEmptyAtIndex_Refactored(IEnumerable<string> words, int index)
+        {
+            // string.IsNullOrEmpty method will return true for null, so this is the same result as in the original method.         
+            return string.IsNullOrEmpty(words.ElementAtOrDefault(index));
+        }
+```
 ---
 
 #### `Where()`
