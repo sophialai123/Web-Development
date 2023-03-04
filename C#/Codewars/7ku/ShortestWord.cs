@@ -11,4 +11,14 @@ String will never be empty and you do not need to account for different data typ
 public class Kata
 {
   public static int FindShort(string s) => s.Split(' ').Min(t => t.Length);
+  
+  
+  public static int FindShort2(string s)
+  {
+    return s.Split(' ').OrderBy(str => str.Length).First().Length;
+  }
+  
 }
+
+
+
