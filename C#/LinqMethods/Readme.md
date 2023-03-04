@@ -228,10 +228,29 @@ public static Person GetYoungest(IEnumerable<Person> people)
 - Throw exceptions if the source sequence is empty or null.
 - Throw exceptions if no elements satisfiesthe condition in predicate.
 
+```
+public static IEnumerable<int> GetSingleElementCollection(IEnumerable<IEnumerable<int>> numberCollections)
+        {
+            //only have one element in the nested numberCollections
+            return numberCollections.Single(x => x.Count() == 1);
+        }
+
+```
+
 
 #### `SingleOrDefault()`
 - Returns a single(ONLY one), specific element of a sequence, or a default value if that element is not found.
 - Throw exceptions if more than one element satisfies the condition in predicate.
+
+```
+ public static string GetTheOnlyUpperCaseWord(IEnumerable<string> words)
+        {
+            // returns only uppercase string
+           return words.SingleOrDefault(x => x.ToUpper() == x);
+            
+        }
+
+```
 ---
 
 
