@@ -201,6 +201,26 @@ public static string FindFirstNameInTheCollection(IEnumerable<string> words)
 
 #### `LastOrDefault()`
 - Returns the last element of a sequence, or a default value if no element is found.(returns null)
+
+```
+public static Person GetYoungest(IEnumerable<Person> people)
+        {
+            //return the youngest person from this collection.
+            return people.OrderBy(x => x.DateOfBirth).LastOrDefault();
+        }
+        
+         public class Person
+    {
+        public string Name {get; set;}
+        public DateTime DateOfBirth {get; set;}
+        
+        public override string ToString()
+        {
+            return $"Name: {Name}, DateOfBirth: {DateOfBirth}";
+        }
+    }
+
+```
 ---
 #### `Where()`
 - Filters a sequence of values based on a predicate.
