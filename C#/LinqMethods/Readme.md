@@ -182,6 +182,16 @@ public static bool IsEmptyAtIndex_Refactored(IEnumerable<string> words, int inde
 
 #### `FirstOrDefault()`
 - Returns the first element of a sequence, or a default value if no element is found.(returns null)
+
+```
+public static string FindFirstNameInTheCollection(IEnumerable<string> words)
+        {
+          
+         // returns if the words is longer than 1 and first letter is uppercase and all other letters are lower case
+           return words.FirstOrDefault(x => x.Length > 1  && (char.IsUpper(x.First()) && x.Count(c => char.IsUpper(c)) == 1));
+        }
+
+```
 ---
 
 #### `Last()`
