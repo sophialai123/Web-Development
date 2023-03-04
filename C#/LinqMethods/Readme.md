@@ -222,5 +222,18 @@ public static Person GetYoungest(IEnumerable<Person> people)
 
 ```
 ---
+#### `Single（）`
+- Returns **Only** one and specific element of a sequence.
+- Throw exceptions if more than one element satisfies the condition in predicate.
+- Throw exceptions if the source sequence is empty or null.
+- Throw exceptions if no elements satisfiesthe condition in predicate.
+
+
+#### `SingleOrDefault()`
+- Returns a single(ONLY one), specific element of a sequence, or a default value if that element is not found.
+- Throw exceptions if more than one element satisfies the condition in predicate.
+---
+
+
 #### `Where()`
 - Filters a sequence of values based on a predicate.
