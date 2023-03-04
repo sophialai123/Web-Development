@@ -256,6 +256,7 @@ public static IEnumerable<int> GetSingleElementCollection(IEnumerable<IEnumerabl
 #### `Where()`
 - Filters a sequence of values based on a predicate.
 - No exceptions will be throw if no conditions match.
+- 
 ```
  public class Exercise
     {
@@ -277,4 +278,18 @@ public static IEnumerable<int> GetSingleElementCollection(IEnumerable<IEnumerabl
             return $"{Name} with marks ({string.Join(", ", Marks)})";
         }
     }
+```
+- Filters a sequence of values based on a predicate. Each element's index is used in the logic of the predicate function.
+- for words {"1.AAA", "2.BBB", "invalidWord", "4.DDD"} the result should be {"1.AAA", "2.BBB", "4.DDD"}
+- for words {"1.AAA", "2.BBB",  "4.DDD"} the result should be {"1.AAA", "2.BBB"}  because "4.DDD" has an invalid index (it is the third word in the collection, so it's index should be 3)
+
+```
+
+
+ public static IEnumerable<string> GetProperlyIndexedWords (IEnumerable<string> words)
+        {
+            //returns only those words, that start with a proper index
+            return words.Where((word,index) => word.StartsWith($"{index + 1}"));
+        }
+
 ```
