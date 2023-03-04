@@ -175,5 +175,22 @@ public static bool IsEmptyAtIndex_Refactored(IEnumerable<string> words, int inde
 ```
 ---
 
+#### `First()`
+- Returns the first element of a sequence.
+- Throws an `ArgumentNullException` exceptions if the predicate is `null`.
+
+
+#### `FirstOrDefault()`
+- Returns the first element of a sequence, or a default value if no element is found.(returns null)
+---
+
+#### `Last()`
+- Returns the last element of a sequence.
+- Throws an `ArgumentNullException` exceptions if the predicate is `null`.
+
+
+#### `LastOrDefault()`
+- Returns the last element of a sequence, or a default value if no element is found.(returns null)
+---
 #### `Where()`
 - Filters a sequence of values based on a predicate.
