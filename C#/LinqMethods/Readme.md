@@ -323,16 +323,40 @@ public static IEnumerable<int> GetSingleElementCollection(IEnumerable<IEnumerabl
 #### `TakeLast()`
 - Returns a new enumerable collection that contains the last count elements from source (take the last count)
 
+```
+ var numbers = new[] { 1, 2, 3,100,200 };
+
+        var secondLargestNum =  numbers.OrderBy(x => x).TakeLast(2).First();
+        Console.WriteLine(secondLargestNum); //return 100
+```
+
 #### `TakeWhile()`
 - Returns elements from a sequence as long as a specified condition is true, and then skips the remaining elements.
 - usually use with `OrderBy()`
 
+---
 
+#### `Skip()`
+- Bypasses a specified number of elements in a sequence and then returns the remaining elements.
+- Skip the passing numbers then return the rest items
+- Does not throw exceptions if it skips more than the items in the collection, return null 
 
+```
+int[] grades = { 59, 82, 70, 56, 92, 98, 85 };
 
+var skip5numbers = grades.Skip(5);  //return 98, 85 as it will skip the first 5 numbers
 
+```
+#### `SkipLast()`
+- Returns a new enumerable collection that contains the elements from source with the last count elements of the source collection omitted.
+- Returns all the items apart from the last passing numbers
 
+```
+int[] grades = { 59, 82, 70, 56, 92, 98, 85 };
 
+var skipLast5numbers = grades.SkipLast(5);  //return 59, 82 as it will skip the last 5 numbers
+
+```
 
 
 
