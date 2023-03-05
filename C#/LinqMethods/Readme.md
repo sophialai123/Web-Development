@@ -293,3 +293,46 @@ public static IEnumerable<int> GetSingleElementCollection(IEnumerable<IEnumerabl
         }
 
 ```
+---
+#### `Take()`
+- Returns a specified number of contiguous elements from the start of a sequence.
+- Does not throw an exception if the index is out of range or null.
+
+```
+ public static IEnumerable<int> TakeSome(IEnumerable<int> numbers)
+    {
+        //Return the first 3 numbers
+        if (numbers.Count() < 10)
+        {
+            return numbers.Take(3);
+        }
+
+        //return the first 30 numbers
+        if (numbers.Count() < 100)
+        {
+            return numbers.Take(30);
+        }
+
+        return numbers;
+        //use Ternary operator
+        return numbers.Count() < 10 ? numbers.Take(3) : numbers.Count() < 100 ? numbers.Take(30) : numbers;
+
+    }
+```
+
+#### `TakeLast()`
+- Returns a new enumerable collection that contains the last count elements from source (take the last count)
+
+#### `TakeWhile()`
+- Returns elements from a sequence as long as a specified condition is true, and then skips the remaining elements.
+- usually use with `OrderBy()`
+
+
+
+
+
+
+
+
+
+
