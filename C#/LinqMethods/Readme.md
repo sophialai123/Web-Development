@@ -360,6 +360,12 @@ var skipLast5numbers = grades.SkipLast(5);  //return 59, 82 as it will skip the 
 #### `SkipWhile()`
 - Bypasses elements in a sequence as long as a specified condition is true and then returns the remaining elements.
 - Usually use with `OrderBy()`
-- 
-
+```
+  public static IEnumerable<int> GetAllAfterFirstDividableBy100_Refactored(IEnumerable<int> numbers)
+        {
+            //it skips the numbers until we hit a number divisible by 100.
+            return numbers.SkipWhile(x => x % 100 != 0);
+        }
+```
+---
 
