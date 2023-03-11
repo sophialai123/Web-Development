@@ -368,4 +368,17 @@ var skipLast5numbers = grades.SkipLast(5);  //return 59, 82 as it will skip the 
         }
 ```
 ---
-
+#### `OfType()`
+- Filters the elements of an IEnumerable based on a specified type.
+- Returns An IEnumerable<T> that contains elements from the input sequence of type TResult.
+    
+```
+     public static int? GetTheFirstInteger(IEnumerable<object> objects)
+        {
+            //will return the first integer from this collection. If no integer is present, it shall return null.
+            //FirstOrDefault,will return null if is no interger
+    
+            return objects.OfType<int?>().FirstOrDefault();
+        }
+```
+---
