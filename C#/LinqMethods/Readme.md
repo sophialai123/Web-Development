@@ -403,6 +403,26 @@ var skipLast5numbers = grades.SkipLast(5);  //return 59, 82 as it will skip the 
 #### `Append()`
  - Appends a value to the **end** of the sequence..
  - Returns a new sequence that begins with element.( Does not change the exsiting collection)
+ 
+ ```
+ public static IEnumerable<int> RemoveDuplicatesFromStartAndEnd(IEnumerable<int> numbers)
+        {
+            
+            //will remove the duplicate occurrences of the first and the last number in the collection.
+            if(numbers.Count() < 2){
+                return numbers;
+            }
+             
+             var firstNumber = numbers.First();
+             var lastNumber = numbers.Last();
+             
+             return numbers.Where(x => x != firstNumber)
+                            .Prepend(firstNumber)
+                            .Where(x => x != lastNumber)
+                            .Append(lastNumber);
+           
+        }
+ ```
     
 ---
     
