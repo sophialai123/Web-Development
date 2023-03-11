@@ -395,4 +395,14 @@ var skipLast5numbers = grades.SkipLast(5);  //return 59, 82 as it will skip the 
         }
 ```
 
+---
+#### `Prepend()`
+ - Adds a value to the **beginning** of the sequence.
+ - Returns a new sequence that begins with element.( Does not change the exsiting collection)
 
+#### `Append()`
+ - Appends a value to the **end** of the sequence..
+ - Returns a new sequence that begins with element.( Does not change the exsiting collection)
+    
+---
+    
