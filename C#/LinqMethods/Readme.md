@@ -382,3 +382,17 @@ var skipLast5numbers = grades.SkipLast(5);  //return 59, 82 as it will skip the 
         }
 ```
 ---
+
+#### `Distinct()`
+- Returns distinct elements from a sequence.(remove duplicate items)
+- So if the count of the result returned by the Distinct method is equal to the count of all elements, 
+- it means each element in the collection is unique:
+```
+ public static bool AreAllUnique<T>(IEnumerable<T> collection)
+        {
+            //return true if all the collection are unique
+            return collection.Distinct().Count() == collection.Count();
+        }
+```
+
+
