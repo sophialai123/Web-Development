@@ -357,6 +357,9 @@ int[] grades = { 59, 82, 70, 56, 92, 98, 85 };
 var skipLast5numbers = grades.SkipLast(5);  //return 59, 82 as it will skip the last 5 numbers
 
 ```
-
+#### `SkipWhile()`
+- Bypasses elements in a sequence as long as a specified condition is true and then returns the remaining elements.
+- Usually use with `OrderBy()`
+- 
 
 
