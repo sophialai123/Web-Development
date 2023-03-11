@@ -59,3 +59,10 @@ namespace Coding.Exercise
         }
     }
 }
+
+
+/*
+, we use SkipWhile(word => word != Start). This will skip all the words that proceed word START. 
+We don't want to include the word START itself, so we skip one word. Then, we take all words until we hit the END word.
+
+*/
