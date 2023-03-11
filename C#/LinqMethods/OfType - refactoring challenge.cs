@@ -19,7 +19,7 @@ namespace Coding.Exercise
         //TODO implement this method
         public static DateTime? GetTheLatestDate_Refactored(IEnumerable<object> objects)
         {
-            //TODO your code goes here
+            //return the latest date which is th max()
             return objects.OfType<DateTime?>().Max();
             
         }
