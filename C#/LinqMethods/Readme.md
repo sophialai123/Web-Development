@@ -425,4 +425,15 @@ var skipLast5numbers = grades.SkipLast(5);  //return 59, 82 as it will skip the 
  ```
     
 ---
+
+#### `Contat()`
+- Concatenates two sequences.
+- Returns an IEnumerable<T> that contains the concatenated elements of the two input sequences.
+- Does not remove dupilcate elements
+
+---
+#### `Union()`
+- Produces the set union of two sequences.(Concatenates)
+- An IEnumerable<T> that contains the elements from both input sequences, excluding duplicates.
+- Removes the duplicate elements
     
