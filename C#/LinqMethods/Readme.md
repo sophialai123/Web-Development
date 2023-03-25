@@ -431,6 +431,17 @@ var skipLast5numbers = grades.SkipLast(5);  //return 59, 82 as it will skip the 
 - Returns an IEnumerable<T> that contains the concatenated elements of the two input sequences.
 - Does not remove dupilcate elements
 
+```
+//for input "f_o!_!x" the result will be "fox_!".
+
+public static string CleanWord(string word)
+        {
+            var wordAarr = word.ToCharArray();
+            
+            return new string(wordAarr.Where(x => char.IsLetter(x)).Concat(wordAarr.Where(c=> !char.IsLetter(c)).Distinct()).ToArray());
+        }
+```
+
 ---
 #### `Union()`
 - Produces the set union of two sequences.(Concatenates)
