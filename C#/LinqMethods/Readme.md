@@ -461,8 +461,21 @@ public static string CleanWord(string word)
 #### `ToDictionary()`
 - Creates a `Dictionary<TKey,TValue>` from an `IEnumerable<T>`.
 - Returns a `Dictionary<TKey,TValue>` that contains values of type `TElement` selected from the input sequence.
-- The key is **unique**, one key is only one value 
-
+- The key is **unique**, one key is only one value
+    
+```
+    public static Dictionary<string, int?> ParseToNumbersAndStoreInDictionary(IEnumerable<string> words)
+        {
+            //return a dictionary where each of the words is the key, and the value is either an integer parsed from this string or null
+            return words.Distinct()
+                        .ToDictionary(
+                        w => w,
+                        w => { 
+                            int result; 
+                            return int.TryParse(w, out result) ? result : (int?) null;
+                        });
+        }
+```
 #### `ToLookup()`
 - Creates a `Lookup<TKey,TElement>` from an `IEnumerable<T>` according to specified key selector and element selector functions.
 - A `Lookup<TKey,TElement>` that contains values of type `TElement` selected from the input sequence.
