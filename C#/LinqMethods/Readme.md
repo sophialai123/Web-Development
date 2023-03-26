@@ -481,6 +481,14 @@ public static string CleanWord(string word)
 - A `Lookup<TKey,TElement>` that contains values of type `TElement` selected from the input sequence.
 - One key can contains mutiple values, 
 
+```
+    public static ILookup<bool, int> CreateLookupByDivisibilityBy2(IEnumerable<int> input)
+        {
+            //the value will be all numbers for whom this boolean says if they are divisible by 2.
+           // output [true] = {2,4,6} //[false] = {1,5,7,9}
+            return input.ToLookup(n => n % 2 == 0 ? true : false, n => n);
+        }
+```
 ---
 #### `AsEnumerable()`
 - Returns the input typed as `IEnumerable<T>`.
