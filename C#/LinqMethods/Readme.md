@@ -499,8 +499,10 @@ public static string CleanWord(string word)
 #### `Cast()`
 - Casts the elements of an IEnumerable to the specified type.
 - Returns an `IEnumerable<T>` that contains each element of the source sequence cast to the specified type.
+    
 ---
-####`Select()`
+    
+#### `Select()`
 - 
 - Projects each element of a sequence into a new form.(Change one collection into a new type)
 - Usually used extract data in a collection 
