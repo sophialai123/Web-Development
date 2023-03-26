@@ -500,3 +500,18 @@ public static string CleanWord(string word)
 - Casts the elements of an IEnumerable to the specified type.
 - Returns an `IEnumerable<T>` that contains each element of the source sequence cast to the specified type.
 ---
+####`Select()`
+- 
+- Projects each element of a sequence into a new form.(Change one collection into a new type)
+- Usually used extract data in a collection 
+- A transform function to apply to each source element; the second parameter of the function represents the index of the source element.
+
+```
+var numbers = new [] {1,2,3,4,5,6};
+IEnumerable<string> numbersAsString = numbers.Select(n => n.ToString());
+
+//Aother example
+var words = new [] {"Hello","There"}
+var numberWords = words.Select((word,index) => $"{index +1} . {word}");
+```
+---
