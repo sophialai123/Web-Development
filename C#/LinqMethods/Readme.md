@@ -447,4 +447,25 @@ public static string CleanWord(string word)
 - Produces the set union of two sequences.(Concatenates)
 - An IEnumerable<T> that contains the elements from both input sequences, excluding duplicates.
 - Removes the duplicate elements
-    
+---
+#### `ToArray()`
+- Creates an array from a `IEnumerable<T>`
+- Returns an array that contains the elements from the input sequence.
+
+
+#### `ToList()`
+- Creates a `List<T>` from a `IEnumerable<T>`
+- Returns a `List<T>` that contains the elements from the input sequence.
+---
+
+#### `ToDictionary()`
+- Creates a `Dictionary<TKey,TValue>` from an `IEnumerable<T>`.
+- Returns a `Dictionary<TKey,TValue>` that contains values of type `TElement` selected from the input sequence.
+- The key is **unique**, one key is only one value 
+
+#### `ToLookup()`
+- Creates a `Lookup<TKey,TElement>` from an `IEnumerable<T>` according to specified key selector and element selector functions.
+- A `Lookup<TKey,TElement>` that contains values of type `TElement` selected from the input sequence.
+- One key can contains mutiple values, 
+
+
