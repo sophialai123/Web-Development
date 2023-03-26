@@ -468,4 +468,14 @@ public static string CleanWord(string word)
 - A `Lookup<TKey,TElement>` that contains values of type `TElement` selected from the input sequence.
 - One key can contains mutiple values, 
 
-
+---
+#### `AsEnumerable()`
+- Returns the input typed as `IEnumerable<T>`.
+- usually use with Class methods
+    
+    
+---
+#### `Cast()`
+- Casts the elements of an IEnumerable to the specified type.
+- Returns an `IEnumerable<T>` that contains each element of the source sequence cast to the specified type.
+---
