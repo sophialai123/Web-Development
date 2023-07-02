@@ -22,14 +22,14 @@
 
 ---
 5. ## Element Operators
-  - ElementAt()
-  - ElementAtOrDefault()
-  - First()
-  - FirstOrDefault()
-  - Last()
-  - LastOrDefault()
-  - Single()
-  - SingleOrDefault()
+     - ElementAt()
+     - ElementAtOrDefault()
+     - First()
+     - FirstOrDefault()
+     - Last()
+     - LastOrDefault()
+     - Single()
+     - SingleOrDefault()
   ---
 6. ## Join Operators
    - Join()
@@ -62,10 +62,10 @@
     - Min()
   ---
 12. ## Partitioning Operators
-   - Skip()
-   - SkipWhile()
-   - Take()
-   - TakeWhile()    
+      - Skip()
+      - SkipWhile()
+      - Take()
+      - TakeWhile()    
  ---
 13. ## Conversion Operators
     - ToList()
