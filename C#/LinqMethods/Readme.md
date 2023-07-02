@@ -1,4 +1,87 @@
-## LINQ Methods
+
+# LINQ Methods:
+
+1. ## Sorting Operators
+   - OrderBy()
+   - OrderByDescending()
+   - ThenBy()
+   - ThenByDescending()
+---
+2. ## Grouping Operators
+   - GroupBy()
+   - ToLookup()
+---
+3. ## Quanifier Operators
+   - All()
+   - Any()
+   - Contains()
+---
+4. ## Filter Operators
+   - OfType()
+   - Where()
+
+---
+5. ## Element Operators
+  - ElementAt()
+  - ElementAtOrDefault()
+  - First()
+  - FirstOrDefault()
+  - Last()
+  - LastOrDefault()
+  - Single()
+  - SingleOrDefault()
+  ---
+6. ## Join Operators
+   - Join()
+   - GroupJoin()
+   ---
+7. ## Equality Operators
+   - SequenceEqual()   
+---
+8. ## Concattenation Operators
+   - Concat()
+ ---
+9. ## Set Operators
+   - Distinct()
+   - Except()
+   - Intersect()
+   - Union()
+ ---
+10. ## Generation Operators
+    - DefaultEmpty()
+    - Empty()
+    - Range()
+    - Repeat()
+ ---
+11. ## Aggregate Operators
+    - Aggregate()
+    - Average()
+    - Count()
+    - Sum()
+    - Max()
+    - Min()
+  ---
+12. ## Partitioning Operators
+   - Skip()
+   - SkipWhile()
+   - Take()
+   - TakeWhile()    
+ ---
+13. ## Conversion Operators
+    - ToList()
+    - ToDictionary()
+    - ToString()
+    - ToArray()
+14. ## Projection Operators
+    - Select()
+    - SelectMany()
+---
+15. ## Keywords
+    - Let
+    - Into
+
+---
+
 ####  `Any()` 
 - Determines whether any element of a sequence exists or satisfies a condition. 
 - Return `true ` if the source sequence contains any elements; otherwise return `false`;
