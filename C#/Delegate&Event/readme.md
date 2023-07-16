@@ -80,4 +80,55 @@ namespace DelegateAndEvent
 }
 
 ```
+---
+3. Using delegates for callback functions
+
+   ```
+   
+namespace DelegateAndEvent
+{
+    class Program
+    {
+        
+        static void Main(string[] args)
+        {
+            Console.WriteLine("The delegate starts here");
+
+            //create an object of the class
+            AnotherLibrary obj = new AnotherLibrary();
+
+            //pass the callback function in the parameter
+            var t = new Thread(() => obj.DoSomeTimeComsumingWork(DoSomeTimeWork));
+ 
+            t.Start();
+            Console.WriteLine("The delegate finishes here");
+            Console.ReadLine();
+        }
+
+
+        //create a callback function
+        public static void DoSomeTimeWork(int i)
+        {
+            Console.WriteLine($"The number is {i}");
+        }
+
+        // callback in delegeate
+        class AnotherLibrary 
+           
+        {
+            //create a delegate
+            public delegate void WorkHanlder(int number);
+
+            //pass a call back function(method) in the parameter
+            public void DoSomeTimeComsumingWork(WorkHanlder callbackFunction)
+            {
+                //do some work
+                Thread.Sleep(2000);
+                //after the work is done call the delegate WorkHanlder method
+                callbackFunction(5);
+            }
+        }
+    }
+}
+   ```
 
