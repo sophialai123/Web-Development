@@ -215,7 +215,24 @@ namespace DelegateAndEvent
   public event EventHandler MySampleEvent;
            
 ```
+### Custom Data in Events
+- Custom data can be sent via events using `EventArgs `
+- A class can be derived (inherit) from `EventArgs `
+```
+    class EventPublisherDemo           
+        {
+            //create a custom data in Events , must inherit from EvnetArgs
+            public class MyArguments : EventArgs 
+            {
+                public int MyProperty { get; set; }
 
+            }
+            //using custon argument type in the event
+            public event EventHandler<MyArguments> MyEventRublisher;
+
+        }
+
+```
 
 
 
