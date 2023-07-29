@@ -81,15 +81,14 @@ namespace DelegateAndEvent
 
 ```
 ---
-3. Using delegates for callback functions
 
-   ```
+3. Using delegates for callback functions
    
-namespace DelegateAndEvent
+```
+   namespace DelegateAndEvent
 {
     class Program
-    {
-        
+    {        
         static void Main(string[] args)
         {
             Console.WriteLine("The delegate starts here");
@@ -104,8 +103,6 @@ namespace DelegateAndEvent
             Console.WriteLine("The delegate finishes here");
             Console.ReadLine();
         }
-
-
         //create a callback function
         public static void DoSomeTimeWork(int i)
         {
@@ -132,6 +129,7 @@ namespace DelegateAndEvent
 }
 
 
+
 ```
 
 ---
@@ -145,8 +143,7 @@ namespace DelegateAndEvent
 - Event is declared by using `event` keyword
 
 ```
-
-namespace DelegateAndEvent
+ namespace DelegateAndEvent
 {
     class Program
     {        
@@ -204,6 +201,8 @@ namespace DelegateAndEvent
         }
     }
 }
+
+
 ```
 
 
