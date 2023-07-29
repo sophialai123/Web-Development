@@ -205,6 +205,16 @@ namespace DelegateAndEvent
 
 ```
 
+### EventHandler
+- .Net provides an inbuilt delegate for events called  `EventHandler`
+```
+     //Inbuilt delegate EventHandler
+     public delegate void EventHandler(object sender, EventArgs e);
+
+  //using Inbuilt delegate to create an  event
+  public event EventHandler MySampleEvent;
+           
+```
 
 
 
