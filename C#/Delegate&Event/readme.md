@@ -130,5 +130,20 @@ namespace DelegateAndEvent
         }
     }
 }
-   ```
+
+```
+
+---
+
+### Events
+- Event is for comunicate bewtween objects(classes)
+- The class that sends(or raise) the event is called **Publisher**
+- The classes that receive (or handler) the event are called **Subscribers**
+- Events are popular in UI based applications like control buttons
+- Event uses delegates internally(delegates need to be declare first)
+- Event is declared by using `event` keyword
+
+
+
+
 
