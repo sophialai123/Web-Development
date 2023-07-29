@@ -131,6 +131,7 @@ namespace DelegateAndEvent
     }
 }
 
+
 ```
 
 ---
@@ -142,6 +143,68 @@ namespace DelegateAndEvent
 - Events are popular in UI based applications like control buttons
 - Event uses delegates internally(delegates need to be declare first)
 - Event is declared by using `event` keyword
+
+```
+
+namespace DelegateAndEvent
+{
+    class Program
+    {        
+        static void Main(string[] args)
+        {
+            Console.WriteLine("The delegate starts here");
+
+            //create a class instance
+            EventPublisherDemo eventPublisherDemo = new EventPublisherDemo();
+
+            //Subscriber for the event
+            eventPublisherDemo.MySampleEvent += OnEventRublished;
+
+            //unsubscriber for the event
+            eventPublisherDemo.MySampleEvent -= OnEventRublished;
+
+            //second subscriber class
+
+            EventPublisherDemo demo2 = new EventPublisherDemo();
+
+            //Subscriber for the event
+            demo2.MySampleEvent+= OnEventRublished2;
+
+        }
+
+        public static void OnEventRublished()
+        {
+            //When the event is Invoke() this method will be called 
+            //Do some work when the event get raised
+        }
+
+        public static void OnEventRublished2()
+        {
+            //When the event is Invoke() this method will be called 
+            //Do some work when the event get raised
+            
+        }
+        class EventPublisherDemo
+           
+        {
+            //create a delegate
+            public delegate void MyDelegate();
+
+            //create an event (delegate needs to be create first)
+            public event MyDelegate MySampleEvent;
+
+            //create a method which raises(Publisher) the event
+
+            public void PublisherMyEvent()
+            {
+                //raise the event
+                MySampleEvent?.Invoke();
+            }
+            
+        }
+    }
+}
+```
 
 
 
