@@ -183,3 +183,27 @@ static void Main(string[] args)
     Console.ReadLine();
 }
 ```
+---
+#### Hashtables
+   - Hashtables are dynamic in size can be increased or decreased
+   - Hashtables are a dynamic type ``All list items can be different types`
+   - Hashtables have a key, value pair and cannot have duplicates keys
+     
+```
+ static void Main(string[] args)
+ {
+     // Hastables
+     Hashtable hashtable = new Hashtable();
+
+     hashtable.Add("key1", "value1");
+     hashtable.Add(1,true); 
+     hashtable.Add(2,"Hello");
+
+     // Accessing the elements, the seques is from the last to the first  
+     foreach (var item in hashtable)
+     {
+         Console.WriteLine(item);
+     }
+     Console.ReadLine();
+ }
+```
