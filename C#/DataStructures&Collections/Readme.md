@@ -4,22 +4,22 @@
    - Arrays can be created in a different way
 
 ```
-          //Array
-            // Create an array of four elements, and add values later
-            string[] cars = new string[4];
-            
-            // Create an array of four elements and add values right away 
-            string[] cars1 = new string[4] { "Volvo", "BMW", "Ford", "Mazda" };
+          static void Main(string[] args)
+ {
+     //ArrayLists
+     ArrayList arrayList = new ArrayList();
 
-            // Create an array of four elements without specifying the size 
-            string[] cars2 = new string[] { "Volvo", "BMW", "Ford", "Mazda" };
+     arrayList.Add("a");
+     arrayList.Add(1);
+     arrayList.Add(true);
+     arrayList.Remove(1);
 
-            // Create an array of four elements, omitting the new keyword, and without specifying the size
-            string[] cars3 = { "Volvo", "BMW", "Ford", "Mazda" };
-            var lastItem = cars3[3];
-            var changeFirstItem = cars3[0] = "changed";
-            Console.WriteLine(cars3[0]);
-            Console.ReadLine();
+     // Accessing the elements 
+     foreach (var item in arrayList)
+     {
+         Console.WriteLine("Each different type of items in the arraylist: " + item);
+     }
+ }
 
 ```
 ---
@@ -27,13 +27,22 @@
    - Lists are dynamic in size and the size can be increased or decreased
    - Lists are static in type `All list items are must be the same type`
 ```
-  //Lists
-  List<string> lists = new List<string>();
+ static void Main(string[] args)
+ {
+     //Lists
+     List<string> lists = new List<string>();
 
-  lists.Add("a");
-  lists.Add("b");
-  lists.Add("c");
-  lists.Remove("d");
+     lists.Add("a");
+     lists.Add("b");
+     lists.Add("c");
+     lists.Remove("d");
+
+     // Accessing the elements 
+     foreach (var item in lists)
+     {
+         Console.WriteLine("Each item : " + item);
+     }
+ }
 ```
 ---
 #### ArrayList
@@ -41,18 +50,21 @@
    - ArrayLists are static in type `All list items can be different types`
      
  ```
- //ArrayLists
- ArrayList arrayList = new ArrayList();
-
- arrayList.Add("a");
- arrayList.Add(1);
- arrayList.Add(true);
- arrayList.Remove(1);
-
- // Accessing the elements 
- foreach (var item in arrayList)
+ static void Main(string[] args)
  {
-     Console.WriteLine("Each different type of items in the arraylist: " + item);
+     //ArrayLists
+     ArrayList arrayList = new ArrayList();
+
+     arrayList.Add("a");
+     arrayList.Add(1);
+     arrayList.Add(true);
+     arrayList.Remove(1);
+
+     // Accessing the elements 
+     foreach (var item in arrayList)
+     {
+         Console.WriteLine("Each different type of items in the arraylist: " + item);
+     }
  }
  ```
 ---
@@ -61,22 +73,25 @@
 - Stacks are the first push item(Add), will get pop (Remove) in the last (First in, Last out)
 
 ```
- //Stacks
- Stack stack = new Stack();
-
- //first pushed item
- stack.Push(1);
- stack.Push(true);
- stack.Push("Hello");
-
- //will remove the last pushed the item
- var last  = stack.Pop();
- Console.WriteLine(last);
-
- // Accessing the elements, the seques is from the last to the first  
- foreach (var item in stack)
+ static void Main(string[] args)
  {
-     Console.WriteLine("Each different type of items in the arraylist: " + item);
+     //Stacks
+     Stack stack = new Stack();
+
+     //first pushed item
+     stack.Push(1);
+     stack.Push(true);
+     stack.Push("Hello");
+
+     //will remove the last pushed the item
+     var last = stack.Pop();
+     Console.WriteLine(last);
+
+     // Accessing the elements, the seques is from the last to the first  
+     foreach (var item in stack)
+     {
+         Console.WriteLine("Each stack item : " + item);
+     }
  }
 
 ```
