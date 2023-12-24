@@ -26,6 +26,32 @@
 #### Lists
    - Lists are dynamic in size and the size can be increased or decreased
    - Lists are static in type `All list items are must be the same type`
+```
+  //Lists
+  List<string> lists = new List<string>();
+
+  lists.Add("a");
+  lists.Add("b");
+  lists.Add("c");
+  lists.Remove("d");
+```
+---
+#### ArrayList
+   - ArrayLists are dynamic in size and the size can be increased or decreased
+   - ArrayLists are static in type `All list items can be different types`
      
-     
- 
+ ```
+ //ArrayLists
+ ArrayList arrayList = new ArrayList();
+
+ arrayList.Add("a");
+ arrayList.Add(1);
+ arrayList.Add(true);
+ arrayList.Remove(1);
+
+ // Accessing the elements 
+ foreach (var item in arrayList)
+ {
+     Console.WriteLine("Each different type of items in the arraylist: " + item);
+ }
+ ```
