@@ -50,4 +50,62 @@ public class CountryContext : DbContext
 }
 ```
 ---
+#### DbSet Type
+ - The Entity Framework type DbSet represents a database table in memory.
+ - It is typically used with a `<T>` qualifier. The type, or `T`, is one of your database model classes.
+ - The ModelBuilder binds each database table entity to a corresponding `DbSet`.
+ - `DbSet` has a number of member methods that can return a `List<T>` of records or a single record.
 
+```
+using Microsoft.EntityFrameworkCore;
+
+public class CountryContext : DbContext
+{
+  public CountryContext(DbContextOptions<CountryContext> options)
+      : base(options)
+  {
+  }
+
+  public DbSet<Country> Countries { get; set; }
+  public DbSet<Continent> Continents { get; set; }
+
+  protected override void OnModelCreating(ModelBuilder modelBuilder)
+  {
+    modelBuilder.Entity<Country>().ToTable("Country");
+    modelBuilder.Entity<Continent>().ToTable("Continent");
+  }
+}
+```
+---
+#### Entity Framework Configuration
+In ASP.NET Core, a database may be connected to a web app using Entity Framework. There are four common steps for any setup:
+
+ - Define one or more database model classes and annotate them
+ - Define a database context class that uses `DbSet` to map entities to tables
+ - Define a database connection string in `appsettings.json`
+ - Add the Entity Framework service in `Startup.ConfigureServices()`
+---
+#### Database Connection String
+- The Entity Framework context depends on a database connection string that identifies a physical database connection.
+- It is typically stored in `appsettings.json`.
+- You can define multiple connection strings for different environments like Development, Test, or Production.
+- Each database product has specific requirements for the syntax of the connection string.
+- This might contain the database name, user name, password, and other options.
+
+```
+{
+  "ConnectionStrings": {
+    "CountryContext": "Data Source=Country.db"
+  }
+}
+```
+---
+#### Creating the Schema
+  - Entity Framework provides command-line tools that help manage the connected database.
+  -  Use these commands in the bash shell or Windows command prompt to create an initial database file and schema. This will read the context class and evaluate each database model represented by a `DbSet`.
+  -  The SQL syntax necessary to create all schema objects is then generated and executed.
+```
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+```
+---
