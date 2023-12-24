@@ -4,7 +4,7 @@
    - Arrays can be created in a different way
 
 ```
-          static void Main(string[] args)
+static void Main(string[] args)
  {
      //ArrayLists
      ArrayList arrayList = new ArrayList();
