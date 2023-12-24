@@ -207,3 +207,29 @@ static void Main(string[] args)
      Console.ReadLine();
  }
 ```
+---
+#### Tuples
+   - Tuples are immutable, meaning their values cannot be changed after they are created.
+   - Tuples are useful when you need to return multiple values from a method, or when you want to work with a collection of heterogeneous elements.
+
+```
+ static void Main(string[] args)
+ {
+     //Create a Tuple
+
+     var person = Tuple.Create("John", 25, "Male");
+
+     //Accessing the items
+     Console.WriteLine(person);
+     Console.WriteLine($"First item: { person.Item1}, Second item: {person.Item1},Third item: {person.Item1}");
+
+     // Creating a ValueTuple with named elements
+     var person2 = (Name: "Steven", Age: 25, Gender: "Male");
+
+     // Accessing named elements
+     Console.WriteLine($"Name: {person2.Name}, Age: {person2.Age}, Gender: {person2.Gender}");
+
+
+     Console.ReadLine();
+ }
+```
