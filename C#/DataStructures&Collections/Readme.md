@@ -23,3 +23,9 @@
 
 ```
 ---
+#### Lists
+   - Lists are dynamic in size and the size can be increased or decreased
+   - Lists are static in type `All list items are must be the same type`
+     
+     
+ 
