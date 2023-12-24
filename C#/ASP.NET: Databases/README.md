@@ -1,4 +1,4 @@
-
+[ASP.NET Cheatsheet](https://www.codecademy.com/learn/asp-net-i/modules/asp-net-databases/cheatsheet)
 #### Database Model
  - Entity Framework uses C# classes to define the database model.
  - This is an in-memory representation of data stored in a database table.
@@ -109,3 +109,45 @@ dotnet ef migrations add InitialCreate
 dotnet ef database update
 ```
 ---
+#### Saving Changes
+  - The Entity Framework context DbSet member provides the `Attach()` method to update an existing record,
+  - the `Add()` method to insert a new record, and
+  - the Remove() method to delete an existing record.
+  - Any combination of multiple records can batched before saving.
+
+**Use the EF context `SaveChanges()` or `SaveChangesAsync()` methods to persist all inserted, updated, and deleted records to the database table.**
+
+```
+// Assuming Country is of type Country
+// Assuming _context is of a type inheriting DbSet
+
+public async Task<IActionResult> OnPostAsync(string id)
+{
+  // update
+  _context.Attach(Country).State = EntityState.Modified;
+
+  // insert
+  await _context.Countries.AddAsync(Country);
+
+  // delete
+  Country Country = await _context.Countries.FindAsync(id);
+
+  if (Country != null)
+  {
+    _context.Countries.Remove(Country);
+  }
+
+  // all three methods must be followed by savechanges
+  await _context.SaveChangesAsync(); 
+  
+  return RedirectToPage("./Index");
+}
+```
+---
+
+#### LINQ Queries
+ - The Entity Framework `DbSet` entities can manage complex queries using C# `LINQ` syntax.
+ - This is referenced from the `System.Linq library.`
+ - All of the `Where()` and `OrderBy()` clauses are evaluated in the final statement that calls `ToListAsync()`.
+ - EF evaluates all options and generates a SQL `SELECT` statement with corresponding `WHERE` and `ORDERBY` clauses.
+
