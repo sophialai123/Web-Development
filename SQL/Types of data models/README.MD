@@ -23,11 +23,11 @@ How does this scenario translate into a Conceptual Data Model? Open the accordio
 Conceptual Model: Car Rental System:
 
 Tables : 
- -. Customer --> Attributes  ---> Customer ID (PK), Name, Contact Information, Driver's License Details.
- -. Car --> Attributes --> Car ID (PK), Make, Model, Year, Rental Rate, Availability Status.
- -. Rental reservation --> Attributes --> Reservation ID (PK), Pick-up Date, Return Date, Total Cost.
- -. Retal agreement --> Attributes --> Agreement ID (PK), Insurance Information, Terms and Conditions.
- -. Business rules --> 
+ 1. Customer --> Attributes  ---> Customer ID (PK), Name, Contact Information, Driver's License Details.
+ 2. Car --> Attributes --> Car ID (PK), Make, Model, Year, Rental Rate, Availability Status.
+3. Rental reservation --> Attributes --> Reservation ID (PK), Pick-up Date, Return Date, Total Cost.
+ 4. Retal agreement --> Attributes --> Agreement ID (PK), Insurance Information, Terms and Conditions.
+ 5. Business rules --> 
            -.A "Customer" can make multiple "Rental Reservations."
 
            -. A "Car" can be associated with multiple "Rental Reservations."
