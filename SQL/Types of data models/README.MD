@@ -22,8 +22,7 @@ How does this scenario translate into a Conceptual Data Model? Open the accordio
 
 Conceptual Model: Car Rental System:
 
-
-  Tables : 
+Tables : 
  -. Customer --> Attributes  ---> Customer ID (PK), Name, Contact Information, Driver's License Details.
  -. Car --> Attributes --> Car ID (PK), Make, Model, Year, Rental Rate, Availability Status.
  -. Rental reservation --> Attributes --> Reservation ID (PK), Pick-up Date, Return Date, Total Cost.
