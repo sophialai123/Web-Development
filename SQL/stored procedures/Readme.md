@@ -94,4 +94,21 @@ Let's take a simple stored procedure that takes an input parameter (CustomerID) 
 --Replace 1 with desired customerID
 EXEC GetCustomerOrders @CustomerID = 1; 
 ```
+---
+#### Create a stored procedure to update the quantity of a product in an inventory system.
+Here's an explanation of the Correct Code:
+
+Step 1: The correct code is `CREATE PROCEDURE UpdateProductQuantity`. This line begins the creation of the stored procedure named "UpdateProductQuantity", which will be used to update the quantity of a product.
+
+Step 2: The correct code is `@newQuantity INT, @productID INT`. This line specifies the input parameters for the stored procedure. In this case, we need two parameters: `@newQuantity` to hold the new quantity value, and `@productID` to specify the product to update.
+
+Step 3: The correct code is `DECLARE @currentQuantity INT`;. This line declares a variable `@currentQuantity` that will be used to store the current quantity of the product.
+
+Step 4: The correct code is `SET @currentQuantity = SELECT quantity FROM products WHERE product_id = @productID;`. This line retrieves the current quantity from the products table based on the provided `product ID` and assigns it to the `@currentQuantity` variable.
+
+Step 5: The correct code is `SET @newQuantity = @currentQuantity + @newQuantity;`. This line updates the quantity by adding the new quantity value to the current quantity.
+
+Step 6: The correct code is `UPDATE products SET quantity = @newQuantity WHERE product_id = @productID;`. This line updates the products table, setting the new quantity value for the specified product ID.
+
+Step 7: The correct code is PRINT `'Product quantity updated successfully.'`;. This line displays a success message indicating the completed product quantity update.
 
