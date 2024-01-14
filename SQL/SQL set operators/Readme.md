@@ -21,4 +21,30 @@ SELECT another_select_query;
  - The dtay types selected in the first query should be replicated in the second query(for example, if the first query selects a number and two charater types, the second query should do the same)
  - When ordering results, place the `ORDER BY` calause at the end of the last query
  - Avoid addding the `ORDER BY ` caluse inside each individual `SELECT` query before using the set operator
-   
+---
+### ` UNION`
+The `UNION` set operator allows you to combine the results of two queries. It removes any duplicate results and shows you the combination of both.
+
+```
+SELECT ‘Customer’ AS record_type, first_name, last_name
+FROM customer
+UNION
+SELECT ‘Employee’, first_name, last_name
+FROM employee
+ORDER BY record_type, first_name, last_name;
+```
+All of the set operators support standard keywords inside the SELECT statement. ** The set operator is just a way of combining results.**
+
+---
+### `UNION ALL`
+The UNION ALL set operator also combines the results from two queries but it does not remove duplicates.
+```
+SELECT ‘Customer’ AS record_type, first_name, last_name
+FROM customer
+UNION ALL
+SELECT ‘Employee’, first_name, last_name
+FROM employee;
+```
+
+**The major difference between UNION ALL and UNION in SQL is that UNION removes any duplicate results from the final result set, and UNION ALL does not. UNION performs a DISTINCT on the result set to remove duplicates. **
+---
