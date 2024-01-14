@@ -95,16 +95,15 @@ END;
     END;
  ```
 
-
 ---
-### `THROW `statement
+### `THROW` statement
 
 - The `THROW` statement is another way to raise an exception and generate a custom error message in SQL.
 - It is similar to `RAISERROR` but provides a more streamlined syntax and is recommended for newer versions of SQL Server.
 - The `THROW` statement allows you to raise an error and specify the error number, severity, state, and message optionally.
 - `EXEC CustomErrorProcedure @Value = -5;`
 
-  ```
+```
     CREATE PROCEDURE CustomErrorProcedure
       @Value INT
   
@@ -125,9 +124,6 @@ END;
               THROW 50000, @ErrorMessage, 1;
   
           END
-  
-          
-  
           PRINT 'No error occurred.';
   
       END TRY
@@ -137,21 +133,20 @@ END;
           PRINT 'An error occurred: ' + ERROR_MESSAGE();
   
       END CATCH
-  
    END;
  ```
 
-
-
 ---
+
 ### `ERROR` functions
 - SQL provides several built-in functions to retrieve information about errors that have occurred.
 - These functions include `ERROR_NUMBER()`, `ERROR_MESSAGE()`, `ERROR_SEVERITY()`, `ERROR_STATE()`, and `ERROR_LINE()`.
 - You can use these functions within the `CATCH` block to retrieve specific details about the error and include them in error handling logic or error logging.
 - `EXEC ErrorInfoProcedure;`
 - This will trigger the custom error and display detailed information about the error, including its number, message, severity, state, and the line number where the error occurred.
- ```
-   CREATE PROCEDURE ErrorInfoProcedure
+
+```
+ CREATE PROCEDURE ErrorInfoProcedure
     AS
     
     BEGIN
