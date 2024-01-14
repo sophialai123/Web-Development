@@ -55,17 +55,12 @@ END;
 
   ```
     CREATE PROCEDURE DivideByZeroErrorProcedure
-  
-      @Dividend INT,
-  
+      @Dividend INT 
       @Divisor INT
   
-  AS
-  
-  BEGIN
-  
+   AS 
+   BEGIN
       BEGIN TRY
-  
           DECLARE @Result DECIMAL(10, 2);
   
           -- Simulate a divide by zero error
@@ -148,11 +143,8 @@ END;
 ```
   CREATE PROCEDURE ErrorInfoProcedure
     AS
-    
-    BEGIN
-    
+    BEGIN 
         BEGIN TRY
-    
             -- Simulate a custom error
     
             DECLARE @ErrorMessage NVARCHAR(100) = 'This is a custom error.';
