@@ -1,4 +1,4 @@
-###Stored procedures
+### Stored procedures
 
 Stored procedures are pre-compiled database objects that contain SQL statements or procedural code. 
 They are essential to SQL (Structured Query Language) databases.
