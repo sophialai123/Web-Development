@@ -45,6 +45,7 @@ BEGIN
 END;
 ```
 ---
+
 ### `RAISERROR` statement
 - The RAISERROR statement generates a custom error message and explicitly raises an error within the SQL code.
 - You can specify the severity level, error message, and optional parameters to provide additional information about the error.
@@ -53,46 +54,46 @@ END;
 - Execute the stored procedure with a divisor of zero `EXEC DivideByZeroErrorProcedure @Dividend = 10, @Divisor = 0;`
 
   ```
-  CREATE PROCEDURE DivideByZeroErrorProcedure
-
-    @Dividend INT,
-
-    @Divisor INT
-
-AS
-
-BEGIN
-
-    BEGIN TRY
-
-        DECLARE @Result DECIMAL(10, 2);
-
-        -- Simulate a divide by zero error
-
-        IF @Divisor = 0
-
-        BEGIN
-
-            DECLARE @ErrorMessage NVARCHAR(100) = 'Cannot divide by zero.';
-
-            RAISERROR (@ErrorMessage, 16, 1);
-
-        END
-      
-        SET @Result = @Dividend / @Divisor;
-
-        PRINT 'Result: ' + CAST(@Result AS NVARCHAR(20));
-
-    END TRY
-
-    BEGIN CATCH
-
-        PRINT 'An error occurred: ' + ERROR_MESSAGE();
-
-    END CATCH
-
-END;
-  ```
+    CREATE PROCEDURE DivideByZeroErrorProcedure
+  
+      @Dividend INT,
+  
+      @Divisor INT
+  
+  AS
+  
+  BEGIN
+  
+      BEGIN TRY
+  
+          DECLARE @Result DECIMAL(10, 2);
+  
+          -- Simulate a divide by zero error
+  
+          IF @Divisor = 0
+  
+          BEGIN
+  
+              DECLARE @ErrorMessage NVARCHAR(100) = 'Cannot divide by zero.';
+  
+              RAISERROR (@ErrorMessage, 16, 1);
+  
+          END
+        
+          SET @Result = @Dividend / @Divisor;
+  
+          PRINT 'Result: ' + CAST(@Result AS NVARCHAR(20));
+  
+      END TRY
+  
+      BEGIN CATCH
+  
+          PRINT 'An error occurred: ' + ERROR_MESSAGE();
+  
+      END CATCH
+  
+  END;
+```
 ---
 
 ### `THROW `statement
@@ -102,41 +103,41 @@ END;
 - `EXEC CustomErrorProcedure @Value = -5;`
 
 ```
-CREATE PROCEDURE CustomErrorProcedure
-
-    @Value INT
-
-AS
-
-BEGIN
-
-    BEGIN TRY
-
-        -- Simulate a condition that triggers an error
-
-        IF @Value < 0
-
-        BEGIN
-
-            DECLARE @ErrorMessage NVARCHAR(100) = 'Value cannot be negative.';
-
-            THROW 50000, @ErrorMessage, 1;
-
-        END
-
-        
-
-        PRINT 'No error occurred.';
-
-    END TRY
-
-    BEGIN CATCH
-
-        PRINT 'An error occurred: ' + ERROR_MESSAGE();
-
-    END CATCH
-
-END;
+  CREATE PROCEDURE CustomErrorProcedure
+  
+      @Value INT
+  
+  AS
+  
+  BEGIN
+  
+      BEGIN TRY
+  
+          -- Simulate a condition that triggers an error
+  
+          IF @Value < 0
+  
+          BEGIN
+  
+              DECLARE @ErrorMessage NVARCHAR(100) = 'Value cannot be negative.';
+  
+              THROW 50000, @ErrorMessage, 1;
+  
+          END
+  
+          
+  
+          PRINT 'No error occurred.';
+  
+      END TRY
+  
+      BEGIN CATCH
+  
+          PRINT 'An error occurred: ' + ERROR_MESSAGE();
+  
+      END CATCH
+  
+  END;
 ```
 ---
 
@@ -148,41 +149,41 @@ END;
 - This will trigger the custom error and display detailed information about the error, including its number, message, severity, state, and the line number where the error occurred.
 
 ```
-CREATE PROCEDURE ErrorInfoProcedure
-
-AS
-
-BEGIN
-
-    BEGIN TRY
-
-        -- Simulate a custom error
-
-        DECLARE @ErrorMessage NVARCHAR(100) = 'This is a custom error.';
-
-        DECLARE @ErrorSeverity INT = 15;
-
-        DECLARE @ErrorState INT = 1;
-
-        RAISERROR(@ErrorMessage, @ErrorSeverity, @ErrorState);
-
-    END TRY
-
-    BEGIN CATCH
-
-        PRINT 'Error Number: ' + CAST(ERROR_NUMBER() AS NVARCHAR(10));
-
-        PRINT 'Error Message: ' + ERROR_MESSAGE();
-
-        PRINT 'Error Severity: ' + CAST(ERROR_SEVERITY() AS NVARCHAR(10));
-
-        PRINT 'Error State: ' + CAST(ERROR_STATE() AS NVARCHAR(10));
-
-        PRINT 'Error Line: ' + CAST(ERROR_LINE() AS NVARCHAR(10));
-
-    END CATCH
-
-END;
+  CREATE PROCEDURE ErrorInfoProcedure
+  
+  AS
+  
+  BEGIN
+  
+      BEGIN TRY
+  
+          -- Simulate a custom error
+  
+          DECLARE @ErrorMessage NVARCHAR(100) = 'This is a custom error.';
+  
+          DECLARE @ErrorSeverity INT = 15;
+  
+          DECLARE @ErrorState INT = 1;
+  
+          RAISERROR(@ErrorMessage, @ErrorSeverity, @ErrorState);
+  
+      END TRY
+  
+      BEGIN CATCH
+  
+          PRINT 'Error Number: ' + CAST(ERROR_NUMBER() AS NVARCHAR(10));
+  
+          PRINT 'Error Message: ' + ERROR_MESSAGE();
+  
+          PRINT 'Error Severity: ' + CAST(ERROR_SEVERITY() AS NVARCHAR(10));
+  
+          PRINT 'Error State: ' + CAST(ERROR_STATE() AS NVARCHAR(10));
+  
+          PRINT 'Error Line: ' + CAST(ERROR_LINE() AS NVARCHAR(10));
+  
+      END CATCH
+  
+  END;
 ```
 
 
