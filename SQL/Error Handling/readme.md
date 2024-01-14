@@ -96,9 +96,8 @@ END;
  ```
 
 
------
-
- ### `THROW `statement
+---
+### `THROW `statement
 
 - The `THROW` statement is another way to raise an exception and generate a custom error message in SQL.
 - It is similar to `RAISERROR` but provides a more streamlined syntax and is recommended for newer versions of SQL Server.
@@ -106,53 +105,8 @@ END;
 - `EXEC CustomErrorProcedure @Value = -5;`
 
   ```
-     CREATE PROCEDURE CustomErrorProcedure
-     
-         @Value INT
-     
-     AS
-     
-     BEGIN
-     
-         BEGIN TRY
-     
-             -- Simulate a condition that triggers an error
-     
-             IF @Value < 0
-     
-             BEGIN
-     
-                 DECLARE @ErrorMessage NVARCHAR(100) = 'Value cannot be negative.';
-     
-                 THROW 50000, @ErrorMessage, 1;
-     
-             END
-     
-             
-     
-             PRINT 'No error occurred.';
-     
-         END TRY
-     
-         BEGIN CATCH
-     
-             PRINT 'An error occurred: ' + ERROR_MESSAGE();
-     
-         END CATCH
-     
-     END;
-  ```
-------
-
-### `ERROR` functions
-- SQL provides several built-in functions to retrieve information about errors that have occurred.
-- These functions include `ERROR_NUMBER()`, `ERROR_MESSAGE()`, `ERROR_SEVERITY()`, `ERROR_STATE()`, and `ERROR_LINE()`.
-- You can use these functions within the `CATCH` block to retrieve specific details about the error and include them in error handling logic or error logging.
-- `EXEC ErrorInfoProcedure;`
-- This will trigger the custom error and display detailed information about the error, including its number, message, severity, state, and the line number where the error occurred.
-
-```
-  CREATE PROCEDURE ErrorInfoProcedure
+    CREATE PROCEDURE CustomErrorProcedure
+      @Value INT
   
   AS
   
@@ -160,33 +114,77 @@ END;
   
       BEGIN TRY
   
-          -- Simulate a custom error
+          -- Simulate a condition that triggers an error
   
-          DECLARE @ErrorMessage NVARCHAR(100) = 'This is a custom error.';
+          IF @Value < 0
   
-          DECLARE @ErrorSeverity INT = 15;
+          BEGIN
   
-          DECLARE @ErrorState INT = 1;
+              DECLARE @ErrorMessage NVARCHAR(100) = 'Value cannot be negative.';
   
-          RAISERROR(@ErrorMessage, @ErrorSeverity, @ErrorState);
+              THROW 50000, @ErrorMessage, 1;
+  
+          END
+  
+          
+  
+          PRINT 'No error occurred.';
   
       END TRY
   
       BEGIN CATCH
   
-          PRINT 'Error Number: ' + CAST(ERROR_NUMBER() AS NVARCHAR(10));
-  
-          PRINT 'Error Message: ' + ERROR_MESSAGE();
-  
-          PRINT 'Error Severity: ' + CAST(ERROR_SEVERITY() AS NVARCHAR(10));
-  
-          PRINT 'Error State: ' + CAST(ERROR_STATE() AS NVARCHAR(10));
-  
-          PRINT 'Error Line: ' + CAST(ERROR_LINE() AS NVARCHAR(10));
+          PRINT 'An error occurred: ' + ERROR_MESSAGE();
   
       END CATCH
   
-  END;
-```
+   END;
+ ```
+
+
+
+---
+### `ERROR` functions
+- SQL provides several built-in functions to retrieve information about errors that have occurred.
+- These functions include `ERROR_NUMBER()`, `ERROR_MESSAGE()`, `ERROR_SEVERITY()`, `ERROR_STATE()`, and `ERROR_LINE()`.
+- You can use these functions within the `CATCH` block to retrieve specific details about the error and include them in error handling logic or error logging.
+- `EXEC ErrorInfoProcedure;`
+- This will trigger the custom error and display detailed information about the error, including its number, message, severity, state, and the line number where the error occurred.
+ ```
+   CREATE PROCEDURE ErrorInfoProcedure
+    AS
+    
+    BEGIN
+    
+        BEGIN TRY
+    
+            -- Simulate a custom error
+    
+            DECLARE @ErrorMessage NVARCHAR(100) = 'This is a custom error.';
+    
+            DECLARE @ErrorSeverity INT = 15;
+    
+            DECLARE @ErrorState INT = 1;
+    
+            RAISERROR(@ErrorMessage, @ErrorSeverity, @ErrorState);
+    
+        END TRY
+    
+        BEGIN CATCH
+    
+            PRINT 'Error Number: ' + CAST(ERROR_NUMBER() AS NVARCHAR(10));
+    
+            PRINT 'Error Message: ' + ERROR_MESSAGE();
+    
+            PRINT 'Error Severity: ' + CAST(ERROR_SEVERITY() AS NVARCHAR(10));
+    
+            PRINT 'Error State: ' + CAST(ERROR_STATE() AS NVARCHAR(10));
+    
+            PRINT 'Error Line: ' + CAST(ERROR_LINE() AS NVARCHAR(10));
+    
+        END CATCH
+    
+    END;
+ ```
 
 
