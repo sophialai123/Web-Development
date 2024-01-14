@@ -57,5 +57,41 @@ And `Price` of that `Product` is stored in the `PRODUCT` Table. This will requir
    ```
    EXEC CalculateTotalPrice;
    ```
- 
+ ---
+ ### Input and Output parameters
+
+ Stored procedures can have input parameters that allow values to be passed into the procedure during execution. These parameters are declared when creating the stored procedure.
+
+Output parameters can be used to return values from the stored procedure back to the calling code.
+
+Example
+Let's take a simple stored procedure that takes an input parameter (CustomerID) and retrieves all orders for that specific customer in our ECommerceDB example:
+
+#### Create the stored procedure
+```
+  CREATE PROCEDURE GetCustomerOrders
+      @CustomerID INT
+  AS
+  BEGIN
+      SELECT 
+          o.OrderID,
+          o.OrderDate,
+          p.ProductName,
+          oi.Quantity,
+          p.Price
+      FROM 
+          [Order] o
+      JOIN 
+          OrderItem oi ON o.OrderID = oi.OrderID
+      JOIN 
+          Product p ON oi.ProductID = p.ProductID
+      WHERE 
+          o.CustomerID = @CustomerID;
+  END;
+```
+#### Execute the stored procedure
+```
+--Replace 1 with desired customerID
+EXEC GetCustomerOrders @CustomerID = 1; 
+```
 
