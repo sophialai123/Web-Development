@@ -107,9 +107,9 @@ END;
     CREATE PROCEDURE CustomErrorProcedure
       @Value INT
   
-  AS
+    AS
   
-  BEGIN
+    BEGIN
   
       BEGIN TRY
   
@@ -146,7 +146,7 @@ END;
 - This will trigger the custom error and display detailed information about the error, including its number, message, severity, state, and the line number where the error occurred.
 
 ```
- CREATE PROCEDURE ErrorInfoProcedure
+  CREATE PROCEDURE ErrorInfoProcedure
     AS
     
     BEGIN
@@ -164,7 +164,6 @@ END;
             RAISERROR(@ErrorMessage, @ErrorSeverity, @ErrorState);
     
         END TRY
-    
         BEGIN CATCH
     
             PRINT 'Error Number: ' + CAST(ERROR_NUMBER() AS NVARCHAR(10));
@@ -179,7 +178,7 @@ END;
     
         END CATCH
     
-    END;
+     END;
  ```
 
 
