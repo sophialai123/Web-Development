@@ -3,10 +3,10 @@ A set operator in SQL is a keyword that lets you combine the results of two quer
 Sometimes in SQL you'll need to query data from two tables, but instead of using a JOIN you'll need to list the results from both tables in a single result, or in different rows. That's what set operators do.
 
 The different set operators are:
- - UNION
- - UNION ALL
- - INTERSECT
- - EXCEPT
+ - `UNION`
+ - `UNION ALL`
+ - `INTERSECT`
+ - `EXCEPT`
 ---
 ### Using set operators
 ```
@@ -37,7 +37,7 @@ All of the set operators support standard keywords inside the SELECT statement. 
 
 ---
 ### `UNION ALL`
-The UNION ALL set operator also combines the results from two queries but it does not remove duplicates.
+The `UNION ALL` set operator also combines the results from two queries but it does not remove duplicates.
 ```
 SELECT ‘Customer’ AS record_type, first_name, last_name
 FROM customer
@@ -46,5 +46,31 @@ SELECT ‘Employee’, first_name, last_name
 FROM employee;
 ```
 
-**The major difference between UNION ALL and UNION in SQL is that UNION removes any duplicate results from the final result set, and UNION ALL does not. UNION performs a DISTINCT on the result set to remove duplicates. **
+**The major difference between UNION ALL and UNION in SQL is that UNION removes any duplicate results from the final result set, and UNION ALL does not. UNION performs a DISTINCT on the result set to remove duplicates.**
 ---
+### `INTERSECT`
+The `INTERSECT` keyword allows you to find results that exist in **both queries**. Two `SELECT` statements are needed.
+
+```
+SELECT first_name, last_name
+FROM customer
+INTERSECT
+SELECT first_name, last_name
+FROM employee;
+```
+---
+### `EXCEPT`
+The `EXCEPT` set operator will return results that are found in the first query specified that don’t exist in the second query. MINUS is the Oracle specific keyword for this set operator.
+
+With our example data, we could use the `EXCEPT` set operator to find all names in the customer table that don’t exist in the employee table:
+```
+SELECT first_name, last_name
+FROM customer
+EXCEPT
+SELECT first_name, last_name
+FROM employee;
+
+```
+
+
+
