@@ -19,13 +19,15 @@ To create an `index` in SQL, you can use the `CREATE INDEX` statement followed b
 Let's assume we have a table called "Employees" with columns "EmployeeID", "FirstName", "LastName", and "Salary". 
 We want to create an index on the "LastName" column to improve the performance of queries that involve searching or sorting by last name.
  ```
-CREATE INDEX idx_LastName ON Employees (LastName); 
-```
+ CREATE INDEX idx_LastName ON Employees (LastName); 
+ ```
 
 After creating the index, the database engine will automatically maintain the index as new rows are inserted, updated, or deleted in the "Employees" table. This ensures that the index stays up-to-date and provides improved query performance.
 
 It's important to note that the indexed column (s) should be chosen based on your application's specific query patterns and performance requirements. Indexing columns frequently used in search conditions or join operations can significantly boost query performance.
+
 ---
+
 ### Using Indexes
 Now, suppose we insert a new row into the "Employees" table:
 ```
