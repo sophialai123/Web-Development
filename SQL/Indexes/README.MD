@@ -18,8 +18,32 @@ To create an `index` in SQL, you can use the `CREATE INDEX` statement followed b
 
 Let's assume we have a table called "Employees" with columns "EmployeeID", "FirstName", "LastName", and "Salary". 
 We want to create an index on the "LastName" column to improve the performance of queries that involve searching or sorting by last name.
-`CREATE INDEX idx_LastName ON Employees (LastName); `
+ ```
+CREATE INDEX idx_LastName ON Employees (LastName); 
+```
 
 After creating the index, the database engine will automatically maintain the index as new rows are inserted, updated, or deleted in the "Employees" table. This ensures that the index stays up-to-date and provides improved query performance.
 
 It's important to note that the indexed column (s) should be chosen based on your application's specific query patterns and performance requirements. Indexing columns frequently used in search conditions or join operations can significantly boost query performance.
+---
+### Using Indexes
+Now, suppose we insert a new row into the "Employees" table:
+```
+INSERT INTO Employees (EmployeeID, FirstName, LastName, Salary) 
+VALUES (1001, 'John', 'Smith', 50000); 
+```
+
+When this new row is inserted, the database engine automatically updates the index "idx_LastName" to include the new last name value ('Smith'). This ensures that the index remains up-to-date and reflects the latest data in the table.
+
+Similarly, if an existing row is updated, for example, if the last name of an employee changes from 'Smith' to 'Johnson':
+
+```
+UPDATE Employees 
+SET LastName = 'Johnson' 
+WHERE EmployeeID = 1001; 
+```
+
+The database engine automatically updates the index to reflect the modified last name value. In this case, 'Smith' is replaced with 'Johnson' in the index.
+
+If a row is deleted from the table, `DELETE FROM Employees 
+WHERE EmployeeID = 1001; ` the database engine will also remove the corresponding entry from the index to maintain its accuracy and consistency with the table data.
