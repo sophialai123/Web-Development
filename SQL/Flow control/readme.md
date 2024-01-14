@@ -94,3 +94,41 @@ ELSE
 END
 ```
 The CASE statement is useful when you want to perform conditional branching based on the value of an expression.
+
+---
+
+### Sort the flow control statements into their correct statement categories.
+
+```
+IF
+
+IF @status = 'Active' BEGIN    PRINT 'User is active.'; END
+
+ This demonstrates the IF statement to execute code based on a condition. 
+
+
+
+WHILE:
+
+WHILE @totalItems > 0 SET @totalItems = @totalItems - 1;
+
+This demonstrates the WHILE loop in a concise form, combining the loop condition and decrement operation on the same line.
+
+
+
+IF...ELSE:
+
+IF @score >= 80 PRINT 'Pass'; ELSE PRINT 'Fail';
+
+This demonstrates the compact form of the IF...ELSE statement. It checks if the score is greater than or equal to 80 and prints either 'Pass' or 'Fail' accordingly. 
+
+
+
+CASE: 
+
+SELECT CASE @day WHEN 1 THEN 'S' WHEN 2 THEN 'M' ELSE 'O' END AS Day; 
+
+This demonstrates the most condensed form of the CASE statement. It evaluates the value of @day and returns 'S' if it equals 1, 'M' if it equals 2, and 'O' for any other value.
+```
+
+
