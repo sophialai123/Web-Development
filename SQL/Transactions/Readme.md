@@ -217,7 +217,7 @@ Durability is typically managed internally by the database management system (DB
 
 3. Isolation
    
-  - Dirty Read: A dirty read occurs when a transaction reads uncommitted data from another transaction that has not been committed yet. It is a consequence of a low isolation level, and it can lead to inconsistent or incorrect results.
-   - Repeatable Read: Repeatable read is an isolation level that guarantees that a transaction will see the same data consistently throughout the transaction, even if other transactions modify the data concurrently.
-   - Serializable: Serializable is the highest isolation level, which ensures that transactions are executed in a serializable order. It provides the strongest level of data consistency by preventing phenomena such as dirty reads, non-repeatable reads, and phantom reads.
-  -  Read Uncommitted: Read uncommitted is the lowest isolation level, where transactions can read uncommitted and potentially inconsistent data from other concurrent transactions. It offers the least level of data consistency.
+        - Dirty Read: A dirty read occurs when a transaction reads uncommitted data from another transaction that has not been committed yet. It is a consequence of a low isolation level, and it can lead to inconsistent or incorrect results.
+         - Repeatable Read: Repeatable read is an isolation level that guarantees that a transaction will see the same data consistently throughout the transaction, even if other transactions modify the data concurrently.
+         - Serializable: Serializable is the highest isolation level, which ensures that transactions are executed in a serializable order. It provides the strongest level of data consistency by preventing phenomena such as dirty reads, non-repeatable reads, and phantom reads.
+        -  Read Uncommitted: Read uncommitted is the lowest isolation level, where transactions can read uncommitted and potentially inconsistent data from other concurrent transactions. It offers the least level of data consistency.
