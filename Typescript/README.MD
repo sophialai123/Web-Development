@@ -8,5 +8,5 @@
 5. `dist` folder will be created by automatically 
 6. search for `> tasks: Configure Default Build Task` in the search bar
 7. select `tsc: watch - tsconfig.json`
-8. search `>tasks: Run Build Task`
+8. search `>tasks: Run Build Task` --> this is will watch the all the changes 
 
