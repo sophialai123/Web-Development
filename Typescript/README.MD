@@ -2,7 +2,7 @@
 
 ##### Run commands in terminal: 
 1. Install typscript and node js
-2. Create a new project run command in terminal `npm init` will create a new `package.json` file
+2. Create a new project run command in terminal `npm init -y` will create a new `package.json` file
 2. Create a `src` folder for typescript files  
 3. Create a typescript complier `tsc --init --sourceMap --rootDir src --outDir dist`
 4. Create typescript dependency `npm i --save-dev typescript` will add this in the `package.json 
