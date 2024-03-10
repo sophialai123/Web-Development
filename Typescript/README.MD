@@ -26,67 +26,55 @@
 
 ```
 
-import * as sql from 'mssql';
-
- 
-
-// SQL Server configuration
-
-const config: sql.config = {
-
-  user: 'your_username',
-
-  password: 'your_password',
-
-  server: 'your_server',
-
-  database: 'your_database',
-
-  options: {
-
-       trustServerCertificate: true, // Only for development purposes
-
-  },
-
-};
-
- 
-
-async function main() {
-
-  try {
-
-    // Create a connection pool
-
-    const pool = await sql.connect(config);
-
- 
-
-    // Query database
-
-    const result = await pool.request().query('SELECT * FROM YourTable');
-
- 
-
-    // Log the result
-
-       console.log(result.recordset);
-
- 
-
-    // Close the connection pool
-
-    await pool.close();
-
-  } catch (error) {
-
-    console.error('Error:', error);
-
-  }
-
-}
-
-main();
+    import * as sql from 'mssql';
+    
+    // SQL Server configuration
+    
+    const config: sql.config = {
+    
+      user: 'your_username',
+    
+      password: 'your_password',
+    
+      server: 'your_server',
+    
+      database: 'your_database',
+    
+      options: {
+    
+           trustServerCertificate: true, // Only for development purposes
+    
+      },
+    
+    };
+    
+    async function main() {
+    
+      try {
+    
+        // Create a connection pool
+    
+        const pool = await sql.connect(config);
+    
+        // Query database
+    
+        const result = await pool.request().query('SELECT * FROM YourTable');
+    
+           console.log(result.recordset);
+    
+        // Close the connection pool
+    
+        await pool.close();
+    
+      } catch (error) {
+    
+        console.error('Error:', error);
+    
+      }
+    
+    }
+    
+     main();
 
 ```
 
