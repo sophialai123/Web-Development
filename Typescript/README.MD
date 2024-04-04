@@ -1,5 +1,5 @@
 ## How to run typescript in vscode ([youtube](https://www.youtube.com/watch?v=4zdBk6wisxc)): 
-
+### HOW TO uninstall node: https://www.geeksforgeeks.org/how-to-completely-remove-node-js-from-windows/
 ### Run commands in terminal: 
 1. Install typscript `npm install --global typescript` and node js
 2. Create a new project run command in terminal `npm init -y` will create a new `package.json` file
