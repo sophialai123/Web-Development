@@ -1,5 +1,5 @@
 
-[Challenge links](https://leetcode.com/problems/immediate-food-delivery-ii/description/?envType=study-plan-v2&envId=top-sql-50)
+[Challenge link 1174. Immediate Food Delivery II ](https://leetcode.com/problems/immediate-food-delivery-ii/description/?envType=study-plan-v2&envId=top-sql-50)
 
 ---
 ### SQL TABLE
